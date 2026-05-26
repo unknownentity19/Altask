@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-from: #ffffff;
+  --bg-to: #f4f6fb;
+  --fg: #0b0d12;
+  --muted: #51576c;
+  --border: rgba(15, 23, 42, 0.08);
+}
+
+.dark {
+  --bg-from: #06080d;
+  --bg-to: #0b0d12;
+  --fg: #f6f7f9;
+  --muted: #b1b6c4;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+html,
+body {
+  background: linear-gradient(180deg, var(--bg-from) 0%, var(--bg-to) 100%);
+  color: var(--fg);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle radial accents used by hero/preview backdrops */
+.bg-aurora {
+  background:
+    radial-gradient(60% 50% at 20% 10%, rgba(58, 100, 255, 0.18) 0%, transparent 60%),
+    radial-gradient(50% 40% at 85% 0%, rgba(139, 92, 246, 0.18) 0%, transparent 60%),
+    radial-gradient(60% 60% at 50% 100%, rgba(58, 100, 255, 0.10) 0%, transparent 70%);
+}
+
+.dark .bg-aurora {
+  background:
+    radial-gradient(60% 50% at 20% 10%, rgba(58, 100, 255, 0.32) 0%, transparent 60%),
+    radial-gradient(50% 40% at 85% 0%, rgba(139, 92, 246, 0.28) 0%, transparent 60%),
+    radial-gradient(60% 60% at 50% 100%, rgba(58, 100, 255, 0.18) 0%, transparent 70%);
+}
+
+.grid-bg {
+  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 90%);
+}
+
+.dark .grid-bg {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+/* Reusable utility classes via @apply */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8;
+  }
+  .section {
+    @apply container-page py-20 sm:py-28;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-ink-200/70 bg-white/60 px-3 py-1 text-xs font-medium uppercase tracking-widest text-ink-600 backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-ink-300;
+  }
+  .card {
+    @apply rounded-2xl border border-ink-200/70 bg-white/70 backdrop-blur dark:border-white/10 dark:bg-white/[0.03];
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-ink-950;
+  }
+  .btn-primary {
+    @apply btn bg-ink-900 text-white shadow-soft hover:bg-ink-700 dark:bg-white dark:text-ink-900 dark:hover:bg-ink-100;
+  }
+  .btn-secondary {
+    @apply btn border border-ink-200/70 bg-white text-ink-900 shadow-soft hover:border-ink-300 hover:bg-ink-50 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-ink-900 via-brand-700 to-accent-600 bg-clip-text text-transparent dark:from-white dark:via-brand-300 dark:to-accent-400;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

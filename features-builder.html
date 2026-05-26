@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @prod-pass v1 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Drag &amp; Drop Builder · Altask</title>
+<meta name="description" content="Compose pages by dragging premium components onto a flexible canvas. Smart snapping, alignment guides, full undo history." />
+<meta name="theme-color" content="#1e3a8a" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b62c4'/%3E%3Cstop offset='1' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M4 18l6-12 4 8 2-4 4 8H4z'/%3E%3C/svg%3E" />
+<link rel="canonical" href="https://altask.app/features-builder.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://altask.app/features-builder.html" />
+<meta property="og:title" content="Drag &amp; Drop Builder · Altask" />
+<meta property="og:description" content="Compose pages by dragging premium components onto a flexible canvas. Smart snapping, alignment guides, full undo history." />
+<meta property="og:image" content="https://altask.app/assets/og-image.svg" />
+<meta property="og:site_name" content="Altask" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Drag &amp; Drop Builder · Altask" />
+<meta name="twitter:description" content="Compose pages by dragging premium components onto a flexible canvas. Smart snapping, alignment guides, full undo history." />
+<meta name="twitter:image" content="https://altask.app/assets/og-image.svg" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/base.css" />
+<link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<!-- ========= TOP UTILITY BAR ========= -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="9"/></svg> Community</a>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="10 17 15 12 10 7"/></svg> YouTube</a>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8h-3v8h3"/><path d="M15 8h3v8h-3"/></svg> Facebook</a>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l8 10-8 8h2l7-7 6 7h4l-9-11 8-7h-2l-7 6-5-6z"/></svg> Twitter</a>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v8M8 7v.01M12 18v-5a3 3 0 0 1 6 0v5"/></svg> LinkedIn</a>
+    </div>
+  </div>
+<!-- ========= NAV ========= -->
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="site-nav__brand" href="index.html" aria-label="Altask home">
+        <span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        Altask
+      </a>
+      <nav aria-label="Primary"><ul class="site-nav__links">
+  <li class="has-submenu has-mega has-mega--2col">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Product <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner mega__inner--2col">
+      <div class="mega__col">
+        <h5>Get started</h5>
+        <a class="mega__link" href="product.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <span class="meta"><strong>Overview</strong><span>The whole platform</span></span>
+        </a>
+        <a class="mega__link" href="how.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></span>
+          <span class="meta"><strong>How it works</strong><span>Three steps, one canvas</span></span>
+        </a>
+        <a class="mega__link" href="editor.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></span>
+          <span class="meta"><strong>Open Editor</strong><span>Try in your browser</span></span>
+        </a>
+        <a class="mega__link" href="templates.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
+          <span class="meta"><strong>Templates</strong><span>Production-ready starts</span></span>
+        </a>
+      </div>
+      <div class="mega__col">
+        <h5>More</h5>
+        <a class="mega__link" href="docs.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4V4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+          <span class="meta"><strong>Documentation</strong><span>SDK, API, guides</span></span>
+        </a>
+        <a class="mega__link" href="community.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="11" r="2.5"/><path d="M3 20c0-3.3 3-6 6-6s6 2.7 6 6"/></svg></span>
+          <span class="meta"><strong>Community</strong><span>12,000+ builders</span></span>
+        </a>
+        <a class="mega__link" href="contact.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span class="meta"><strong>Contact</strong><span>Talk to the team</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li class="has-submenu has-mega">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner">
+      <div class="mega__col">
+        <h5>Features</h5>
+        <a class="mega__link" href="features-builder.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <span class="meta"><strong>Drag &amp; Drop builder</strong><span>Smart snapping, alignment guides</span></span>
+        </a>
+        <a class="mega__link" href="features-responsive.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="11" rx="1"/><rect x="13" y="9" width="9" height="13" rx="1"/></svg></span>
+          <span class="meta"><strong>Responsive controls</strong><span>Per-breakpoint overrides</span></span>
+        </a>
+        <a class="mega__link" href="features-publish.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 9l6-6 6 6"/><rect x="3" y="15" width="18" height="6" rx="1"/></svg></span>
+          <span class="meta"><strong>One-click publish</strong><span>Global edge with HTTPS</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li class="has-submenu has-mega">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Templates <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner">
+      <div class="mega__col">
+        <h5>Templates</h5>
+        <a class="mega__link" href="templates.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></span>
+          <span class="meta"><strong>Browse all</strong><span>Production-ready starts</span></span>
+        </a>
+        <a class="mega__link" href="templates-startup.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c5-5 9-9 14-14M14 5h5v5"/></svg></span>
+          <span class="meta"><strong>Startup &amp; SaaS</strong><span>Lift, Stack, Pulse</span></span>
+        </a>
+        <a class="mega__link" href="templates-portfolio.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="2"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M21 17l-5-5-7 7"/></svg></span>
+          <span class="meta"><strong>Portfolio</strong><span>Showcase, Folio, Frame</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li><a href="pricing.html">Pricing</a></li>
+  <li><a href="docs.html">Docs</a></li>
+  </ul></nav>
+      <div class="site-nav__cta">
+        <a class="btn btn-secondary btn-sm" href="contact.html">Sign in</a>
+        <a class="btn btn-primary btn-sm" href="editor.html">Get Started</a>
+        <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="site-nav__mobile" data-nav-mobile>
+      <a href="product.html">Product</a>
+      <a href="features-builder.html">Features</a>
+      <a href="templates.html">Templates</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="docs.html">Docs</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary" href="editor.html">Get Started</a>
+    </div>
+  </header></header>
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <span class="kicker" data-reveal>Drag &amp; Drop Builder</span>
+    <h1 class="reveal-words mt-3">Compose pages by dragging,<br/><span class="text-purple">never by typing CSS</span></h1>
+    <p data-reveal style="transition-delay:.2s">A flexible canvas with smart snapping, alignment guides, keyboard shortcuts, and full undo history. Built for the speed of real product teams.</p>
+    <div class="hero__ctas mt-8" data-reveal style="transition-delay:.3s">
+      <a class="btn btn-primary btn-lg" href="editor.html" data-magnetic="0.18">Try the canvas free</a>
+      <a class="btn btn-secondary btn-lg" href="docs.html">Read the docs</a>
+    </div>
+  </div>
+</section>
+
+<!-- Big illustration: split canvas / sidebar / inspector -->
+<section class="section-tight">
+  <div class="container">
+    <div class="card" data-reveal style="overflow:hidden;padding:0;">
+      <svg viewBox="0 0 1200 540" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="width:100%;display:block;">
+        <defs>
+          <linearGradient id="bg-builder" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8f9fb"/><stop offset="1" stop-color="#eff5ff"/></linearGradient>
+        </defs>
+        <rect width="1200" height="540" fill="url(#bg-builder)"/>
+        <!-- top bar -->
+        <rect x="0" y="0" width="1200" height="48" fill="#fff"/>
+        <line x1="0" y1="48" x2="1200" y2="48" stroke="#e1e5ed"/>
+        <rect x="24" y="18" width="14" height="14" fill="#1e3a8a"/>
+        <rect x="46" y="22" width="60" height="8" fill="#0b1220"/>
+        <rect x="1080" y="14" width="80" height="20" fill="#1e3a8a"/>
+        <!-- Left palette -->
+        <rect x="0" y="48" width="220" height="492" fill="#fff"/>
+        <line x1="220" y1="48" x2="220" y2="540" stroke="#e1e5ed"/>
+        <text x="22" y="78" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#9aa3b2" letter-spacing="2">COMPONENTS</text>
+        <!-- 6 component rows in palette -->
+        <g font-family="Inter,sans-serif" font-size="13" fill="#1f2937">
+          <rect x="14" y="92" width="192" height="38" rx="4" fill="#eff5ff" stroke="#b6cdff"/>
+          <rect x="22" y="103" width="22" height="16" fill="#1e3a8a"/>
+          <text x="56" y="115">Hero section</text>
+          <rect x="14" y="138" width="192" height="38" rx="4" fill="#fff" stroke="#e1e5ed"/>
+          <rect x="22" y="149" width="22" height="16" fill="#cdd2de"/>
+          <text x="56" y="161" fill="#4b5563">Navbar</text>
+          <rect x="14" y="184" width="192" height="38" rx="4" fill="#fff" stroke="#e1e5ed"/>
+          <rect x="22" y="195" width="22" height="16" fill="#cdd2de"/>
+          <text x="56" y="207" fill="#4b5563">Features grid</text>
+          <rect x="14" y="230" width="192" height="38" rx="4" fill="#fff" stroke="#e1e5ed"/>
+          <rect x="22" y="241" width="22" height="16" fill="#cdd2de"/>
+          <text x="56" y="253" fill="#4b5563">Pricing table</text>
+          <rect x="14" y="276" width="192" height="38" rx="4" fill="#fff" stroke="#e1e5ed"/>
+          <rect x="22" y="287" width="22" height="16" fill="#cdd2de"/>
+          <text x="56" y="299" fill="#4b5563">Testimonial</text>
+          <rect x="14" y="322" width="192" height="38" rx="4" fill="#fff" stroke="#e1e5ed"/>
+          <rect x="22" y="333" width="22" height="16" fill="#cdd2de"/>
+          <text x="56" y="345" fill="#4b5563">FAQ</text>
+        </g>
+        <!-- Center canvas page -->
+        <rect x="260" y="80" width="660" height="440" fill="#fff" stroke="#e1e5ed"/>
+        <!-- Hero block currently selected (purple dashed outline) -->
+        <rect x="276" y="96" width="628" height="180" fill="#eff5ff" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="4 4" rx="2"/>
+        <text x="408" y="170" font-family="Inter,sans-serif" font-size="36" font-weight="800" fill="#0b1220">Build websites visually</text>
+        <text x="408" y="200" font-family="Inter,sans-serif" font-size="16" fill="#4b5563">Drag premium components onto a flexible canvas.</text>
+        <rect x="408" y="218" width="100" height="32" fill="#1e3a8a"/>
+        <rect x="516" y="218" width="100" height="32" fill="#fff" stroke="#cdd2de"/>
+        <!-- Selection handles -->
+        <rect x="272" y="92" width="6" height="6" fill="#1e3a8a"/>
+        <rect x="900" y="92" width="6" height="6" fill="#1e3a8a"/>
+        <rect x="272" y="272" width="6" height="6" fill="#1e3a8a"/>
+        <rect x="900" y="272" width="6" height="6" fill="#1e3a8a"/>
+        <!-- Insertion line below hero -->
+        <line x1="276" y1="288" x2="904" y2="288" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="276" cy="288" r="4" fill="#1e3a8a"/>
+        <circle cx="904" cy="288" r="4" fill="#1e3a8a"/>
+        <!-- Features grid placeholder below -->
+        <rect x="276" y="304" width="200" height="100" fill="#f8f9fb" stroke="#e1e5ed" rx="2"/>
+        <rect x="490" y="304" width="200" height="100" fill="#f8f9fb" stroke="#e1e5ed" rx="2"/>
+        <rect x="704" y="304" width="200" height="100" fill="#f8f9fb" stroke="#e1e5ed" rx="2"/>
+        <!-- Cursor showing dragging a Pricing block -->
+        <g transform="translate(560, 396)">
+          <rect width="220" height="80" rx="4" fill="#fff" stroke="#1e3a8a" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.95"/>
+          <rect x="14" y="14" width="120" height="10" fill="#0b1220"/>
+          <rect x="14" y="32" width="80" height="6" fill="#9aa3b2"/>
+          <rect x="14" y="48" width="60" height="20" fill="#1e3a8a"/>
+        </g>
+        <g transform="translate(720, 446)">
+          <path d="M0 0 L14 6 L8 8 L6 14 Z" fill="#1e3a8a"/>
+          <text x="20" y="10" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#fff" stroke="#1e3a8a" stroke-width="0">Maya</text>
+          <rect x="18" y="-2" width="40" height="14" fill="#1e3a8a" rx="2"/>
+          <text x="22" y="9" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#fff">Maya</text>
+        </g>
+        <!-- Right inspector -->
+        <rect x="960" y="48" width="240" height="492" fill="#fff"/>
+        <line x1="960" y1="48" x2="960" y2="540" stroke="#e1e5ed"/>
+        <text x="978" y="78" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#9aa3b2" letter-spacing="2">PROPERTIES</text>
+        <text x="978" y="106" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">PADDING</text>
+        <rect x="978" y="118" width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
+        <text x="990" y="138" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">64 px</text>
+        <text x="978" y="172" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">FONT SIZE</text>
+        <rect x="978" y="184" width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
+        <text x="990" y="204" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">36 px</text>
+        <text x="978" y="238" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">ALIGNMENT</text>
+        <g transform="translate(978, 250)">
+          <rect width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
+          <rect x="2" y="2" width="64" height="30" fill="#1e3a8a"/>
+          <text x="22" y="22" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#fff">Center</text>
+          <text x="86" y="22" font-family="Inter,sans-serif" font-size="11" fill="#4b5563">Left</text>
+          <text x="146" y="22" font-family="Inter,sans-serif" font-size="11" fill="#4b5563">Right</text>
+        </g>
+        <text x="978" y="304" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">COLOR</text>
+        <rect x="978" y="316" width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
+        <rect x="990" y="324" width="18" height="18" fill="#1e3a8a"/>
+        <text x="1018" y="338" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">#1E3A8A</text>
+        <text x="978" y="372" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">SHADOW</text>
+        <rect x="978" y="384" width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
+        <text x="990" y="404" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">md</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 3 pillars -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker" data-reveal>What you get</span>
+      <h2 class="reveal-words mt-3">A canvas built like real design tools</h2>
+      <p data-reveal style="transition-delay:.2s">Smart defaults, real keyboard shortcuts, and live multiplayer — without the steep learning curve.</p>
+    </div>
+    <div class="grid grid-3" data-reveal-stagger>
+      <article class="card card-hover feature-card">
+        <span class="icon-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h12M3 18h18M21 12h-3M21 18h-3"/></svg></span>
+        <h3>Smart snapping</h3>
+        <p>Components align to a flexible grid as you drag. Spacing guides appear automatically. Drop-zones highlight live so you always know where a block will land.</p>
+      </article>
+      <article class="card card-hover feature-card">
+        <span class="icon-tile alt-emerald"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span>
+        <h3>Drag to reorder</h3>
+        <p>Move blocks up, down, or into nested containers with a single drag. Or pick a block and use arrow keys for pixel-precise reordering with the keyboard.</p>
+      </article>
+      <article class="card card-hover feature-card">
+        <span class="icon-tile alt-amber"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 6v6h6"/></svg></span>
+        <h3>Full undo history</h3>
+        <p>80 levels of undo with redo. Every property change, every reorder, every duplicate — captured. Cmd+Z and Cmd+Shift+Z navigate any change.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Side-by-side: Inline editing showcase -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center;gap:48px;">
+      <div data-reveal-left>
+        <span class="kicker">Inline editing</span>
+        <h2 class="mt-3">Click any text to edit it</h2>
+        <p class="mt-4">No popup forms. No "edit modes". Click headlines, buttons, paragraphs anywhere on the canvas and start typing. Properties update live in the inspector — and the inspector updates live as you type.</p>
+        <ul class="mt-6" style="list-style:none;padding:0;display:grid;gap:12px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;color:var(--fg-2);font-size:15px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--p-700);flex-shrink:0;margin-top:2px;"><path d="M4 12.5l5 5L20 6"/></svg>Inline rich text formatting</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;color:var(--fg-2);font-size:15px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--p-700);flex-shrink:0;margin-top:2px;"><path d="M4 12.5l5 5L20 6"/></svg>Markdown shortcuts (## for h2, ** for bold)</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;color:var(--fg-2);font-size:15px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--p-700);flex-shrink:0;margin-top:2px;"><path d="M4 12.5l5 5L20 6"/></svg>Auto-save on every keystroke</li>
+        </ul>
+      </div>
+      <div class="card" data-reveal-right style="overflow:hidden;padding:0;">
+        <svg viewBox="0 0 540 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+          <rect width="540" height="380" fill="#fff"/>
+          <rect x="20" y="20" width="500" height="120" fill="#eff5ff" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="4 4"/>
+          <text x="40" y="70" font-family="Inter,sans-serif" font-size="32" font-weight="800" fill="#0b1220">Edit me directly</text>
+          <text x="40" y="100" font-family="Inter,sans-serif" font-size="14" fill="#4b5563">Click any text to start typing</text>
+          <!-- Cursor in the heading -->
+          <line x1="296" y1="50" x2="296" y2="80" stroke="#1e3a8a" stroke-width="2"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></line>
+          <!-- Toolbar floater -->
+          <g transform="translate(40, 160)">
+            <rect width="220" height="38" rx="4" fill="#0b1220"/>
+            <text x="14" y="24" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">B</text>
+            <text x="36" y="24" font-family="Inter,sans-serif" font-size="13" font-style="italic" fill="#fff">I</text>
+            <text x="56" y="24" font-family="Inter,sans-serif" font-size="13" text-decoration="underline" fill="#fff">U</text>
+            <line x1="76" y1="10" x2="76" y2="28" stroke="#3b62c4"/>
+            <text x="86" y="24" font-family="Inter,sans-serif" font-size="11" fill="#fff">H1</text>
+            <text x="110" y="24" font-family="Inter,sans-serif" font-size="11" fill="#fff">H2</text>
+            <text x="134" y="24" font-family="Inter,sans-serif" font-size="11" fill="#fff">H3</text>
+            <line x1="158" y1="10" x2="158" y2="28" stroke="#3b62c4"/>
+            <text x="170" y="24" font-family="Inter,sans-serif" font-size="11" fill="#fff">Link</text>
+          </g>
+          <text x="40" y="240" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#9aa3b2" letter-spacing="2">PROPERTIES → Heading</text>
+          <rect x="40" y="252" width="460" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
+          <text x="54" y="272" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">Edit me directly</text>
+          <rect x="40" y="298" width="220" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
+          <text x="54" y="318" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">800 weight</text>
+          <rect x="276" y="298" width="224" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
+          <text x="290" y="318" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">32 px</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Keyboard shortcuts -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker" data-reveal>Keyboard-first</span>
+      <h2 class="reveal-words mt-3">Shortcuts for everything</h2>
+    </div>
+    <div class="grid grid-3" data-reveal-stagger>
+      <div class="card feature-card">
+        <h3>Selection</h3>
+        <ul style="list-style:none;padding:0;margin-top:14px;display:grid;gap:10px;">
+          <li style="display:flex;justify-content:space-between;font-size:14px;color:var(--fg-2);">Select parent block <span style="font-family:ui-monospace;background:var(--bg-mute);padding:2px 8px;border:1px solid var(--border);font-size:12px;">Esc</span></li>
+          <li style="display:flex;justify-content:space-between;font-size:14px;color:var(--fg-2);">Multi-select <span style="font-family:ui-monospace;background:var(--bg-mute);padding:2px 8px;border:1px solid var(--border);font-size:12px;">⌘ + Click</span></li>
+          <li style="display:flex;justify-content:space-between;font-size:14px;color:var(--fg-2);">Select all in section <span style="font-family:ui-monospace;background:var(--bg-mute);padding:2px 8px;border:1px solid var(--border);font-size:12px;">⌘A</span></li>
+        </ul>
+      </div>
+      <div class="card feature-card">
+        <h3>Editing</h3>
+        <ul style="list-style:none;padding:0;margin-top:14px;display:grid;gap:10px;">
+          <li style="display:flex;justify-content:space-between;font-size:14px;color:var(--fg-2);">Undo <span style="font-family:ui-monospace;background:var(--bg-mute);padding:2px 8px;border:1px solid var(--border);font-size:12px;">⌘Z</span></li>
+          <li style="display:flex;justify-content:space-between;font-size:14px;color:var(--fg-2);">Redo <span style="font-family:ui-monospace;background:var(--bg-mute);padding:2px 8px;border:1px solid var(--border);font-size:12px;">⌘⇧Z</span></li>
+          <li style="display:flex;justify-content:space-between;font-size:14px;color:var(--fg-2);">Duplicate block <span style="font-family:ui-monospace;background:var(--bg-mute);padding:2px 8px;border:1px solid var(--border);font-size:12px;">⌘D</span></li>
+        </ul>
+      </div>
+      <div class="card feature-card">
+        <h3>Navigation</h3>
+        <ul style="list-style:none;padding:0;margin-top:14px;display:grid;gap:10px;">
+          <li style="display:flex;justify-content:space-between;font-size:14px;color:var(--fg-2);">Move block up <span style="font-family:ui-monospace;background:var(--bg-mute);padding:2px 8px;border:1px solid var(--border);font-size:12px;">⌘↑</span></li>
+          <li style="display:flex;justify-content:space-between;font-size:14px;color:var(--fg-2);">Move block down <span style="font-family:ui-monospace;background:var(--bg-mute);padding:2px 8px;border:1px solid var(--border);font-size:12px;">⌘↓</span></li>
+          <li style="display:flex;justify-content:space-between;font-size:14px;color:var(--fg-2);">Toggle inspector <span style="font-family:ui-monospace;background:var(--bg-mute);padding:2px 8px;border:1px solid var(--border);font-size:12px;">⌘I</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <h2>Try the canvas now</h2>
+      <p>The editor works in your browser. No signup, no credit card. Drop your first block in 30 seconds.</p>
+      <div class="ctas">
+        <a class="btn btn-primary btn-lg" href="editor.html" data-magnetic="0.18">Open the editor</a>
+        <a class="btn btn-secondary btn-lg" href="features-builder.html">All features</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- ========= FOOTER ========= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="site-nav__brand" href="index.html"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Altask</a>
+          <p class="mt-4" style="max-width:280px;font-size:14px;">The visual website builder for teams who care about craft. Drag, drop, and ship.</p>
+        </div>
+        <div><h4>Product</h4><ul><li><a href="product.html">Overview</a></li><li><a href="features-builder.html">Features</a></li><li><a href="templates.html">Templates</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="editor.html">Editor</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Customers</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="docs.html">Docs</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
+        <div><h4>Social</h4><ul><li><a href="#">Twitter</a></li><li><a href="#">GitHub</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Dribbble</a></li></ul></div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span data-year>2026</span> Altask, Inc. All rights reserved.</span>
+        <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Security</a></span>
+      </div>
+    </div>
+  </footer></footer>
+<script src="assets/js/site.js" defer></script>
+</body></html>

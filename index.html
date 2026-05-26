@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @prod-pass v1 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Altask — Build websites visually. No code. Full control.</title>
+  <meta name="description" content="Altask is the visual website builder for teams who care about craft. Drag, drop, and ship beautiful websites without writing code." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b62c4'/%3E%3Cstop offset='1' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M4 18l6-12 4 8 2-4 4 8H4z'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+<link rel="canonical" href="https://altask.app/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://altask.app/" />
+<meta property="og:title" content="Altask — Build websites visually. No code. Full control." />
+<meta property="og:description" content="Altask is the visual website builder for teams who care about craft. Drag, drop, and ship beautiful websites without writing code." />
+<meta property="og:image" content="https://altask.app/assets/og-image.svg" />
+<meta property="og:site_name" content="Altask" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Altask — Build websites visually. No code. Full control." />
+<meta name="twitter:description" content="Altask is the visual website builder for teams who care about craft. Drag, drop, and ship beautiful websites without writing code." />
+<meta name="twitter:image" content="https://altask.app/assets/og-image.svg" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Altask",
+  "url": "https://altask.app",
+  "logo": "https://altask.app/assets/og-image.svg",
+  "description": "Visual website builder with drag-and-drop editor.",
+  "sameAs": ["https://twitter.com/altask", "https://github.com/altask", "https://linkedin.com/company/altask"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Altask",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "847" }
+}
+</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <!-- ========= TOP UTILITY BAR ========= -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="9"/></svg> Community</a>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="10 17 15 12 10 7"/></svg> YouTube</a>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8h-3v8h3"/><path d="M15 8h3v8h-3"/></svg> Facebook</a>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l8 10-8 8h2l7-7 6 7h4l-9-11 8-7h-2l-7 6-5-6z"/></svg> Twitter</a>
+      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v8M8 7v.01M12 18v-5a3 3 0 0 1 6 0v5"/></svg> LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- ========= NAV ========= -->
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a class="site-nav__brand" href="index.html" aria-label="Altask home">
+        <span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        Altask
+      </a>
+      <nav aria-label="Primary"><ul class="site-nav__links">
+  <li class="has-submenu has-mega has-mega--2col">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Product <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner mega__inner--2col">
+      <div class="mega__col">
+        <h5>Get started</h5>
+        <a class="mega__link" href="product.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <span class="meta"><strong>Overview</strong><span>The whole platform</span></span>
+        </a>
+        <a class="mega__link" href="how.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></span>
+          <span class="meta"><strong>How it works</strong><span>Three steps, one canvas</span></span>
+        </a>
+        <a class="mega__link" href="editor.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></span>
+          <span class="meta"><strong>Open Editor</strong><span>Try in your browser</span></span>
+        </a>
+        <a class="mega__link" href="templates.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
+          <span class="meta"><strong>Templates</strong><span>Production-ready starts</span></span>
+        </a>
+      </div>
+      <div class="mega__col">
+        <h5>More</h5>
+        <a class="mega__link" href="docs.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4V4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+          <span class="meta"><strong>Documentation</strong><span>SDK, API, guides</span></span>
+        </a>
+        <a class="mega__link" href="community.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="11" r="2.5"/><path d="M3 20c0-3.3 3-6 6-6s6 2.7 6 6"/></svg></span>
+          <span class="meta"><strong>Community</strong><span>12,000+ builders</span></span>
+        </a>
+        <a class="mega__link" href="contact.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span class="meta"><strong>Contact</strong><span>Talk to the team</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li class="has-submenu has-mega">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner">
+      <div class="mega__col">
+        <h5>Features</h5>
+        <a class="mega__link" href="features-builder.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <span class="meta"><strong>Drag &amp; Drop builder</strong><span>Smart snapping, alignment guides</span></span>
+        </a>
+        <a class="mega__link" href="features-responsive.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="11" rx="1"/><rect x="13" y="9" width="9" height="13" rx="1"/></svg></span>
+          <span class="meta"><strong>Responsive controls</strong><span>Per-breakpoint overrides</span></span>
+        </a>
+        <a class="mega__link" href="features-publish.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 9l6-6 6 6"/><rect x="3" y="15" width="18" height="6" rx="1"/></svg></span>
+          <span class="meta"><strong>One-click publish</strong><span>Global edge with HTTPS</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li class="has-submenu has-mega">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Templates <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner">
+      <div class="mega__col">
+        <h5>Templates</h5>
+        <a class="mega__link" href="templates.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></span>
+          <span class="meta"><strong>Browse all</strong><span>Production-ready starts</span></span>
+        </a>
+        <a class="mega__link" href="templates-startup.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c5-5 9-9 14-14M14 5h5v5"/></svg></span>
+          <span class="meta"><strong>Startup &amp; SaaS</strong><span>Lift, Stack, Pulse</span></span>
+        </a>
+        <a class="mega__link" href="templates-portfolio.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="2"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M21 17l-5-5-7 7"/></svg></span>
+          <span class="meta"><strong>Portfolio</strong><span>Showcase, Folio, Frame</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li><a href="pricing.html">Pricing</a></li>
+  <li><a href="docs.html">Docs</a></li>
+  </ul></nav>
+      <div class="site-nav__cta">
+        <a class="btn btn-secondary btn-sm" href="signin.html">Sign in</a>
+        <a class="btn btn-primary btn-sm" href="editor.html">Get Started</a>
+        <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="site-nav__mobile" data-nav-mobile>
+      <a href="product.html">Product</a>
+      <a href="features-builder.html">Features</a>
+      <a href="templates.html">Templates</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="docs.html">Docs</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-primary" href="editor.html">Get Started</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ========= HERO ========= -->
+    <section class="hero">
+      <span class="hero__star" aria-hidden="true">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 0 L58 36 L100 50 L58 64 L50 100 L42 64 L0 50 L42 36 Z" fill="#c4b5fd" opacity="0.85"/>
+        </svg>
+      </span>
+
+      <div class="container hero__layout">
+        <div class="hero__copy" data-reveal>
+          <div class="hero__userpile">
+            <span class="avpile">
+              <span class="a1">M</span>
+              <span class="a2">D</span>
+              <span class="a3">R</span>
+            </span>
+            <div class="hero__userpile-meta">
+              <strong>2.5K</strong>
+              <span>Active Users</span>
+            </div>
+          </div>
+
+          <h1 class="hero__title">
+            Design Visually,<br/>
+            <span class="accent">Ship with Confidence.</span>
+          </h1>
+          <p class="hero__sub">
+            Drag premium components onto a flexible canvas. Edit every pixel. Publish to a global edge in one click.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn-primary btn-lg" data-magnetic="0.18" href="editor.html">
+              Editor
+              <span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="btn btn-secondary btn-lg" href="signup.html">
+              Start Free Trial
+              <span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+          </div>
+          <div class="hero__meta">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> Free 14-day trial</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> No credit card required</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> Cancel anytime</span>
+          </div>
+        </div>
+
+        <div class="hero__illustration" data-reveal style="transition-delay:.15s;">
+          <img src="assets/images/hero.png" alt="Altask Visual Builder" style="width: 100%; height: auto; display: block;">
+        </div>
+      </div>
+    </section>
+
+      <!-- ========= REAL PRODUCT PREVIEW ========= -->
+      <div class="product-preview" data-reveal style="transition-delay:.2s">
+        <div class="preview-glow"></div>
+        <span class="float-chip float-chip--saved"><span class="pip"></span> Auto-saved</span>
+        <span class="float-chip float-chip--users">
+          <span class="avpile"><span class="a1">M</span><span class="a2">D</span><span class="a3">R</span></span>
+          3 editing
+        </span>
+        <span class="float-chip float-chip--live"><span class="pill">LIVE</span> Published in 1.2s</span>
+
+        <div class="preview-stage">
+          <div class="mock-window">
+            <div class="mock-chrome">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="url">
+                <span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  altask.app/editor
+                </span>
+              </span>
+              <span class="publish">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg>
+                Publish
+              </span>
+            </div>
+            <div class="mock-body">
+              <aside class="mock-side">
+                <h5>Components</h5>
+                <div class="mock-comp is-active">
+                  <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></span>
+                  Hero
+                </div>
+                <div class="mock-comp">
+                  <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
+                  Features
+                </div>
+                <div class="mock-comp">
+                  <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></span>
+                  Pricing
+                </div>
+                <div class="mock-comp">
+                  <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></span>
+                  Testimonials
+                </div>
+                <div class="mock-comp">
+                  <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 5 2c-1 .5-2 1-2 2"/><path d="M12 17h.01"/></svg></span>
+                  FAQ
+                </div>
+                <div class="mock-comp">
+                  <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 13h18M8 21h8M12 17v4"/></svg></span>
+                  Footer
+                </div>
+              </aside>
+
+              <section class="mock-canvas">
+                <div class="mock-doc">
+                  <div class="h1"></div>
+                  <div class="h2"></div>
+                  <div class="row">
+                    <div class="tile is-selected"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                  </div>
+                  <div class="ctas"><span class="b1"></span><span class="b2"></span></div>
+                </div>
+                <div class="mock-cursor" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 6-6 2-2 6L5 3z"/></svg>
+                  <span class="label">Maya</span>
+                </div>
+              </section>
+
+              <aside class="mock-side right">
+                <h5>Properties</h5>
+                <div class="mock-row"><span class="label">Padding</span><span class="value">32px</span></div>
+                <div class="mock-row"><span class="label">Radius</span><span class="value">14px</span></div>
+                <div class="mock-row"><span class="label">Color</span><span class="value"><span class="swatch"></span>#7C3AED</span></div>
+                <div style="height:6px"></div>
+                <h5 style="margin-top:14px">Spacing</h5>
+                <div class="mock-bar" style="--w:78%"><i></i></div>
+                <div class="mock-bar" style="--w:42%"><i></i></div>
+                <div class="mock-bar" style="--w:90%"><i></i></div>
+                <div style="height:6px"></div>
+                <h5 style="margin-top:14px">Effects</h5>
+                <div class="mock-row"><span class="label">Shadow</span><span class="value">md</span></div>
+                <div class="mock-row"><span class="label">Hover</span><span class="value">lift</span></div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= LOGO STRIP ========= -->
+    <section class="container">
+      <div class="logos" data-reveal>
+        <div class="logos__label">Trusted by founders from</div>
+        <div class="logos-marquee">
+          <div class="logos-marquee__track">
+            <span class="logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6l-3 6 3 6 3-6-3-6z"/></svg>
+              Northwind
+            </span>
+            <span class="logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h6l3-10 3 10h6"/></svg>
+              Lumen
+            </span>
+            <span class="logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+              Atlas
+            </span>
+            <span class="logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4c4 4 4 12 0 16M19 4c-4 4-4 12 0 16"/></svg>
+              Helix
+            </span>
+            <span class="logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg>
+              Quanta
+            </span>
+            <span class="logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 6-9 6-9-6 9-6z"/><path d="M3 15l9 6 9-6"/></svg>
+              Ember
+            </span>
+            <span class="logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+              Polar
+            </span>
+            <span class="logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l4 6h-3v6h-2V8H8z"/><circle cx="12" cy="18" r="2"/></svg>
+              Forge
+            </span>
+            <!-- duplicate for seamless loop -->
+            <span class="logo" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6l-3 6 3 6 3-6-3-6z"/></svg>
+              Northwind
+            </span>
+            <span class="logo" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h6l3-10 3 10h6"/></svg>
+              Lumen
+            </span>
+            <span class="logo" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+              Atlas
+            </span>
+            <span class="logo" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4c4 4 4 12 0 16M19 4c-4 4-4 12 0 16"/></svg>
+              Helix
+            </span>
+            <span class="logo" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg>
+              Quanta
+            </span>
+            <span class="logo" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 6-9 6-9-6 9-6z"/><path d="M3 15l9 6 9-6"/></svg>
+              Ember
+            </span>
+            <span class="logo" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg>
+              Polar
+            </span>
+            <span class="logo" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l4 6h-3v6h-2V8H8z"/><circle cx="12" cy="18" r="2"/></svg>
+              Forge
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= PROBLEM ========= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="kicker">The Problem</span>
+          <h2 class="reveal-words mt-3">Why Most Marketing Sites Fall Short</h2>
+          <p>Building without the right tools is the #1 reason marketing sites take months to ship. Don't be another statistic.</p>
+        </div>
+
+        <div class="grid grid-4" data-reveal-stagger>
+          <article class="card stat-card card-hover">
+            <div class="row">
+              <span class="icon-tile alt-amber"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.86l-8.5 14.6A2 2 0 0 0 3.5 21h17a2 2 0 0 0 1.7-2.54l-8.5-14.6a2 2 0 0 0-3.4 0z"/></svg></span>
+              <span class="num"><span data-count="72" data-suffix="%">72%</span></span>
+            </div>
+            <p>of teams ship marketing sites late due to designer / developer handoff friction</p>
+          </article>
+          <article class="card stat-card card-hover">
+            <div class="row">
+              <span class="icon-tile alt-amber"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+              <span class="num"><span data-count="6" data-suffix="+">6+</span></span>
+            </div>
+            <p>weeks wasted on engineering work that could have been a visual edit</p>
+          </article>
+          <article class="card stat-card card-hover">
+            <div class="row">
+              <span class="icon-tile alt-rose"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><path d="M3 3l18 18"/></svg></span>
+              <span class="num"><span data-count="90" data-suffix="%">90%</span></span>
+            </div>
+            <p>of marketers can't update their own site without filing a developer ticket</p>
+          </article>
+          <article class="card stat-card card-hover">
+            <div class="row">
+              <span class="icon-tile alt-emerald"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 7-8"/><path d="M14 8h7v7"/></svg></span>
+              <span class="num"><span data-count="80" data-suffix="%">80%</span></span>
+            </div>
+            <p>of conversion opportunities missed because pages can't iterate fast enough</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= TABBED SHOWCASE ========= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="reveal-words">The Smarter Way to Build Websites</h2>
+          <p>Altask combines a visual builder, a real component library, and one-click publishing so any team member can ship a beautiful site at every stage.</p>
+        </div>
+
+        <div class="showcase" data-reveal>
+          <div class="tabs" data-tabs>
+            <button class="tab is-active" data-tab-for="design" type="button">
+              <div class="tab__head">
+                <div class="tab__title">
+                  <span class="icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></span>
+                  <div><h3>Design</h3><p>Visual builder</p></div>
+                </div>
+                <span class="tab__chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+              </div>
+              <div class="tab__body"><div>
+                <p>Stop bouncing between tools. Compose pages by dragging premium components onto a flexible canvas, then refine every detail in a properties panel.</p>
+                <ul>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> Drag-and-drop component library</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> Pixel-perfect responsive overrides</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> Inline editing on the canvas</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> Full version history</li>
+                </ul>
+              </div></div>
+            </button>
+
+            <button class="tab" data-tab-for="collab" type="button">
+              <div class="tab__head">
+                <div class="tab__title">
+                  <span class="icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="11" r="2.5"/><path d="M3 20c0-3.3 3-6 6-6s6 2.7 6 6"/></svg></span>
+                  <div><h3>Collaborate</h3><p>Multiplayer canvas</p></div>
+                </div>
+                <span class="tab__chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+              </div>
+              <div class="tab__body"><div>
+                <p>Live cursors, presence, and inline comments built in. Reviews happen on the canvas, not in a long email thread.</p>
+                <ul>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> Real-time multiplayer cursors</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> Threaded inline comments</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg> Roles and permissions</li>
+                </ul>
+              </div></div>
+            </button>
+
+            <button class="tab" data-tab-for="publish" type="button">
+              <div class="tab__head">
+                <div class="tab__title">
+                  <span class="icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 9l6-6 6 6"/><rect x="3" y="15" width="18" height="6" rx="1.5"/></svg></span>
+                  <div><h3>Publish</h3><p>One-click ship</p></div>
+                </div>
+                <span class="tab__chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+              </div>
+              <div class="tab__body"><div>
+                <p>Hit publish and your site is live on a global edge in seconds, complete with HTTPS, asset optimization, and analytics.</p>
+              </div></div>
+            </button>
+
+            <button class="tab" data-tab-for="extend" type="button">
+              <div class="tab__head">
+                <div class="tab__title">
+                  <span class="icon-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg></span>
+                  <div><h3>Extend</h3><p>Custom code</p></div>
+                </div>
+                <span class="tab__chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+              </div>
+              <div class="tab__body"><div>
+                <p>Inject HTML, CSS, or JavaScript anywhere. Perfect for analytics, integrations, or one-off effects. No abstractions in your way.</p>
+              </div></div>
+            </button>
+          </div>
+
+          <div class="preview-card" data-tab-panel="design">
+            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.app — Editor</span></div>
+            <div class="preview-card__body">
+              <div class="preview-card__top">
+                <div><div class="label">Page builder</div><h3>Hero Section</h3></div>
+                <div class="score"><b>87</b>/100 polish</div>
+              </div>
+              <div class="metric"><div class="label-row"><span class="name">Typography</span><span class="val">Excellent</span></div><div class="bar"><i style="--w:92%"></i></div></div>
+              <div class="metric"><div class="label-row"><span class="name">Spacing rhythm</span><span class="val">Good</span></div><div class="bar bar--amber"><i style="--w:74%"></i></div></div>
+              <div class="metric"><div class="label-row"><span class="name">Conversion fit</span><span class="val">+18% lift</span></div><div class="bar bar--green"><i style="--w:88%"></i></div></div>
+              <div class="recommend">
+                <div class="recommend__head"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9 13.8 10.7 12 15l-1.8-4.3L5.5 9l4.7-1.3L12 3z"/></svg> AI Recommendation</div>
+                <p>Layout looks great. Try a single primary CTA above the fold for a 12% conversion lift.</p>
+              </div>
+              <div class="preview-dots"><i class="is-on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+
+          <div class="preview-card" data-tab-panel="collab" hidden>
+            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.app — Live review</span></div>
+            <div class="preview-card__body">
+              <div class="preview-card__top">
+                <div><div class="label">Multiplayer</div><h3>Live Review</h3></div>
+                <div class="score"><b>3</b> editing now</div>
+              </div>
+              <div class="metric"><div class="label-row"><span class="name">Maya is editing Hero</span><span class="val">just now</span></div><div class="bar"><i style="--w:65%"></i></div></div>
+              <div class="metric"><div class="label-row"><span class="name">Daniel left a comment</span><span class="val">2m ago</span></div><div class="bar bar--amber"><i style="--w:50%"></i></div></div>
+              <div class="metric"><div class="label-row"><span class="name">Rohini approved Pricing</span><span class="val">5m ago</span></div><div class="bar bar--green"><i style="--w:100%"></i></div></div>
+              <div class="recommend"><div class="recommend__head">All systems live</div><p>Three people are working on this draft. Cursors and comments are syncing in real time.</p></div>
+              <div class="preview-dots"><i></i><i class="is-on"></i><i></i><i></i></div>
+            </div>
+          </div>
+
+          <div class="preview-card" data-tab-panel="publish" hidden>
+            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.app — Deploy</span></div>
+            <div class="preview-card__body">
+              <div class="preview-card__top">
+                <div><div class="label">Publish</div><h3>Site is live</h3></div>
+                <div class="score"><b>1.2</b>s deploy</div>
+              </div>
+              <div class="metric"><div class="label-row"><span class="name">CDN propagation</span><span class="val">Global</span></div><div class="bar"><i style="--w:96%"></i></div></div>
+              <div class="metric"><div class="label-row"><span class="name">SSL provisioning</span><span class="val">Auto</span></div><div class="bar bar--green"><i style="--w:100%"></i></div></div>
+              <div class="metric"><div class="label-row"><span class="name">Lighthouse score</span><span class="val">A+</span></div><div class="bar bar--green"><i style="--w:97%"></i></div></div>
+              <div class="recommend"><div class="recommend__head">Deployment complete</div><p>Your site is live on the Altask edge with HTTPS by default.</p></div>
+              <div class="preview-dots"><i></i><i></i><i class="is-on"></i><i></i></div>
+            </div>
+          </div>
+
+          <div class="preview-card" data-tab-panel="extend" hidden>
+            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.app — Code blocks</span></div>
+            <div class="preview-card__body">
+              <div class="preview-card__top">
+                <div><div class="label">Custom code</div><h3>Inject anywhere</h3></div>
+                <div class="score"><b>HTML</b> CSS JS</div>
+              </div>
+              <div class="metric"><div class="label-row"><span class="name">Analytics tag</span><span class="val">Embedded</span></div><div class="bar bar--green"><i style="--w:100%"></i></div></div>
+              <div class="metric"><div class="label-row"><span class="name">Custom font</span><span class="val">Loaded</span></div><div class="bar"><i style="--w:80%"></i></div></div>
+              <div class="metric"><div class="label-row"><span class="name">Webhook on publish</span><span class="val">Active</span></div><div class="bar bar--amber"><i style="--w:65%"></i></div></div>
+              <div class="recommend"><div class="recommend__head">Tip</div><p>Wrap custom JS in a defer block to keep your Lighthouse score in the green.</p></div>
+              <div class="preview-dots"><i></i><i></i><i></i><i class="is-on"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= FEATURES ========= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="kicker">Features</span>
+          <h2 class="reveal-words mt-3">Everything you need to ship a beautiful site</h2>
+          <p>Powerful primitives, polished defaults, and the right escape hatches when you need them.</p>
+        </div>
+
+        <div class="grid grid-3" data-reveal-stagger>
+          <article class="card card-hover feature-card">
+            <span class="icon-tile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17h7M17.5 13.5L21 17l-3.5 3.5"/></svg></span>
+            <h3>Drag & Drop Builder</h3>
+            <p>Compose pages by dragging premium blocks onto a flexible canvas. Snap, align, and rearrange in seconds.</p>
+          </article>
+          <article class="card card-hover feature-card">
+            <span class="icon-tile alt-sky"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="11" rx="1.5"/><rect x="13" y="9" width="9" height="13" rx="1.5"/><path d="M6 18h6"/></svg></span>
+            <h3>Responsive Controls</h3>
+            <p>Design once and tune every breakpoint with intuitive responsive overrides — phones, tablets, and desktops.</p>
+          </article>
+          <article class="card card-hover feature-card">
+            <span class="icon-tile alt-amber"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 9l6-6 6 6"/><rect x="3" y="15" width="18" height="6" rx="1.5"/></svg></span>
+            <h3>One-click Publish</h3>
+            <p>Push to a global edge in one click. Custom domains, SSL, and analytics included on every plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= TEMPLATES ========= -->
+    <section class="section" id="templates">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="kicker">Templates</span>
+          <h2 class="reveal-words mt-3">Start from a beautiful blueprint</h2>
+          <p>Hand-crafted templates for every use case. Fully editable, production ready.</p>
+        </div>
+
+        <div class="grid grid-4" data-reveal-stagger>
+          <a class="card template-card card-hover" href="templates.html">
+            <div class="template-thumb">
+              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="tplg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eff5ff"/><stop offset="1" stop-color="#ede9fe"/></linearGradient>
+                </defs>
+                <rect width="320" height="240" fill="url(#tplg1)"/>
+                <!-- nav bar -->
+                <rect x="0" y="0" width="320" height="22" fill="#fff"/>
+                <rect x="14" y="9" width="22" height="4" fill="#1e3a8a"/>
+                <rect x="50" y="10" width="14" height="3" fill="#9ca3af"/>
+                <rect x="70" y="10" width="14" height="3" fill="#9ca3af"/>
+                <rect x="90" y="10" width="14" height="3" fill="#9ca3af"/>
+                <rect x="284" y="7" width="22" height="9" fill="#1e3a8a"/>
+                <line x1="0" y1="22" x2="320" y2="22" stroke="#b6cdff" stroke-width="0.5"/>
+                <!-- hero content -->
+                <rect x="60" y="50" width="200" height="10" rx="2" fill="#0a0a0a"/>
+                <rect x="80" y="64" width="160" height="10" rx="2" fill="#1e3a8a"/>
+                <rect x="50" y="84" width="220" height="4" rx="1" fill="#9ca3af"/>
+                <rect x="65" y="92" width="190" height="4" rx="1" fill="#9ca3af"/>
+                <rect x="105" y="108" width="50" height="14" fill="#1e3a8a"/>
+                <rect x="160" y="108" width="50" height="14" fill="#fff" stroke="#d4d4d8" stroke-width="0.5"/>
+                <!-- 3 feature cards -->
+                <rect x="20" y="148" width="88" height="76" rx="3" fill="#fff" stroke="#b6cdff" stroke-width="0.5"/>
+                <rect x="32" y="160" width="14" height="14" rx="2" fill="#ede9fe"/>
+                <rect x="32" y="180" width="50" height="4" fill="#0a0a0a"/>
+                <rect x="32" y="190" width="60" height="3" fill="#9ca3af"/>
+                <rect x="32" y="196" width="40" height="3" fill="#9ca3af"/>
+                <rect x="116" y="148" width="88" height="76" rx="3" fill="#fff" stroke="#b6cdff" stroke-width="0.5"/>
+                <rect x="128" y="160" width="14" height="14" rx="2" fill="#ede9fe"/>
+                <rect x="128" y="180" width="55" height="4" fill="#0a0a0a"/>
+                <rect x="128" y="190" width="60" height="3" fill="#9ca3af"/>
+                <rect x="128" y="196" width="42" height="3" fill="#9ca3af"/>
+                <rect x="212" y="148" width="88" height="76" rx="3" fill="#fff" stroke="#b6cdff" stroke-width="0.5"/>
+                <rect x="224" y="160" width="14" height="14" rx="2" fill="#ede9fe"/>
+                <rect x="224" y="180" width="46" height="4" fill="#0a0a0a"/>
+                <rect x="224" y="190" width="60" height="3" fill="#9ca3af"/>
+                <rect x="224" y="196" width="38" height="3" fill="#9ca3af"/>
+              </svg>
+            </div>
+            <div class="template-meta"><div><div class="cat">Startup</div><h3>Lift</h3></div><span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+          </a>
+
+          <a class="card template-card card-hover" href="templates.html">
+            <div class="template-thumb">
+              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="tplg2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
+                  <linearGradient id="tplg2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fda4af"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+                  <linearGradient id="tplg2c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+                </defs>
+                <rect width="320" height="240" fill="#fafaf7"/>
+                <!-- minimal top bar -->
+                <rect x="14" y="14" width="40" height="6" fill="#0a0a0a"/>
+                <rect x="240" y="14" width="20" height="3" fill="#9ca3af"/>
+                <rect x="266" y="14" width="20" height="3" fill="#9ca3af"/>
+                <rect x="292" y="14" width="14" height="3" fill="#9ca3af"/>
+                <!-- big headline -->
+                <rect x="14" y="44" width="200" height="14" fill="#0a0a0a"/>
+                <rect x="14" y="62" width="160" height="14" fill="#0a0a0a"/>
+                <rect x="14" y="86" width="180" height="3" fill="#6b7280"/>
+                <rect x="14" y="93" width="140" height="3" fill="#6b7280"/>
+                <!-- portfolio masonry grid -->
+                <rect x="14" y="112" width="92" height="112" fill="url(#tplg2a)"/>
+                <circle cx="60" cy="156" r="18" fill="#fff" opacity="0.7"/>
+                <rect x="114" y="112" width="92" height="62" fill="url(#tplg2b)"/>
+                <rect x="214" y="112" width="92" height="62" fill="url(#tplg2c)"/>
+                <rect x="114" y="180" width="192" height="44" fill="#1f2937"/>
+                <rect x="126" y="194" width="80" height="6" fill="#fff"/>
+                <rect x="126" y="206" width="50" height="4" fill="#9ca3af"/>
+              </svg>
+            </div>
+            <div class="template-meta"><div><div class="cat">Portfolio</div><h3>Showcase</h3></div><span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+          </a>
+
+          <a class="card template-card card-hover" href="templates.html">
+            <div class="template-thumb">
+              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="tplg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ecfeff"/><stop offset="1" stop-color="#cffafe"/></linearGradient>
+                  <linearGradient id="tplg3line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0891b2"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+                </defs>
+                <rect width="320" height="240" fill="url(#tplg3)"/>
+                <!-- nav -->
+                <rect x="0" y="0" width="320" height="22" fill="#fff"/>
+                <rect x="14" y="9" width="20" height="4" fill="#0891b2"/>
+                <rect x="48" y="10" width="14" height="3" fill="#9ca3af"/>
+                <rect x="68" y="10" width="14" height="3" fill="#9ca3af"/>
+                <rect x="284" y="7" width="22" height="9" fill="#0891b2"/>
+                <line x1="0" y1="22" x2="320" y2="22" stroke="#cffafe" stroke-width="0.5"/>
+                <!-- header -->
+                <rect x="50" y="38" width="220" height="10" fill="#0a0a0a"/>
+                <rect x="80" y="56" width="160" height="3" fill="#6b7280"/>
+                <!-- analytics card with line chart -->
+                <rect x="14" y="74" width="292" height="78" rx="3" fill="#fff" stroke="#cffafe"/>
+                <rect x="26" y="86" width="50" height="4" fill="#0a0a0a"/>
+                <rect x="26" y="94" width="38" height="3" fill="#9ca3af"/>
+                <rect x="240" y="84" width="50" height="14" fill="#0891b2"/>
+                <polyline points="26,140 60,128 90,134 124,118 158,124 194,108 226,116 262,98 290,108"
+                          fill="none" stroke="url(#tplg3line)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="262" cy="98" r="3" fill="#1e3a8a"/>
+                <!-- stat pills -->
+                <rect x="14" y="160" width="92" height="60" rx="3" fill="#fff" stroke="#cffafe"/>
+                <rect x="26" y="170" width="14" height="14" rx="2" fill="#cffafe"/>
+                <rect x="26" y="190" width="50" height="6" fill="#0a0a0a"/>
+                <rect x="26" y="200" width="36" height="4" fill="#9ca3af"/>
+                <rect x="114" y="160" width="92" height="60" rx="3" fill="#fff" stroke="#cffafe"/>
+                <rect x="126" y="170" width="14" height="14" rx="2" fill="#cffafe"/>
+                <rect x="126" y="190" width="50" height="6" fill="#0a0a0a"/>
+                <rect x="126" y="200" width="36" height="4" fill="#9ca3af"/>
+                <rect x="214" y="160" width="92" height="60" rx="3" fill="#fff" stroke="#cffafe"/>
+                <rect x="226" y="170" width="14" height="14" rx="2" fill="#cffafe"/>
+                <rect x="226" y="190" width="50" height="6" fill="#0a0a0a"/>
+                <rect x="226" y="200" width="36" height="4" fill="#9ca3af"/>
+              </svg>
+            </div>
+            <div class="template-meta"><div><div class="cat">SaaS</div><h3>Stack</h3></div><span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+          </a>
+
+          <a class="card template-card card-hover" href="templates.html">
+            <div class="template-thumb">
+              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="tplg4a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#fb7185"/></linearGradient>
+                  <linearGradient id="tplg4b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#34d399"/></linearGradient>
+                  <linearGradient id="tplg4c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+                  <linearGradient id="tplg4d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
+                </defs>
+                <rect width="320" height="240" fill="#fff"/>
+                <!-- top nav with cart -->
+                <rect x="0" y="0" width="320" height="24" fill="#0a0a0a"/>
+                <rect x="14" y="11" width="44" height="3" fill="#fff"/>
+                <rect x="240" y="10" width="14" height="4" fill="#fff"/>
+                <rect x="262" y="10" width="14" height="4" fill="#fff"/>
+                <circle cx="294" cy="12" r="5" fill="#1e3a8a"/>
+                <text x="294" y="14" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-size="6" font-weight="700">3</text>
+                <!-- category strip -->
+                <rect x="14" y="34" width="40" height="6" fill="#1e3a8a"/>
+                <rect x="60" y="34" width="32" height="6" fill="#e5e7eb"/>
+                <rect x="98" y="34" width="36" height="6" fill="#e5e7eb"/>
+                <rect x="140" y="34" width="32" height="6" fill="#e5e7eb"/>
+                <!-- product grid 4 cols -->
+                <rect x="14" y="48" width="68" height="80" fill="url(#tplg4a)"/>
+                <rect x="14" y="132" width="44" height="4" fill="#0a0a0a"/>
+                <rect x="14" y="140" width="32" height="4" fill="#1e3a8a"/>
+                <rect x="86" y="48" width="68" height="80" fill="url(#tplg4b)"/>
+                <rect x="86" y="132" width="44" height="4" fill="#0a0a0a"/>
+                <rect x="86" y="140" width="32" height="4" fill="#1e3a8a"/>
+                <rect x="158" y="48" width="68" height="80" fill="url(#tplg4c)"/>
+                <rect x="158" y="132" width="44" height="4" fill="#0a0a0a"/>
+                <rect x="158" y="140" width="32" height="4" fill="#1e3a8a"/>
+                <rect x="230" y="48" width="76" height="80" fill="url(#tplg4d)"/>
+                <rect x="230" y="132" width="44" height="4" fill="#0a0a0a"/>
+                <rect x="230" y="140" width="32" height="4" fill="#1e3a8a"/>
+                <!-- promo strip -->
+                <rect x="14" y="160" width="292" height="64" fill="#eff5ff" stroke="#b6cdff"/>
+                <rect x="28" y="174" width="120" height="8" fill="#0a0a0a"/>
+                <rect x="28" y="188" width="180" height="3" fill="#6b7280"/>
+                <rect x="28" y="195" width="140" height="3" fill="#6b7280"/>
+                <rect x="28" y="206" width="60" height="12" fill="#1e3a8a"/>
+              </svg>
+            </div>
+            <div class="template-meta"><div><div class="cat">E-commerce</div><h3>Market</h3></div><span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= PRICING ========= -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="kicker">Pricing</span>
+          <h2 class="reveal-words mt-3">Simple pricing that scales with you</h2>
+          <p>Start free. Upgrade when you need a custom domain, more projects, or your team.</p>
+          <div class="pricing-toggle" data-toggle="pricing" role="tablist" aria-label="Billing period">
+            <button class="is-on" data-mode="monthly" type="button">Monthly</button>
+            <button data-mode="yearly" type="button">Yearly <span class="save">−20%</span></button>
+          </div>
+        </div>
+
+        <div class="grid grid-3" data-reveal-stagger>
+          <article class="card price-card card-hover">
+            <h3>Free</h3>
+            <p class="text-dim">Everything you need to ship a beautiful starter site.</p>
+            <div class="price"><strong data-monthly="$0" data-yearly="$0">$0</strong><span data-monthly="forever" data-yearly="forever">forever</span></div>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>1 project</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Altask subdomain</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Drag & drop builder</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Community support</li>
+            </ul>
+            <a class="btn btn-secondary full-w" href="editor.html">Start Free</a>
+          </article>
+          <article class="card price-card is-highlight">
+            <span class="badge">Most popular</span>
+            <h3>Pro</h3>
+            <p class="text-dim">For solo founders and freelancers shipping real products.</p>
+            <div class="price"><strong data-monthly="$19" data-yearly="$15">$19</strong><span data-monthly="per month" data-yearly="per month, billed yearly">per month</span></div>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Unlimited projects</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Custom domain + SSL</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Advanced components</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Custom code blocks</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Priority support</li>
+            </ul>
+            <a class="btn btn-primary full-w" href="contact.html">Go Pro</a>
+          </article>
+          <article class="card price-card card-hover">
+            <h3>Team</h3>
+            <p class="text-dim">Collaboration, roles, and review for growing teams.</p>
+            <div class="price"><strong data-monthly="$49" data-yearly="$39">$49</strong><span data-monthly="per editor / mo" data-yearly="per editor / mo, billed yearly">per editor / mo</span></div>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Everything in Pro</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Real-time collaboration</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Shared component library</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Roles & permissions</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>Audit log</li>
+            </ul>
+            <a class="btn btn-secondary full-w" href="contact.html">Start Trial</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ========= FAQ ========= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="kicker">FAQ</span>
+          <h2 class="reveal-words mt-3">Common questions</h2>
+        </div>
+        <div class="faq" data-reveal-stagger style="max-width:780px;margin:0 auto;">
+          <details open>
+            <summary>Is coding required? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+            <div class="faq__body">No. Altask is designed for visual building. You can ship an entire site without writing a single line of code, while keeping the door open for custom code when you want it.</div>
+          </details>
+          <details>
+            <summary>Can I export my website? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+            <div class="faq__body">Yes. The free editor on this site even exports your work as a clean, dependency-free <code>.html</code> file you can host anywhere.</div>
+          </details>
+          <details>
+            <summary>Is hosting included? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+            <div class="faq__body">Every plan includes managed hosting on a global edge network with automatic HTTPS. Pro and Team plans add custom domains.</div>
+          </details>
+          <details>
+            <summary>Is it free? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+            <div class="faq__body">Altask has a generous free tier with the full visual builder. Upgrade only when you need a custom domain or advanced features.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= CTA ========= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner" data-reveal>
+          <span class="eyebrow"><span class="dot"></span> Ready when you are</span>
+          <h2 class="mt-6">Ship your next site this week</h2>
+          <p>Free forever for solo projects. No credit card. No catch.</p>
+          <div class="ctas">
+            <a class="btn btn-primary btn-lg" data-magnetic="0.18" href="editor.html">
+              Open the Editor
+              <span class="arr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a class="btn btn-secondary btn-lg" href="pricing.html">See pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========= FOOTER ========= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a class="site-nav__brand" href="index.html"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Altask</a>
+          <p class="mt-4" style="max-width:280px;font-size:14px;">The visual website builder for teams who care about craft. Drag, drop, and ship.</p>
+        </div>
+        <div><h4>Product</h4><ul><li><a href="product.html">Overview</a></li><li><a href="features-builder.html">Features</a></li><li><a href="templates.html">Templates</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="editor.html">Editor</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Customers</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="docs.html">Docs</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
+        <div><h4>Social</h4><ul><li><a href="#">Twitter</a></li><li><a href="#">GitHub</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Dribbble</a></li></ul></div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span data-year>2026</span> Altask, Inc. All rights reserved.</span>
+        <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Security</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>

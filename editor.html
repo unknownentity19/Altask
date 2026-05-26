@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @prod-pass v1 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editor · Altask</title>
+  <meta name="description" content="The Altask visual editor — drag components, edit them inline, and export your page as a real HTML file." />
+  <meta name="theme-color" content="#06080d" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233a64ff' d='M4 18l6-12 4 8 2-4 4 8H4z'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+  <link rel="stylesheet" href="assets/css/editor.css" />
+<link rel="canonical" href="https://altask.app/editor.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://altask.app/editor.html" />
+<meta property="og:title" content="Editor · Altask" />
+<meta property="og:description" content="The Altask visual website builder. Drag, drop, and ship in your browser." />
+<meta property="og:image" content="https://altask.app/assets/og-image.svg" />
+<meta property="og:site_name" content="Altask" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Editor · Altask" />
+<meta name="twitter:description" content="The Altask visual website builder. Drag, drop, and ship in your browser." />
+<meta name="twitter:image" content="https://altask.app/assets/og-image.svg" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Altask",
+  "url": "https://altask.app",
+  "logo": "https://altask.app/assets/og-image.svg",
+  "description": "Visual website builder with drag-and-drop editor.",
+  "sameAs": ["https://twitter.com/altask", "https://github.com/altask", "https://linkedin.com/company/altask"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Altask",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "847" }
+}
+</script>
+</head>
+<body class="editor-page">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="ed-app">
+    <!-- =============== Topbar =============== -->
+    <header class="ed-top">
+      <div class="ed-top__group">
+        <a href="index.html" class="site-nav__brand" title="Back to site">
+          <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="hide-sm">Altask</span>
+        </a>
+        <span class="ed-divider"></span>
+        <input id="nameInput" class="ed-top__name" type="text" placeholder="Untitled site" />
+      </div>
+
+      <div class="ed-top__group">
+        <button id="undoBtn" class="ed-iconbtn" title="Undo (⌘Z)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg>
+        </button>
+        <button id="redoBtn" class="ed-iconbtn" title="Redo (⌘⇧Z)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></svg>
+        </button>
+        <span class="ed-divider"></span>
+        <button class="ed-iconbtn is-on" data-device="desktop" title="Desktop preview">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        </button>
+        <button class="ed-iconbtn" data-device="tablet" title="Tablet preview">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M11 18h2"/></svg>
+        </button>
+        <button class="ed-iconbtn" data-device="mobile" title="Mobile preview">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        </button>
+      </div>
+
+      <div class="ed-top__group">
+        <button id="clearBtn" class="ed-iconbtn" title="Clear canvas">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M6 6l1 14a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-14"/></svg>
+        </button>
+        <button id="previewBtn" class="btn btn-secondary btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          Preview
+        </button>
+        <button id="exportBtn" class="btn btn-primary btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 9l6-6 6 6"/><rect x="3" y="15" width="18" height="6" rx="1.5"/></svg>
+          Export HTML
+        </button>
+      </div>
+    </header>
+
+    <!-- =============== Body =============== -->
+    <div class="ed-body">
+      <!-- Components -->
+      <aside class="ed-side" aria-label="Components">
+        <div class="ed-side__head">
+          <h3>Components</h3>
+          <p>Drag onto the canvas — or click to add at the end.</p>
+        </div>
+        <div id="paletteList" class="ed-comp-list"></div>
+      </aside>
+
+      <!-- Canvas -->
+      <div id="canvasWrap" class="ed-canvas-wrap">
+        <div id="canvas" class="ed-canvas" data-device="desktop"></div>
+      </div>
+
+      <!-- Inspector -->
+      <aside class="ed-side ed-side--right" aria-label="Properties">
+        <div class="ed-side__head">
+          <h3>Properties</h3>
+          <p>Edit the selected block. Changes preview live.</p>
+        </div>
+        <div id="inspector" class="ed-insp"></div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Preview overlay -->
+  <div id="preview" class="ed-preview" role="dialog" aria-label="Preview">
+    <div class="ed-preview__top">
+      <strong>Live Preview</strong>
+      <button id="closePreviewBtn" class="btn btn-secondary btn-sm">Close</button>
+    </div>
+    <iframe id="previewFrame" title="Preview"></iframe>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="ed-toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/editor.js"></script>
+</body>
+</html>

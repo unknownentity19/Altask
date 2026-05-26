@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: HTML parse check
+        run: |
+          python3 - <<'PY'
+          import glob, sys
+          from html.parser import HTMLParser
+          class P(HTMLParser): pass
+          ok = True
+          for f in sorted(glob.glob('*.html')):
+              try:
+                  P().feed(open(f, encoding='utf-8').read())
+                  print(f, 'ok')
+              except Exception as e:
+                  ok = False
+                  print(f, 'FAIL', e)
+          sys.exit(0 if ok else 1)
+          PY
+      - name: JS syntax check
+        run: |
+          for f in assets/js/*.js; do
+            node -e "new Function(require('fs').readFileSync('$f','utf8'))" && echo "$f ok"
+          done
+      - name: Check for broken internal links
+        run: |
+          python3 - <<'PY'
+          import re, glob, os, sys
+          missing = []
+          for f in glob.glob('*.html'):
+              for m in re.finditer(r'href="([^"#?]+\.html)"', open(f, encoding='utf-8').read()):
+                  href = m.group(1)
+                  if not os.path.exists(href):
+                      missing.append((f, href))
+          if missing:
+              for f, h in missing: print(f'{f} -> {h} MISSING')
+              sys.exit(1)
+          print('all internal links resolve')
+          PY
