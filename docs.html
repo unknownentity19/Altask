@@ -1,205 +1,298 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- @prod-pass v1 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Documentation · Altask</title>
-<meta name="description" content="Altask developer docs: SDK, REST API, components, webhooks. Build, embed, and integrate with our visual platform." />
-<meta name="theme-color" content="#1e3a8a" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b62c4'/%3E%3Cstop offset='1' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M4 18l6-12 4 8 2-4 4 8H4z'/%3E%3C/svg%3E" />
-<link rel="canonical" href="https://altask.app/docs.html" />
-<meta property="og:title" content="Documentation · Altask" />
-<meta property="og:description" content="Altask developer docs: SDK, REST API, components, webhooks. Build, embed, and integrate with our visual platform." />
-<meta property="og:image" content="https://altask.app/assets/og-image.svg" />
-<meta property="og:url" content="https://altask.app/docs.html" />
+<meta name="description" content="Altask developer documentation: Quickstart, SDK, REST API, components, webhooks, and embed snippets." />
+<meta name="theme-color" content="#5b3fd6" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237a5fe5'/%3E%3Cstop offset='1' stop-color='%234f30c2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M4 18l6-12 4 8 2-4 4 8H4z'/%3E%3C/svg%3E" />
+<link rel="canonical" href="https://altask.dev/docs.html" />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://altask.dev/docs.html" />
+<meta property="og:title" content="Documentation · Altask" />
+<meta property="og:description" content="Altask developer documentation: Quickstart, SDK, REST API, components, webhooks, and embed snippets." />
+<meta property="og:image" content="https://altask.dev/assets/og-image.svg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="manifest" href="/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/base.css" />
-<link rel="stylesheet" href="assets/css/pages.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/base.css?v=8" />
+<link rel="stylesheet" href="assets/css/pages.css?v=17" />
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
+
 <!-- ========= TOP UTILITY BAR ========= -->
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="9"/></svg> Community</a>
-      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="10 17 15 12 10 7"/></svg> YouTube</a>
-      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8h-3v8h3"/><path d="M15 8h3v8h-3"/></svg> Facebook</a>
-      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l8 10-8 8h2l7-7 6 7h4l-9-11 8-7h-2l-7 6-5-6z"/></svg> Twitter</a>
-      <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v8M8 7v.01M12 18v-5a3 3 0 0 1 6 0v5"/></svg> LinkedIn</a>
+<div class="topbar">
+  <div class="container topbar__inner">
+    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="9"/></svg> Community</a>
+    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="10 17 15 12 10 7"/></svg> YouTube</a>
+    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l8 10-8 8h2l7-7 6 7h4l-9-11 8-7h-2l-7 6-5-6z"/></svg> Twitter</a>
+    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v8M8 7v.01M12 18v-5a3 3 0 0 1 6 0v5"/></svg> LinkedIn</a>
+  </div>
+</div>
+
+<!-- ========= NAV ========= -->
+<header class="site-nav">
+  <div class="container site-nav__inner">
+    <a class="site-nav__brand" href="index.html" aria-label="Altask home">
+      <img src="assets/images/logo.svg" alt="Altask" class="logo-img" style="height: 48px; width: auto;">
+    </a>
+    <nav aria-label="Primary"><ul class="site-nav__links">
+      <li><a href="product.html">Product</a></li>
+      <li><a href="features-builder.html">Features</a></li>
+      <li><a href="templates.html">Templates</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a class="is-active" href="docs.html">Docs</a></li>
+    </ul></nav>
+    <div class="site-nav__cta">
+      <a class="btn btn-secondary btn-sm" href="contact.html">Sign in</a>
+      <a class="btn btn-primary btn-sm" href="editor.html">Get Started</a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </div>
-<!-- ========= NAV ========= -->
-  <header class="site-nav">
-    <div class="container site-nav__inner">
-      <a class="site-nav__brand" href="index.html" aria-label="Altask home">
-        <span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Altask
-      </a>
-      <nav aria-label="Primary"><ul class="site-nav__links">
-  <li class="has-submenu has-mega has-mega--2col">
-    <button type="button" class="submenu-trigger" aria-expanded="false">Product <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
-    <div class="mega" role="menu"><div class="mega__inner mega__inner--2col">
-      <div class="mega__col">
-        <h5>Get started</h5>
-        <a class="mega__link" href="product.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></span>
-          <span class="meta"><strong>Overview</strong><span>The whole platform</span></span>
-        </a>
-        <a class="mega__link" href="how.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></span>
-          <span class="meta"><strong>How it works</strong><span>Three steps, one canvas</span></span>
-        </a>
-        <a class="mega__link" href="editor.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></span>
-          <span class="meta"><strong>Open Editor</strong><span>Try in your browser</span></span>
-        </a>
-        <a class="mega__link" href="templates.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>
-          <span class="meta"><strong>Templates</strong><span>Production-ready starts</span></span>
-        </a>
-      </div>
-      <div class="mega__col">
-        <h5>More</h5>
-        <a class="mega__link" href="docs.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4V4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
-          <span class="meta"><strong>Documentation</strong><span>SDK, API, guides</span></span>
-        </a>
-        <a class="mega__link" href="community.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="11" r="2.5"/><path d="M3 20c0-3.3 3-6 6-6s6 2.7 6 6"/></svg></span>
-          <span class="meta"><strong>Community</strong><span>12,000+ builders</span></span>
-        </a>
-        <a class="mega__link" href="contact.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-          <span class="meta"><strong>Contact</strong><span>Talk to the team</span></span>
-        </a>
-      </div>
-    </div></div>
-  </li>
-  <li class="has-submenu has-mega">
-    <button type="button" class="submenu-trigger" aria-expanded="false">Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
-    <div class="mega" role="menu"><div class="mega__inner">
-      <div class="mega__col">
-        <h5>Features</h5>
-        <a class="mega__link" href="features-builder.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
-          <span class="meta"><strong>Drag &amp; Drop builder</strong><span>Smart snapping, alignment guides</span></span>
-        </a>
-        <a class="mega__link" href="features-responsive.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="11" rx="1"/><rect x="13" y="9" width="9" height="13" rx="1"/></svg></span>
-          <span class="meta"><strong>Responsive controls</strong><span>Per-breakpoint overrides</span></span>
-        </a>
-        <a class="mega__link" href="features-publish.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 9l6-6 6 6"/><rect x="3" y="15" width="18" height="6" rx="1"/></svg></span>
-          <span class="meta"><strong>One-click publish</strong><span>Global edge with HTTPS</span></span>
-        </a>
-      </div>
-    </div></div>
-  </li>
-  <li class="has-submenu has-mega">
-    <button type="button" class="submenu-trigger" aria-expanded="false">Templates <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
-    <div class="mega" role="menu"><div class="mega__inner">
-      <div class="mega__col">
-        <h5>Templates</h5>
-        <a class="mega__link" href="templates.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></span>
-          <span class="meta"><strong>Browse all</strong><span>Production-ready starts</span></span>
-        </a>
-        <a class="mega__link" href="templates-startup.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c5-5 9-9 14-14M14 5h5v5"/></svg></span>
-          <span class="meta"><strong>Startup &amp; SaaS</strong><span>Lift, Stack, Pulse</span></span>
-        </a>
-        <a class="mega__link" href="templates-portfolio.html">
-          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="2"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M21 17l-5-5-7 7"/></svg></span>
-          <span class="meta"><strong>Portfolio</strong><span>Showcase, Folio, Frame</span></span>
-        </a>
-      </div>
-    </div></div>
-  </li>
-  <li><a href="pricing.html">Pricing</a></li>
-  <li><a href="docs.html">Docs</a></li>
-  </ul></nav>
-      <div class="site-nav__cta">
-        <a class="btn btn-secondary btn-sm" href="contact.html">Sign in</a>
-        <a class="btn btn-primary btn-sm" href="editor.html">Get Started</a>
-        <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </button>
-      </div>
-    </div>
-    <div class="site-nav__mobile" data-nav-mobile>
-      <a href="product.html">Product</a>
-      <a href="features-builder.html">Features</a>
-      <a href="templates.html">Templates</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="docs.html">Docs</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn-primary" href="editor.html">Get Started</a>
-    </div>
-  </header></header>
+  <div class="site-nav__mobile" data-nav-mobile>
+    <a href="product.html">Product</a>
+    <a href="features-builder.html">Features</a>
+    <a href="templates.html">Templates</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="docs.html">Docs</a>
+      <a href="about.html">About</a>
+    <a class="btn btn-primary" href="editor.html">Get Started</a>
+  </div>
+</header>
+
 <main id="main">
 
-<section class="page-hero">
-  <div class="container">
-    <span class="kicker" data-reveal>Documentation</span>
-    <h1 class="reveal-words mt-3">Build with the<br/><span class="text-purple">Altask SDK and API</span></h1>
-    <p data-reveal style="transition-delay:.2s">Component reference, REST API, webhooks, embed snippets, and SDK guides for JavaScript, Python, and Go.</p>
-  </div>
-</section>
+  <!-- ========= DOCS LAYOUT ========= -->
+  <div class="docs-layout">
 
-<section class="section-tight">
-  <div class="container">
-    <div class="devdocs" data-reveal>
-      <aside class="devdocs-side">
-        <div class="devdocs-search">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-          Search docs
+    <!-- ===== Sidebar ===== -->
+    <aside class="docs-side" aria-label="Documentation navigation">
+      <div class="docs-side__inner">
+        <button type="button" class="docs-search" aria-haspopup="dialog">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+          <span>Search docs</span>
           <kbd>⌘K</kbd>
+        </button>
+
+        <nav>
+          <h5>Get started</h5>
+          <a href="#quickstart" class="is-active">Quickstart</a>
+          <a href="#install">SDK install</a>
+          <a href="#auth">Authentication</a>
+
+          <h5>Components</h5>
+          <a href="#hero"><code>&lt;Hero/&gt;</code></a>
+          <a href="#pricing"><code>&lt;Pricing/&gt;</code></a>
+          <a href="#form"><code>&lt;Form/&gt;</code></a>
+          <a href="#footer"><code>&lt;Footer/&gt;</code></a>
+
+          <h5>REST API</h5>
+          <a href="#api-sites">Sites</a>
+          <a href="#api-pages">Pages</a>
+          <a href="#api-deploys">Deploys</a>
+
+          <h5>Integrations</h5>
+          <a href="#webhooks">Webhooks</a>
+          <a href="#embed">Embed snippets</a>
+          <a href="#errors">Error reference</a>
+
+          <h5>Guides</h5>
+          <a href="#guide-cms">Wire up a CMS</a>
+          <a href="#guide-domains">Custom domains</a>
+          <a href="#guide-cli">CLI &amp; CI</a>
+        </nav>
+
+        <a class="docs-side__cta" href="contact.html">
+          <span>
+            <strong>Need help?</strong>
+            <small>Talk to the team</small>
+          </span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ===== Content ===== -->
+    <article class="docs-main">
+
+      <!-- Page hero -->
+      <header class="docs-hero">
+        <nav class="docs-crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Altask</a>
+          <span>/</span>
+          <a href="docs.html">Docs</a>
+          <span>/</span>
+          <span class="is-current">Quickstart</span>
+        </nav>
+        <h1>Build with Altask</h1>
+        <p>The component library, REST API, webhooks, and embed snippets for shipping marketing sites that look like product. Less plumbing, more shipping.</p>
+        <div class="docs-hero__chips">
+          <span class="docs-chip">v3.0 · current</span>
+          <span class="docs-chip docs-chip--ok">All systems normal</span>
+          <span class="docs-chip docs-chip--ghost">Last updated <time>Sep 14, 2026</time></span>
         </div>
-        <h5>Get started</h5>
-        <a href="#" class="is-active">Quickstart</a>
-        <a href="#">Authentication</a>
-        <a href="#">SDK install</a>
-        <h5>Components</h5>
-        <a href="#"><code>&lt;Hero/&gt;</code></a>
-        <a href="#"><code>&lt;Pricing/&gt;</code></a>
-        <a href="#"><code>&lt;Form/&gt;</code></a>
-        <a href="#"><code>&lt;Footer/&gt;</code></a>
-        <h5>API</h5>
-        <a href="#">Sites</a>
-        <a href="#">Pages</a>
-        <a href="#">Deploys</a>
-        <a href="#">Webhooks</a>
-      </aside>
+      </header>
 
-      <div class="devdocs-content">
-        <article class="devdocs-block">
-          <h2><code>&lt;Hero/&gt;</code> Component</h2>
-          <p>The Hero component renders a headline, subheading, and call-to-action area. Used as the first block of most marketing pages.</p>
+      <!-- Quickstart -->
+      <section class="docs-section" id="quickstart">
+        <h2>Quickstart</h2>
+        <p class="docs-lead">Three minutes from a clean install to a deployed page. Pick your runtime — the snippet stays the same.</p>
 
-          <table class="props">
-            <thead>
-              <tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><code>title</code></td><td>string</td><td>—</td><td>Headline text</td></tr>
-              <tr><td><code>subtitle</code></td><td>string</td><td>—</td><td>Supporting copy</td></tr>
-              <tr><td><code>cta</code></td><td>{ label, href }</td><td>—</td><td>Primary call-to-action</td></tr>
-              <tr><td><code>variant</code></td><td>"centered" | "split"</td><td>"centered"</td><td>Layout style</td></tr>
-              <tr><td><code>theme</code></td><td>"light" | "dark"</td><td>"light"</td><td>Color theme</td></tr>
-            </tbody>
-          </table>
+        <div class="docs-tabs" data-docs-tabs>
+          <div class="docs-tabs__bar" role="tablist">
+            <button class="docs-tabs__btn is-on" data-target="qs-js"   role="tab">JavaScript</button>
+            <button class="docs-tabs__btn"        data-target="qs-py"   role="tab">Python</button>
+            <button class="docs-tabs__btn"        data-target="qs-curl" role="tab">cURL</button>
+          </div>
 
-          <div class="devdocs-code"><span class="tc">// install</span>
-<span class="tk">npm</span> install <span class="ts">@altask/components</span>
+          <div class="devdocs-code" data-panel="qs-js" role="tabpanel">
+            <button class="devdocs-code__copy" type="button" aria-label="Copy code">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+<pre><span class="tc">// 1 · install</span>
+<span class="tk">npm</span> install <span class="ts">@altask/sdk</span>
 
-<span class="tc">// usage</span>
-<span class="tk">import</span> { <span class="tn">Hero</span> } <span class="tk">from</span> <span class="ts">"@altask/components"</span>;
+<span class="tc">// 2 · authenticate</span>
+<span class="tk">import</span> { <span class="tn">Altask</span> } <span class="tk">from</span> <span class="ts">"@altask/sdk"</span>;
+<span class="tk">const</span> client = <span class="tk">new</span> <span class="tn">Altask</span>({ token: <span class="tn">process</span>.env.<span class="tp">ALTASK_KEY</span> });
+
+<span class="tc">// 3 · ship</span>
+<span class="tk">await</span> client.sites.deploy({ id: <span class="ts">"site_8aL2k9X"</span> });</pre>
+          </div>
+
+          <div class="devdocs-code" data-panel="qs-py" role="tabpanel" hidden>
+            <button class="devdocs-code__copy" type="button" aria-label="Copy code">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+<pre><span class="tc"># 1 · install</span>
+<span class="tk">pip</span> install <span class="ts">altask</span>
+
+<span class="tc"># 2 · authenticate</span>
+<span class="tk">from</span> <span class="tn">altask</span> <span class="tk">import</span> <span class="tn">Altask</span>
+client = <span class="tn">Altask</span>(token=<span class="tn">os</span>.environ[<span class="ts">"ALTASK_KEY"</span>])
+
+<span class="tc"># 3 · ship</span>
+client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
+          </div>
+
+          <div class="devdocs-code" data-panel="qs-curl" role="tabpanel" hidden>
+            <button class="devdocs-code__copy" type="button" aria-label="Copy code">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            </button>
+<pre><span class="tc"># deploy a site</span>
+<span class="tk">curl</span> -X POST https://api.altask.dev/v1/sites/site_8aL2k9X/deploys \
+  -H <span class="ts">"Authorization: Bearer $ALTASK_KEY"</span></pre>
+          </div>
+        </div>
+
+        <div class="docs-callout">
+          <strong>Pro tip</strong>
+          <p>Pin the SDK to a major version (<code>^3.0</code>) so minor releases roll in without breaking your build. Breaking changes only ship behind a new major.</p>
+        </div>
+      </section>
+
+      <!-- SDK install -->
+      <section class="docs-section" id="install">
+        <h2>SDK install</h2>
+        <p>Install the Altask SDK with your package manager of choice. The same client supports server, edge, and worker runtimes.</p>
+
+        <div class="docs-tabs" data-docs-tabs style="margin-top:18px;">
+          <div class="docs-tabs__bar" role="tablist">
+            <button class="docs-tabs__btn is-on" data-target="ins-npm"  role="tab">npm</button>
+            <button class="docs-tabs__btn"        data-target="ins-pnpm" role="tab">pnpm</button>
+            <button class="docs-tabs__btn"        data-target="ins-yarn" role="tab">yarn</button>
+            <button class="docs-tabs__btn"        data-target="ins-bun"  role="tab">bun</button>
+          </div>
+          <div class="devdocs-code" data-panel="ins-npm"  role="tabpanel"><pre><span class="tk">npm</span> install <span class="ts">@altask/sdk @altask/components</span></pre></div>
+          <div class="devdocs-code" data-panel="ins-pnpm" role="tabpanel" hidden><pre><span class="tk">pnpm</span> add <span class="ts">@altask/sdk @altask/components</span></pre></div>
+          <div class="devdocs-code" data-panel="ins-yarn" role="tabpanel" hidden><pre><span class="tk">yarn</span> add <span class="ts">@altask/sdk @altask/components</span></pre></div>
+          <div class="devdocs-code" data-panel="ins-bun"  role="tabpanel" hidden><pre><span class="tk">bun</span> add <span class="ts">@altask/sdk @altask/components</span></pre></div>
+        </div>
+
+        <table class="props">
+          <thead><tr><th>Package</th><th>Description</th><th>Size (gz)</th></tr></thead>
+          <tbody>
+            <tr><td><code>@altask/sdk</code></td><td>REST client + Webhook helpers</td><td>4.8 KB</td></tr>
+            <tr><td><code>@altask/components</code></td><td>React components used by the editor</td><td>21 KB</td></tr>
+            <tr><td><code>@altask/cli</code></td><td>CLI for local dev, preview, deploy</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Authentication -->
+      <section class="docs-section" id="auth">
+        <h2>Authentication</h2>
+        <p>The Altask API uses Bearer tokens. Generate keys in <a href="#">Dashboard → Settings → API keys</a>. Tokens scope to a single workspace and rotate on demand.</p>
+
+        <div class="docs-grid-2">
+          <div class="docs-info">
+            <span class="docs-info__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            </span>
+            <div>
+              <h4>Server keys</h4>
+              <p>Use for backend calls only. Full read/write scope. Treat as a secret.</p>
+            </div>
+          </div>
+          <div class="docs-info">
+            <span class="docs-info__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            </span>
+            <div>
+              <h4>Public keys</h4>
+              <p>Embed in client code. Read-only, scoped per origin. Rotate freely.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="devdocs-code">
+<pre><span class="tc"># every request</span>
+<span class="tk">curl</span> https://api.altask.dev/v1/me \
+  -H <span class="ts">"Authorization: Bearer $ALTASK_KEY"</span>
+
+<span class="tc"># response</span>
+{
+  <span class="tp">"workspace"</span>: <span class="ts">"acme"</span>,
+  <span class="tp">"plan"</span>: <span class="ts">"pro"</span>,
+  <span class="tp">"scopes"</span>: [<span class="ts">"sites:read"</span>, <span class="ts">"sites:write"</span>]
+}</pre>
+        </div>
+      </section>
+
+      <!-- Hero component -->
+      <section class="docs-section" id="hero">
+        <div class="docs-section__head">
+          <h2><code>&lt;Hero/&gt;</code> component</h2>
+          <span class="docs-tag">Component</span>
+        </div>
+        <p>The Hero is the headline-and-CTA block at the top of most marketing pages. It accepts a title, subtitle, and call-to-action; switch <code>variant</code> for a centered or split layout.</p>
+
+        <table class="props">
+          <thead>
+            <tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>title</code></td><td>string</td><td>—</td><td>Headline text. Required.</td></tr>
+            <tr><td><code>subtitle</code></td><td>string</td><td>—</td><td>Supporting copy beneath the headline.</td></tr>
+            <tr><td><code>cta</code></td><td>{ label, href }</td><td>—</td><td>Primary call-to-action.</td></tr>
+            <tr><td><code>secondaryCta</code></td><td>{ label, href }</td><td>—</td><td>Optional secondary button.</td></tr>
+            <tr><td><code>variant</code></td><td>"centered" | "split"</td><td>"centered"</td><td>Layout style.</td></tr>
+            <tr><td><code>theme</code></td><td>"light" | "dark"</td><td>"light"</td><td>Color theme override.</td></tr>
+            <tr><td><code>media</code></td><td>{ src, alt }</td><td>—</td><td>Image rendered for the split variant.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="devdocs-code">
+          <button class="devdocs-code__copy" type="button" aria-label="Copy code">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          </button>
+<pre><span class="tk">import</span> { <span class="tn">Hero</span> } <span class="tk">from</span> <span class="ts">"@altask/components"</span>;
 
 <span class="tk">export default function</span> <span class="tn">Page</span>() {
   <span class="tk">return</span> (
@@ -210,49 +303,455 @@
       <span class="tp">variant</span>=<span class="ts">"centered"</span>
     <span class="tag">/&gt;</span>
   );
-}</div>
-        </article>
+}</pre>
+        </div>
+      </section>
 
-        <article class="devdocs-block">
-          <h2><code>POST /v1/sites</code></h2>
-          <p>Create a new site programmatically. Returns the site ID and a publish token.</p>
-          <div class="devdocs-code"><span class="tc"># curl</span>
-<span class="tk">curl</span> -X POST https://api.altask.app/v1/sites \
+      <!-- Pricing component -->
+      <section class="docs-section" id="pricing">
+        <div class="docs-section__head">
+          <h2><code>&lt;Pricing/&gt;</code> component</h2>
+          <span class="docs-tag">Component</span>
+        </div>
+        <p>Render a pricing table with monthly/yearly toggle, feature lists, and an optional highlighted plan. Plans are passed as an array; the order on the page matches the order in the array.</p>
+
+        <table class="props">
+          <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>plans</code></td><td>Plan[]</td><td>—</td><td>Plans to render. Required.</td></tr>
+            <tr><td><code>billing</code></td><td>"monthly" | "yearly"</td><td>"monthly"</td><td>Initial billing period.</td></tr>
+            <tr><td><code>currency</code></td><td>string</td><td>"USD"</td><td>ISO currency code.</td></tr>
+            <tr><td><code>highlight</code></td><td>string</td><td>—</td><td>Plan ID to render as featured.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="devdocs-code">
+<pre><span class="tag">&lt;Pricing</span>
+  <span class="tp">plans</span>={[
+    { id: <span class="ts">"free"</span>, name: <span class="ts">"Free"</span>,  price: <span class="tn">0</span>,  features: [<span class="ts">"1 site"</span>] },
+    { id: <span class="ts">"pro"</span>,  name: <span class="ts">"Pro"</span>,   price: <span class="tn">19</span>, features: [<span class="ts">"Unlimited sites"</span>] },
+    { id: <span class="ts">"team"</span>, name: <span class="ts">"Team"</span>,  price: <span class="tn">59</span>, features: [<span class="ts">"Roles &amp; SSO"</span>] }
+  ]}
+  <span class="tp">highlight</span>=<span class="ts">"pro"</span>
+<span class="tag">/&gt;</span></pre>
+        </div>
+      </section>
+
+      <!-- Form component -->
+      <section class="docs-section" id="form">
+        <div class="docs-section__head">
+          <h2><code>&lt;Form/&gt;</code> component</h2>
+          <span class="docs-tag">Component</span>
+        </div>
+        <p>A composable form with built-in validation, server-action support, and accessible labels. Use the <code>fields</code> prop for quick declarative forms or compose <code>&lt;Form.Field/&gt;</code> children for full control.</p>
+
+        <table class="props">
+          <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>fields</code></td><td>Field[]</td><td>—</td><td>Declarative field list. Optional.</td></tr>
+            <tr><td><code>action</code></td><td>(values) =&gt; Promise</td><td>—</td><td>Submit handler. Receives sanitised values.</td></tr>
+            <tr><td><code>submitLabel</code></td><td>string</td><td>"Submit"</td><td>Submit button label.</td></tr>
+            <tr><td><code>validateOn</code></td><td>"blur" | "change"</td><td>"blur"</td><td>When to run field validation.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="devdocs-code">
+<pre><span class="tag">&lt;Form</span>
+  <span class="tp">fields</span>={[
+    { name: <span class="ts">"email"</span>, type: <span class="ts">"email"</span>, label: <span class="ts">"Email"</span>, required: <span class="tk">true</span> },
+    { name: <span class="ts">"company"</span>, type: <span class="ts">"text"</span>, label: <span class="ts">"Company"</span> }
+  ]}
+  <span class="tp">action</span>={subscribe}
+  <span class="tp">submitLabel</span>=<span class="ts">"Subscribe"</span>
+<span class="tag">/&gt;</span></pre>
+        </div>
+      </section>
+
+      <!-- Footer component -->
+      <section class="docs-section" id="footer">
+        <div class="docs-section__head">
+          <h2><code>&lt;Footer/&gt;</code> component</h2>
+          <span class="docs-tag">Component</span>
+        </div>
+        <p>Render the site footer with brand, navigation columns, and a legal/social row. Columns are passed as plain objects so you can drive them from a CMS.</p>
+
+        <table class="props">
+          <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>brand</code></td><td>{ name, logo }</td><td>—</td><td>Wordmark and logo. Required.</td></tr>
+            <tr><td><code>columns</code></td><td>Column[]</td><td>[]</td><td>Link columns rendered as a grid.</td></tr>
+            <tr><td><code>social</code></td><td>SocialLink[]</td><td>[]</td><td>Social platform handles.</td></tr>
+            <tr><td><code>legal</code></td><td>string</td><td>—</td><td>Copyright / legal copy.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- REST: Sites -->
+      <section class="docs-section" id="api-sites">
+        <div class="docs-section__head">
+          <h2>Sites</h2>
+          <span class="docs-tag docs-tag--api">REST API</span>
+        </div>
+        <p>Create, list, update, and delete sites. Every site has at least one page and one deploy.</p>
+
+        <ul class="docs-endpoints">
+          <li>
+            <span class="docs-endpoints__verb docs-endpoints__verb--post">POST</span>
+            <code>/v1/sites</code>
+            <span class="docs-endpoints__desc">Create a site</span>
+          </li>
+          <li>
+            <span class="docs-endpoints__verb docs-endpoints__verb--get">GET</span>
+            <code>/v1/sites</code>
+            <span class="docs-endpoints__desc">List all sites</span>
+          </li>
+          <li>
+            <span class="docs-endpoints__verb docs-endpoints__verb--get">GET</span>
+            <code>/v1/sites/{id}</code>
+            <span class="docs-endpoints__desc">Retrieve a site</span>
+          </li>
+          <li>
+            <span class="docs-endpoints__verb docs-endpoints__verb--patch">PATCH</span>
+            <code>/v1/sites/{id}</code>
+            <span class="docs-endpoints__desc">Update a site</span>
+          </li>
+          <li>
+            <span class="docs-endpoints__verb docs-endpoints__verb--delete">DEL</span>
+            <code>/v1/sites/{id}</code>
+            <span class="docs-endpoints__desc">Archive a site</span>
+          </li>
+        </ul>
+
+        <h3 class="docs-h3">Create a site</h3>
+        <div class="devdocs-code">
+          <button class="devdocs-code__copy" type="button" aria-label="Copy code">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          </button>
+<pre><span class="tc"># request</span>
+<span class="tk">curl</span> -X POST https://api.altask.dev/v1/sites \
   -H <span class="ts">"Authorization: Bearer $ALTASK_KEY"</span> \
   -H <span class="ts">"Content-Type: application/json"</span> \
   -d <span class="ts">'{"name": "habits-app", "template": "lift"}'</span>
 
-<span class="tc"># response</span>
+<span class="tc"># response · 201</span>
 {
   <span class="tp">"id"</span>: <span class="ts">"site_8aL2k9X"</span>,
-  <span class="tp">"url"</span>: <span class="ts">"https://habits-app.altask.app"</span>,
-  <span class="tp">"publish_token"</span>: <span class="ts">"pt_••••••••"</span>
-}</div>
-        </article>
+  <span class="tp">"name"</span>: <span class="ts">"habits-app"</span>,
+  <span class="tp">"url"</span>: <span class="ts">"https://habits-app.altask.dev"</span>,
+  <span class="tp">"publish_token"</span>: <span class="ts">"pt_••••••••"</span>,
+  <span class="tp">"created_at"</span>: <span class="ts">"2026-09-14T18:42:00Z"</span>
+}</pre>
+        </div>
+      </section>
+
+      <!-- REST: Pages -->
+      <section class="docs-section" id="api-pages">
+        <div class="docs-section__head">
+          <h2>Pages</h2>
+          <span class="docs-tag docs-tag--api">REST API</span>
+        </div>
+        <p>Pages live inside a site. Each page has a slug, a JSON content tree, and an SEO block. Updates are atomic — partial PATCH bodies are merged server-side.</p>
+        <ul class="docs-endpoints">
+          <li><span class="docs-endpoints__verb docs-endpoints__verb--get">GET</span><code>/v1/sites/{id}/pages</code><span class="docs-endpoints__desc">List pages</span></li>
+          <li><span class="docs-endpoints__verb docs-endpoints__verb--post">POST</span><code>/v1/sites/{id}/pages</code><span class="docs-endpoints__desc">Create a page</span></li>
+          <li><span class="docs-endpoints__verb docs-endpoints__verb--get">GET</span><code>/v1/pages/{id}</code><span class="docs-endpoints__desc">Retrieve a page</span></li>
+          <li><span class="docs-endpoints__verb docs-endpoints__verb--patch">PATCH</span><code>/v1/pages/{id}</code><span class="docs-endpoints__desc">Update slug, blocks, or SEO</span></li>
+          <li><span class="docs-endpoints__verb docs-endpoints__verb--delete">DEL</span><code>/v1/pages/{id}</code><span class="docs-endpoints__desc">Archive a page</span></li>
+        </ul>
+        <h3 class="docs-h3">Update SEO meta</h3>
+        <div class="devdocs-code">
+<pre><span class="tk">curl</span> -X PATCH https://api.altask.dev/v1/pages/page_4Bz1 \
+  -H <span class="ts">"Authorization: Bearer $ALTASK_KEY"</span> \
+  -H <span class="ts">"Content-Type: application/json"</span> \
+  -d <span class="ts">'{"seo": {"title": "Pricing — Altask", "description": "Plans for every team."}}'</span></pre>
+        </div>
+      </section>
+
+      <!-- REST: Deploys -->
+      <section class="docs-section" id="api-deploys">
+        <div class="docs-section__head">
+          <h2>Deploys</h2>
+          <span class="docs-tag docs-tag--api">REST API</span>
+        </div>
+        <p>Each deploy is an immutable snapshot of a site. Deploys are queued, built, and promoted to the global edge. Use <code>state</code> to track progress; promote previews to production with a single PATCH.</p>
+        <ul class="docs-endpoints">
+          <li><span class="docs-endpoints__verb docs-endpoints__verb--post">POST</span><code>/v1/sites/{id}/deploys</code><span class="docs-endpoints__desc">Trigger a deploy</span></li>
+          <li><span class="docs-endpoints__verb docs-endpoints__verb--get">GET</span><code>/v1/sites/{id}/deploys</code><span class="docs-endpoints__desc">List recent deploys</span></li>
+          <li><span class="docs-endpoints__verb docs-endpoints__verb--get">GET</span><code>/v1/deploys/{id}</code><span class="docs-endpoints__desc">Inspect a deploy</span></li>
+          <li><span class="docs-endpoints__verb docs-endpoints__verb--patch">PATCH</span><code>/v1/deploys/{id}</code><span class="docs-endpoints__desc">Promote to production</span></li>
+        </ul>
+
+        <table class="props">
+          <thead><tr><th>State</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>queued</code></td><td>Accepted, waiting for a build runner.</td></tr>
+            <tr><td><code>building</code></td><td>Asset pipeline is running.</td></tr>
+            <tr><td><code>preview</code></td><td>Live at a preview URL, not promoted.</td></tr>
+            <tr><td><code>live</code></td><td>Promoted to the production domain.</td></tr>
+            <tr><td><code>failed</code></td><td>Failed validation, build, or health check.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Webhooks -->
+      <section class="docs-section" id="webhooks">
+        <h2>Webhooks</h2>
+        <p>Subscribe to lifecycle events to keep your CMS, CI, or analytics in sync. Payloads are signed with HMAC-SHA256 — verify with the <code>X-Altask-Signature</code> header.</p>
+        <table class="props">
+          <thead><tr><th>Event</th><th>When it fires</th></tr></thead>
+          <tbody>
+            <tr><td><code>site.created</code></td><td>A new site is created via dashboard or API.</td></tr>
+            <tr><td><code>page.published</code></td><td>A page is published or republished.</td></tr>
+            <tr><td><code>deploy.succeeded</code></td><td>A deploy lands on the global edge with a 2xx health check.</td></tr>
+            <tr><td><code>deploy.failed</code></td><td>A deploy fails build, validation, or health check.</td></tr>
+            <tr><td><code>domain.verified</code></td><td>A custom domain passes DNS &amp; SSL verification.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Embed -->
+      <section class="docs-section" id="embed">
+        <h2>Embed snippet</h2>
+        <p>Drop a single script tag into any HTML page to render an Altask block in place. Snippets render server-side at the edge and hydrate progressively.</p>
+        <div class="devdocs-code">
+          <button class="devdocs-code__copy" type="button" aria-label="Copy code">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          </button>
+<pre><span class="tag">&lt;div</span> <span class="tp">id</span>=<span class="ts">"altask-pricing"</span><span class="tag">&gt;&lt;/div&gt;</span>
+<span class="tag">&lt;script</span>
+  <span class="tp">src</span>=<span class="ts">"https://embed.altask.dev/v1/altask.js"</span>
+  <span class="tp">data-block</span>=<span class="ts">"pricing"</span>
+  <span class="tp">data-site</span>=<span class="ts">"site_8aL2k9X"</span>
+  <span class="tp">data-mount</span>=<span class="ts">"#altask-pricing"</span>
+  <span class="tk">defer</span>
+<span class="tag">&gt;&lt;/script&gt;</span></pre>
+        </div>
+      </section>
+
+      <!-- Error reference -->
+      <section class="docs-section" id="errors">
+        <h2>Error reference</h2>
+        <p>Errors return a JSON body with <code>code</code>, <code>message</code>, and an optional <code>request_id</code>. Always log <code>request_id</code> when contacting support — it pins the request to a single trace.</p>
+        <table class="props">
+          <thead><tr><th>Status</th><th>Code</th><th>When you'll see it</th></tr></thead>
+          <tbody>
+            <tr><td>400</td><td><code>invalid_request</code></td><td>Body fails schema validation. Inspect <code>errors[]</code>.</td></tr>
+            <tr><td>401</td><td><code>unauthenticated</code></td><td>Missing or expired token.</td></tr>
+            <tr><td>403</td><td><code>forbidden</code></td><td>Token lacks the required scope.</td></tr>
+            <tr><td>404</td><td><code>not_found</code></td><td>Resource doesn't exist or is archived.</td></tr>
+            <tr><td>409</td><td><code>conflict</code></td><td>Slug or domain is already taken in this workspace.</td></tr>
+            <tr><td>429</td><td><code>rate_limited</code></td><td>Too many requests. Honor <code>Retry-After</code>.</td></tr>
+            <tr><td>500</td><td><code>internal_error</code></td><td>Transient server error. Retry with backoff.</td></tr>
+          </tbody>
+        </table>
+        <div class="devdocs-code">
+<pre><span class="tc"># example error</span>
+{
+  <span class="tp">"code"</span>: <span class="ts">"invalid_request"</span>,
+  <span class="tp">"message"</span>: <span class="ts">"slug must match ^[a-z0-9-]+$"</span>,
+  <span class="tp">"request_id"</span>: <span class="ts">"req_3rWv0pY"</span>,
+  <span class="tp">"errors"</span>: [
+    { <span class="tp">"path"</span>: <span class="ts">"slug"</span>, <span class="tp">"rule"</span>: <span class="ts">"pattern"</span> }
+  ]
+}</pre>
+        </div>
+      </section>
+
+      <!-- Guide: CMS -->
+      <section class="docs-section" id="guide-cms">
+        <div class="docs-section__head">
+          <h2>Wire up a CMS</h2>
+          <span class="docs-tag">Guide</span>
+        </div>
+        <p>Pull content from any headless CMS and let editors update copy without touching layout. The block tree stays in Altask, the strings live in the CMS.</p>
+        <ol class="docs-steps">
+          <li><strong>Map fields.</strong> In the editor, mark text props as <em>bound</em> and pick a CMS path (e.g. <code>hero.title</code>).</li>
+          <li><strong>Add a fetch hook.</strong> Server-side, fetch your CMS, then pass the JSON to <code>client.pages.render({ id, data })</code>.</li>
+          <li><strong>Subscribe.</strong> Listen for the <code>page.published</code> webhook to revalidate caches in your CMS layer.</li>
+        </ol>
+        <div class="devdocs-code">
+<pre><span class="tk">const</span> data = <span class="tk">await</span> fetchCms(<span class="ts">"home"</span>);
+<span class="tk">const</span> html = <span class="tk">await</span> client.pages.render({
+  id: <span class="ts">"page_4Bz1"</span>,
+  data
+});</pre>
+        </div>
+      </section>
+
+      <!-- Guide: Custom domains -->
+      <section class="docs-section" id="guide-domains">
+        <div class="docs-section__head">
+          <h2>Custom domains</h2>
+          <span class="docs-tag">Guide</span>
+        </div>
+        <p>Apex domains, subdomains, and wildcards. Add a CNAME, hit verify, done. We handle DNSSEC, CAA, and edge propagation automatically.</p>
+
+        <table class="props">
+          <thead><tr><th>Type</th><th>Record</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td>Apex</td><td><code>A</code></td><td><code>76.76.21.21</code></td></tr>
+            <tr><td>Subdomain</td><td><code>CNAME</code></td><td><code>edge.altask.dev</code></td></tr>
+            <tr><td>Wildcard</td><td><code>CNAME</code> for <code>*</code></td><td><code>edge.altask.dev</code></td></tr>
+          </tbody>
+        </table>
+
+        <div class="devdocs-code">
+<pre><span class="tc"># verify a domain after DNS update</span>
+<span class="tk">curl</span> -X POST https://api.altask.dev/v1/sites/site_8aL2k9X/domains/verify \
+  -H <span class="ts">"Authorization: Bearer $ALTASK_KEY"</span> \
+  -d <span class="ts">'{"hostname": "habits-app.com"}'</span></pre>
+        </div>
+      </section>
+
+      <!-- Guide: CLI -->
+      <section class="docs-section" id="guide-cli">
+        <div class="docs-section__head">
+          <h2>CLI &amp; CI</h2>
+          <span class="docs-tag">Guide</span>
+        </div>
+        <p>The Altask CLI runs the same build pipeline as the cloud — preview locally, lint your blocks, and ship from CI without leaving your terminal.</p>
+
+        <div class="docs-tabs" data-docs-tabs>
+          <div class="docs-tabs__bar" role="tablist">
+            <button class="docs-tabs__btn is-on" data-target="cli-local" role="tab">Local preview</button>
+            <button class="docs-tabs__btn"        data-target="cli-ci"    role="tab">From CI</button>
+          </div>
+          <div class="devdocs-code" data-panel="cli-local" role="tabpanel">
+<pre><span class="tk">npx</span> @altask/cli login
+<span class="tk">npx</span> @altask/cli dev      <span class="tc"># preview at localhost:3010</span>
+<span class="tk">npx</span> @altask/cli build    <span class="tc"># static export to ./dist</span></pre>
+          </div>
+          <div class="devdocs-code" data-panel="cli-ci" role="tabpanel" hidden>
+<pre><span class="tc"># .github/workflows/deploy.yml</span>
+<span class="tp">- name</span>: Deploy
+  <span class="tp">run</span>: |
+    npm i -g @altask/cli
+    altask deploy --site $SITE_ID --token $<span class="tp">{{ secrets.ALTASK_KEY }}</span></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="docs-cta">
+        <div>
+          <h3>Need something specific?</h3>
+          <p>Our team replies in under a working day. Open a thread, share a repro, get unstuck.</p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Contact support</a>
+      </section>
+
+      <footer class="docs-footnav" aria-label="Page navigation">
+        <a class="docs-footnav__prev" href="#">
+          <small>← Previous</small>
+          <strong>Welcome to Altask</strong>
+        </a>
+        <a class="docs-footnav__next" href="#">
+          <small>Next →</small>
+          <strong>Authentication</strong>
+        </a>
+      </footer>
+    </article>
+
+    <!-- ===== On this page ===== -->
+    <aside class="docs-toc" aria-label="On this page">
+      <div class="docs-toc__inner">
+        <h6>On this page</h6>
+        <ul>
+          <li><a href="#quickstart" class="is-active">Quickstart</a></li>
+          <li><a href="#auth">Authentication</a></li>
+          <li><a href="#hero"><code>&lt;Hero/&gt;</code> component</a></li>
+          <li><a href="#api-sites">Sites · REST</a></li>
+          <li><a href="#webhooks">Webhooks</a></li>
+          <li><a href="#embed">Embed snippet</a></li>
+        </ul>
+        <hr/>
+        <a class="docs-toc__edit" href="#">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+          Edit on GitHub
+        </a>
       </div>
-    </div>
+    </aside>
+
   </div>
-</section>
 
 </main>
+
 <!-- ========= FOOTER ========= -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__grid">
-        <div>
-          <a class="site-nav__brand" href="index.html"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Altask</a>
-          <p class="mt-4" style="max-width:280px;font-size:14px;">The visual website builder for teams who care about craft. Drag, drop, and ship.</p>
-        </div>
-        <div><h4>Product</h4><ul><li><a href="product.html">Overview</a></li><li><a href="features-builder.html">Features</a></li><li><a href="templates.html">Templates</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="editor.html">Editor</a></li></ul></div>
-        <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Customers</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div><h4>Resources</h4><ul><li><a href="docs.html">Docs</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
-        <div><h4>Social</h4><ul><li><a href="#">Twitter</a></li><li><a href="#">GitHub</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Dribbble</a></li></ul></div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a class="site-nav__brand" href="index.html"><img src="assets/images/logo.svg" alt="Altask" class="logo-img" style="height: 48px; width: auto;"></a>
+        <p class="mt-4" style="max-width:280px;font-size:14px;">The visual website builder for teams who care about craft. Drag, drop, and ship.</p>
       </div>
-      <div class="site-footer__bottom">
-        <span>© <span data-year>2026</span> Altask, Inc. All rights reserved.</span>
-        <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Security</a></span>
-      </div>
+      <div><h4>Product</h4><ul><li><a href="product.html">Overview</a></li><li><a href="features-builder.html">Features</a></li><li><a href="templates.html">Templates</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="editor.html">Editor</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Customers</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="docs.html">Docs</a></li>
+  <li><a href="about.html">About</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
+      <div><h4>Social</h4><ul><li><a href="#">Twitter</a></li><li><a href="#">GitHub</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Dribbble</a></li></ul></div>
     </div>
-  </footer></footer>
-<script src="assets/js/site.js" defer></script>
-</body></html>
+    <div class="site-footer__bottom">
+      <span>© <span data-year>2026</span> Altask, Inc. All rights reserved.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Security</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js?v=2" defer></script>
+<script>
+  // Tabs + copy buttons + scrollspy for the docs page.
+  (function(){
+    document.querySelectorAll('[data-docs-tabs]').forEach(function(group){
+      var btns = group.querySelectorAll('.docs-tabs__btn');
+      btns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          btns.forEach(function(b){ b.classList.toggle('is-on', b === btn); });
+          var target = btn.getAttribute('data-target');
+          group.querySelectorAll('[data-panel]').forEach(function(p){
+            p.hidden = p.getAttribute('data-panel') !== target;
+          });
+        });
+      });
+    });
+
+    document.querySelectorAll('.devdocs-code__copy').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var pre = btn.closest('.devdocs-code').querySelector('pre');
+        if (!pre) return;
+        navigator.clipboard.writeText(pre.innerText).then(function(){
+          btn.classList.add('is-copied');
+          setTimeout(function(){ btn.classList.remove('is-copied'); }, 1400);
+        });
+      });
+    });
+
+    // Right-rail + left-sidebar scrollspy
+    var spyLinks = document.querySelectorAll('.docs-toc a, .docs-side nav a');
+    var byHash = {};
+    spyLinks.forEach(function(a){
+      var href = a.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+      (byHash[href] = byHash[href] || []).push(a);
+    });
+    var sections = Object.keys(byHash)
+      .map(function(h){ return document.querySelector(h); })
+      .filter(Boolean);
+
+    if (sections.length && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (!entry.isIntersecting) return;
+          var hash = '#' + entry.target.id;
+          spyLinks.forEach(function(a){
+            var href = a.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+            a.classList.toggle('is-active', href === hash);
+          });
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      sections.forEach(function(s){ io.observe(s); });
+    }
+  })();
+</script>
+</body>
+</html>

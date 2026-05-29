@@ -11,19 +11,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/pages.css" />
-<link rel="canonical" href="https://altask.app/" />
+  <link rel="stylesheet" href="assets/css/base.css?v=8" />
+  <link rel="stylesheet" href="assets/css/pages.css?v=17" />
+<link rel="canonical" href="https://altask.dev/" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://altask.app/" />
+<meta property="og:url" content="https://altask.dev/" />
 <meta property="og:title" content="Altask — Build websites visually. No code. Full control." />
 <meta property="og:description" content="Altask is the visual website builder for teams who care about craft. Drag, drop, and ship beautiful websites without writing code." />
-<meta property="og:image" content="https://altask.app/assets/og-image.svg" />
+<meta property="og:image" content="https://altask.dev/assets/og-image.svg" />
 <meta property="og:site_name" content="Altask" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Altask — Build websites visually. No code. Full control." />
 <meta name="twitter:description" content="Altask is the visual website builder for teams who care about craft. Drag, drop, and ship beautiful websites without writing code." />
-<meta name="twitter:image" content="https://altask.app/assets/og-image.svg" />
+<meta name="twitter:image" content="https://altask.dev/assets/og-image.svg" />
 <link rel="manifest" href="/site.webmanifest" />
 <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 <script type="application/ld+json">
@@ -31,8 +31,8 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Altask",
-  "url": "https://altask.app",
-  "logo": "https://altask.app/assets/og-image.svg",
+  "url": "https://altask.dev",
+  "logo": "https://altask.dev/assets/og-image.svg",
   "description": "Visual website builder with drag-and-drop editor.",
   "sameAs": ["https://twitter.com/altask", "https://github.com/altask", "https://linkedin.com/company/altask"]
 }
@@ -66,8 +66,7 @@
   <header class="site-nav">
     <div class="container site-nav__inner">
       <a class="site-nav__brand" href="index.html" aria-label="Altask home">
-        <span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Altask
+        <img src="assets/images/logo.svg" alt="Altask" class="logo-img" style="height: 48px; width: auto;">
       </a>
       <nav aria-label="Primary"><ul class="site-nav__links">
   <li class="has-submenu has-mega has-mega--2col">
@@ -151,6 +150,7 @@
   </li>
   <li><a href="pricing.html">Pricing</a></li>
   <li><a href="docs.html">Docs</a></li>
+  <li><a href="about.html">About</a></li>
   </ul></nav>
       <div class="site-nav__cta">
         <a class="btn btn-secondary btn-sm" href="signin.html">Sign in</a>
@@ -166,6 +166,7 @@
       <a href="templates.html">Templates</a>
       <a href="pricing.html">Pricing</a>
       <a href="docs.html">Docs</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a class="btn btn-primary" href="editor.html">Get Started</a>
     </div>
@@ -219,7 +220,13 @@
         </div>
 
         <div class="hero__illustration" data-reveal style="transition-delay:.15s;">
-          <img src="assets/images/hero.png" alt="Altask Visual Builder" style="width: 100%; height: auto; display: block;">
+          <div
+            class="hero__art"
+            role="img"
+            aria-label="Altask Visual Builder"
+            oncontextmenu="return false"
+            ondragstart="return false"
+          ></div>
         </div>
       </div>
     </section>
@@ -241,7 +248,7 @@
               <span class="url">
                 <span>
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                  altask.app/editor
+                  altask.dev/editor
                 </span>
               </span>
               <span class="publish">
@@ -319,7 +326,7 @@
     <!-- ========= LOGO STRIP ========= -->
     <section class="container">
       <div class="logos" data-reveal>
-        <div class="logos__label">Trusted by founders from</div>
+        <div class="logos__label">Trusted by teams at</div>
         <div class="logos-marquee">
           <div class="logos-marquee__track">
             <span class="logo">
@@ -509,7 +516,7 @@
           </div>
 
           <div class="preview-card" data-tab-panel="design">
-            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.app — Editor</span></div>
+            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.dev — Editor</span></div>
             <div class="preview-card__body">
               <div class="preview-card__top">
                 <div><div class="label">Page builder</div><h3>Hero Section</h3></div>
@@ -527,7 +534,7 @@
           </div>
 
           <div class="preview-card" data-tab-panel="collab" hidden>
-            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.app — Live review</span></div>
+            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.dev — Live review</span></div>
             <div class="preview-card__body">
               <div class="preview-card__top">
                 <div><div class="label">Multiplayer</div><h3>Live Review</h3></div>
@@ -542,7 +549,7 @@
           </div>
 
           <div class="preview-card" data-tab-panel="publish" hidden>
-            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.app — Deploy</span></div>
+            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.dev — Deploy</span></div>
             <div class="preview-card__body">
               <div class="preview-card__top">
                 <div><div class="label">Publish</div><h3>Site is live</h3></div>
@@ -557,7 +564,7 @@
           </div>
 
           <div class="preview-card" data-tab-panel="extend" hidden>
-            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.app — Code blocks</span></div>
+            <div class="preview-card__chrome"><i></i><i></i><i></i><span>altask.dev — Code blocks</span></div>
             <div class="preview-card__body">
               <div class="preview-card__top">
                 <div><div class="label">Custom code</div><h3>Inject anywhere</h3></div>
@@ -613,172 +620,378 @@
         </div>
 
         <div class="grid grid-4" data-reveal-stagger>
-          <a class="card template-card card-hover" href="templates.html">
+
+          <!-- ============ 1. Lift / Startup ============ -->
+          <a class="card template-card card-hover" href="demo-lift.html">
             <div class="template-thumb">
-              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Lift — startup landing demo">
                 <defs>
-                  <linearGradient id="tplg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eff5ff"/><stop offset="1" stop-color="#ede9fe"/></linearGradient>
+                  <linearGradient id="liftBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6f8ff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+                  <linearGradient id="liftHero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b3fd6"/><stop offset="1" stop-color="#3a64ff"/></linearGradient>
+                  <linearGradient id="liftPhoto" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9683f0"/><stop offset=".5" stop-color="#5b3fd6"/><stop offset="1" stop-color="#181024"/></linearGradient>
                 </defs>
-                <rect width="320" height="240" fill="url(#tplg1)"/>
-                <!-- nav bar -->
-                <rect x="0" y="0" width="320" height="22" fill="#fff"/>
-                <rect x="14" y="9" width="22" height="4" fill="#1e3a8a"/>
-                <rect x="50" y="10" width="14" height="3" fill="#9ca3af"/>
-                <rect x="70" y="10" width="14" height="3" fill="#9ca3af"/>
-                <rect x="90" y="10" width="14" height="3" fill="#9ca3af"/>
-                <rect x="284" y="7" width="22" height="9" fill="#1e3a8a"/>
-                <line x1="0" y1="22" x2="320" y2="22" stroke="#b6cdff" stroke-width="0.5"/>
-                <!-- hero content -->
-                <rect x="60" y="50" width="200" height="10" rx="2" fill="#0a0a0a"/>
-                <rect x="80" y="64" width="160" height="10" rx="2" fill="#1e3a8a"/>
-                <rect x="50" y="84" width="220" height="4" rx="1" fill="#9ca3af"/>
-                <rect x="65" y="92" width="190" height="4" rx="1" fill="#9ca3af"/>
-                <rect x="105" y="108" width="50" height="14" fill="#1e3a8a"/>
-                <rect x="160" y="108" width="50" height="14" fill="#fff" stroke="#d4d4d8" stroke-width="0.5"/>
-                <!-- 3 feature cards -->
-                <rect x="20" y="148" width="88" height="76" rx="3" fill="#fff" stroke="#b6cdff" stroke-width="0.5"/>
-                <rect x="32" y="160" width="14" height="14" rx="2" fill="#ede9fe"/>
-                <rect x="32" y="180" width="50" height="4" fill="#0a0a0a"/>
-                <rect x="32" y="190" width="60" height="3" fill="#9ca3af"/>
-                <rect x="32" y="196" width="40" height="3" fill="#9ca3af"/>
-                <rect x="116" y="148" width="88" height="76" rx="3" fill="#fff" stroke="#b6cdff" stroke-width="0.5"/>
-                <rect x="128" y="160" width="14" height="14" rx="2" fill="#ede9fe"/>
-                <rect x="128" y="180" width="55" height="4" fill="#0a0a0a"/>
-                <rect x="128" y="190" width="60" height="3" fill="#9ca3af"/>
-                <rect x="128" y="196" width="42" height="3" fill="#9ca3af"/>
-                <rect x="212" y="148" width="88" height="76" rx="3" fill="#fff" stroke="#b6cdff" stroke-width="0.5"/>
-                <rect x="224" y="160" width="14" height="14" rx="2" fill="#ede9fe"/>
-                <rect x="224" y="180" width="46" height="4" fill="#0a0a0a"/>
-                <rect x="224" y="190" width="60" height="3" fill="#9ca3af"/>
-                <rect x="224" y="196" width="38" height="3" fill="#9ca3af"/>
+                <rect width="320" height="240" fill="url(#liftBg)"/>
+                <rect x="0" y="0" width="320" height="14" fill="#f0f1f6"/>
+                <circle cx="9"  cy="7" r="2.6" fill="#fb7185"/>
+                <circle cx="18" cy="7" r="2.6" fill="#fbbf24"/>
+                <circle cx="27" cy="7" r="2.6" fill="#34d399"/>
+                <rect x="120" y="3" width="80" height="8" rx="3" fill="#ffffff" stroke="#dee0ea"/>
+                <text x="160" y="9.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="5" fill="#6b7280">lift.altask.dev</text>
+                <rect x="14" y="22" width="292" height="20" rx="4" fill="#ffffff" stroke="#e6e8ee"/>
+                <circle cx="26" cy="32" r="4" fill="url(#liftHero)"/>
+                <text x="36" y="34" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">Lift</text>
+                <text x="160" y="34" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Product</text>
+                <text x="190" y="34" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Pricing</text>
+                <text x="220" y="34" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Docs</text>
+                <rect x="262" y="26" width="38" height="12" rx="3" fill="#181024"/>
+                <text x="281" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="6" font-weight="700" fill="#ffffff">Sign up</text>
+                <rect x="14" y="50" width="158" height="100" rx="6" fill="#ffffff" stroke="#e6e8ee"/>
+                <rect x="22" y="58" width="44" height="9" rx="3" fill="#f4f1ff" stroke="#e1d8ff"/>
+                <text x="44" y="64.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="5" font-weight="700" fill="#5b3fd6">v3 LAUNCH</text>
+                <text x="22" y="83" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#181024">Ship faster.</text>
+                <text x="22" y="96" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#5b3fd6">Together.</text>
+                <rect x="22" y="106" width="124" height="3"  rx="1" fill="#cdd5ee"/>
+                <rect x="22" y="113" width="100" height="3"  rx="1" fill="#cdd5ee"/>
+                <rect x="22" y="120" width="64"  height="3"  rx="1" fill="#cdd5ee"/>
+                <rect x="22" y="130" width="46" height="14" rx="4" fill="url(#liftHero)"/>
+                <text x="45" y="139" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="6" font-weight="700" fill="#ffffff">Get started</text>
+                <rect x="72" y="130" width="46" height="14" rx="4" fill="#ffffff" stroke="#cdd5ee"/>
+                <text x="95" y="139" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="6" font-weight="600" fill="#181024">Demo</text>
+                <rect x="178" y="50" width="128" height="100" rx="6" fill="url(#liftPhoto)"/>
+                <rect x="190" y="64" width="104" height="60" rx="6" fill="#ffffff" opacity=".22"/>
+                <rect x="198" y="72" width="32" height="3" rx="1.5" fill="#ffffff" opacity=".85"/>
+                <rect x="198" y="80" width="60" height="3" rx="1.5" fill="#ffffff" opacity=".55"/>
+                <rect x="198" y="88" width="44" height="3" rx="1.5" fill="#ffffff" opacity=".55"/>
+                <rect x="198" y="100" width="40" height="14" rx="4" fill="#ffffff" opacity=".9"/>
+                <text x="218" y="109" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="6" font-weight="700" fill="#5b3fd6">Try it</text>
+                <rect x="248" y="128" width="52" height="14" rx="7" fill="#ffffff"/>
+                <circle cx="256" cy="135" r="3" fill="#34d399"/>
+                <text x="263" y="138" font-family="Inter, system-ui, sans-serif" font-size="5.5" font-weight="600" fill="#181024">Live now</text>
+                <rect x="14" y="158" width="92" height="68" rx="6" fill="#ffffff" stroke="#e6e8ee"/>
+                <circle cx="26" cy="170" r="6" fill="#f4f1ff"/>
+                <path d="M22 170l3 3 5-5" stroke="#5b3fd6" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+                <text x="22" y="190" font-family="Inter, system-ui, sans-serif" font-size="6.5" font-weight="700" fill="#181024">Drag &amp; drop</text>
+                <rect x="22" y="195" width="60" height="3" rx="1" fill="#cdd5ee"/>
+                <rect x="22" y="202" width="48" height="3" rx="1" fill="#cdd5ee"/>
+                <rect x="114" y="158" width="92" height="68" rx="6" fill="#ffffff" stroke="#e6e8ee"/>
+                <circle cx="126" cy="170" r="6" fill="#f4f1ff"/>
+                <path d="M122 170l3 3 5-5" stroke="#5b3fd6" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+                <text x="122" y="190" font-family="Inter, system-ui, sans-serif" font-size="6.5" font-weight="700" fill="#181024">Live preview</text>
+                <rect x="122" y="195" width="60" height="3" rx="1" fill="#cdd5ee"/>
+                <rect x="122" y="202" width="48" height="3" rx="1" fill="#cdd5ee"/>
+                <rect x="214" y="158" width="92" height="68" rx="6" fill="#ffffff" stroke="#e6e8ee"/>
+                <circle cx="226" cy="170" r="6" fill="#f4f1ff"/>
+                <path d="M222 170l3 3 5-5" stroke="#5b3fd6" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+                <text x="222" y="190" font-family="Inter, system-ui, sans-serif" font-size="6.5" font-weight="700" fill="#181024">Edge deploy</text>
+                <rect x="222" y="195" width="60" height="3" rx="1" fill="#cdd5ee"/>
+                <rect x="222" y="202" width="48" height="3" rx="1" fill="#cdd5ee"/>
               </svg>
+              <span class="template-tag">Live demo</span>
             </div>
             <div class="template-meta"><div><div class="cat">Startup</div><h3>Lift</h3></div><span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
           </a>
 
-          <a class="card template-card card-hover" href="templates.html">
+          <!-- ============ 2. Showcase / Portfolio ============ -->
+          <a class="card template-card card-hover" href="demo-showcase.html">
             <div class="template-thumb">
-              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Showcase — designer portfolio demo">
                 <defs>
-                  <linearGradient id="tplg2a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
-                  <linearGradient id="tplg2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fda4af"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
-                  <linearGradient id="tplg2c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+                  <linearGradient id="showBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf6"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+                  <linearGradient id="showHero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbcfe8"/><stop offset=".5" stop-color="#f472b6"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+                  <linearGradient id="showA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+                  <linearGradient id="showB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
                 </defs>
-                <rect width="320" height="240" fill="#fafaf7"/>
-                <!-- minimal top bar -->
-                <rect x="14" y="14" width="40" height="6" fill="#0a0a0a"/>
-                <rect x="240" y="14" width="20" height="3" fill="#9ca3af"/>
-                <rect x="266" y="14" width="20" height="3" fill="#9ca3af"/>
-                <rect x="292" y="14" width="14" height="3" fill="#9ca3af"/>
-                <!-- big headline -->
-                <rect x="14" y="44" width="200" height="14" fill="#0a0a0a"/>
-                <rect x="14" y="62" width="160" height="14" fill="#0a0a0a"/>
-                <rect x="14" y="86" width="180" height="3" fill="#6b7280"/>
-                <rect x="14" y="93" width="140" height="3" fill="#6b7280"/>
-                <!-- portfolio masonry grid -->
-                <rect x="14" y="112" width="92" height="112" fill="url(#tplg2a)"/>
-                <circle cx="60" cy="156" r="18" fill="#fff" opacity="0.7"/>
-                <rect x="114" y="112" width="92" height="62" fill="url(#tplg2b)"/>
-                <rect x="214" y="112" width="92" height="62" fill="url(#tplg2c)"/>
-                <rect x="114" y="180" width="192" height="44" fill="#1f2937"/>
-                <rect x="126" y="194" width="80" height="6" fill="#fff"/>
-                <rect x="126" y="206" width="50" height="4" fill="#9ca3af"/>
+                <rect width="320" height="240" fill="url(#showBg)"/>
+                <rect x="0" y="0" width="320" height="14" fill="#f4efe7"/>
+                <circle cx="9"  cy="7" r="2.6" fill="#fb7185"/>
+                <circle cx="18" cy="7" r="2.6" fill="#fbbf24"/>
+                <circle cx="27" cy="7" r="2.6" fill="#34d399"/>
+                <rect x="120" y="3" width="92" height="8" rx="3" fill="#ffffff" stroke="#e8dfcc"/>
+                <text x="166" y="9.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="5" fill="#6b7280">studio.altask.dev</text>
+                <text x="20" y="32" font-family="'Playfair Display', Georgia, serif" font-size="13" font-weight="700" font-style="italic" fill="#181024">Studio</text>
+                <text x="220" y="32" font-family="Inter, system-ui, sans-serif" font-size="7" fill="#181024" font-weight="600">Work</text>
+                <text x="248" y="32" font-family="Inter, system-ui, sans-serif" font-size="7" fill="#6b7280">About</text>
+                <text x="280" y="32" font-family="Inter, system-ui, sans-serif" font-size="7" fill="#6b7280">Contact</text>
+                <text x="20" y="68" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#181024">Selected</text>
+                <text x="20" y="92" font-family="'Playfair Display', Georgia, serif" font-size="22" font-style="italic" fill="#181024">work, 2024.</text>
+                <rect x="200" y="56" width="100" height="3" rx="1" fill="#cdd5ee"/>
+                <rect x="200" y="64" width="84" height="3" rx="1" fill="#cdd5ee"/>
+                <rect x="200" y="72" width="68" height="3" rx="1" fill="#cdd5ee"/>
+                <rect x="200" y="84" width="56" height="12" rx="3" fill="#181024"/>
+                <text x="228" y="92" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="6" font-weight="700" fill="#ffffff">View all</text>
+                <rect x="20" y="108" width="170" height="116" rx="6" fill="url(#showHero)"/>
+                <ellipse cx="60"  cy="170" rx="34" ry="28" fill="#ffffff" opacity=".22"/>
+                <ellipse cx="118" cy="148" rx="22" ry="16" fill="#ffffff" opacity=".15"/>
+                <ellipse cx="148" cy="200" rx="28" ry="18" fill="#ffffff" opacity=".15"/>
+                <circle cx="72" cy="156" r="4" fill="#ffffff" opacity=".7"/>
+                <rect x="28" y="200" width="100" height="14" rx="7" fill="#ffffff" opacity=".88"/>
+                <text x="34" y="209" font-family="Inter, system-ui, sans-serif" font-size="6" font-weight="700" fill="#181024">Aurora · Branding</text>
+                <rect x="198" y="108" width="102" height="56" rx="6" fill="url(#showA)"/>
+                <rect x="208" y="120" width="32" height="3" rx="1.5" fill="#ffffff" opacity=".9"/>
+                <rect x="208" y="128" width="50" height="3" rx="1.5" fill="#ffffff" opacity=".55"/>
+                <rect x="208" y="148" width="50" height="10" rx="5" fill="#ffffff"/>
+                <text x="233" y="155" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="5.5" font-weight="700" fill="#181024">Case study</text>
+                <rect x="198" y="170" width="102" height="54" rx="6" fill="url(#showB)"/>
+                <rect x="208" y="182" width="32" height="3" rx="1.5" fill="#ffffff" opacity=".9"/>
+                <rect x="208" y="190" width="50" height="3" rx="1.5" fill="#ffffff" opacity=".55"/>
+                <rect x="208" y="208" width="50" height="10" rx="5" fill="#ffffff"/>
+                <text x="233" y="215" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="5.5" font-weight="700" fill="#181024">Case study</text>
               </svg>
+              <span class="template-tag">Live demo</span>
             </div>
             <div class="template-meta"><div><div class="cat">Portfolio</div><h3>Showcase</h3></div><span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
           </a>
 
-          <a class="card template-card card-hover" href="templates.html">
+          <!-- ============ 3. Stack / SaaS dashboard ============ -->
+          <a class="card template-card card-hover" href="demo-stack.html">
             <div class="template-thumb">
-              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Stack — SaaS analytics demo">
                 <defs>
-                  <linearGradient id="tplg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ecfeff"/><stop offset="1" stop-color="#cffafe"/></linearGradient>
-                  <linearGradient id="tplg3line" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0891b2"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient>
+                  <linearGradient id="stackBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ecfeff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+                  <linearGradient id="stackLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#5b3fd6"/></linearGradient>
+                  <linearGradient id="stackArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#06b6d4" stop-opacity=".30"/><stop offset="1" stop-color="#06b6d4" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="stackBars" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#5b3fd6"/><stop offset="1" stop-color="#9683f0"/></linearGradient>
                 </defs>
-                <rect width="320" height="240" fill="url(#tplg3)"/>
-                <!-- nav -->
-                <rect x="0" y="0" width="320" height="22" fill="#fff"/>
-                <rect x="14" y="9" width="20" height="4" fill="#0891b2"/>
-                <rect x="48" y="10" width="14" height="3" fill="#9ca3af"/>
-                <rect x="68" y="10" width="14" height="3" fill="#9ca3af"/>
-                <rect x="284" y="7" width="22" height="9" fill="#0891b2"/>
-                <line x1="0" y1="22" x2="320" y2="22" stroke="#cffafe" stroke-width="0.5"/>
-                <!-- header -->
-                <rect x="50" y="38" width="220" height="10" fill="#0a0a0a"/>
-                <rect x="80" y="56" width="160" height="3" fill="#6b7280"/>
-                <!-- analytics card with line chart -->
-                <rect x="14" y="74" width="292" height="78" rx="3" fill="#fff" stroke="#cffafe"/>
-                <rect x="26" y="86" width="50" height="4" fill="#0a0a0a"/>
-                <rect x="26" y="94" width="38" height="3" fill="#9ca3af"/>
-                <rect x="240" y="84" width="50" height="14" fill="#0891b2"/>
-                <polyline points="26,140 60,128 90,134 124,118 158,124 194,108 226,116 262,98 290,108"
-                          fill="none" stroke="url(#tplg3line)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="262" cy="98" r="3" fill="#1e3a8a"/>
-                <!-- stat pills -->
-                <rect x="14" y="160" width="92" height="60" rx="3" fill="#fff" stroke="#cffafe"/>
-                <rect x="26" y="170" width="14" height="14" rx="2" fill="#cffafe"/>
-                <rect x="26" y="190" width="50" height="6" fill="#0a0a0a"/>
-                <rect x="26" y="200" width="36" height="4" fill="#9ca3af"/>
-                <rect x="114" y="160" width="92" height="60" rx="3" fill="#fff" stroke="#cffafe"/>
-                <rect x="126" y="170" width="14" height="14" rx="2" fill="#cffafe"/>
-                <rect x="126" y="190" width="50" height="6" fill="#0a0a0a"/>
-                <rect x="126" y="200" width="36" height="4" fill="#9ca3af"/>
-                <rect x="214" y="160" width="92" height="60" rx="3" fill="#fff" stroke="#cffafe"/>
-                <rect x="226" y="170" width="14" height="14" rx="2" fill="#cffafe"/>
-                <rect x="226" y="190" width="50" height="6" fill="#0a0a0a"/>
-                <rect x="226" y="200" width="36" height="4" fill="#9ca3af"/>
+                <rect width="320" height="240" fill="url(#stackBg)"/>
+                <rect x="0" y="0" width="320" height="14" fill="#eaf6f8"/>
+                <circle cx="9"  cy="7" r="2.6" fill="#fb7185"/>
+                <circle cx="18" cy="7" r="2.6" fill="#fbbf24"/>
+                <circle cx="27" cy="7" r="2.6" fill="#34d399"/>
+                <rect x="120" y="3" width="84" height="8" rx="3" fill="#ffffff" stroke="#cffafe"/>
+                <text x="162" y="9.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="5" fill="#6b7280">stack.altask.dev</text>
+                <rect x="0" y="14" width="44" height="226" fill="#ffffff" stroke="#e6e8ee"/>
+                <rect x="14" y="22" width="16" height="16" rx="4" fill="#06b6d4"/>
+                <rect x="14" y="50" width="16" height="3" rx="1.5" fill="#5b3fd6"/>
+                <rect x="14" y="56" width="20" height="3" rx="1.5" fill="#cdd5ee"/>
+                <rect x="14" y="76" width="16" height="3" rx="1.5" fill="#cdd5ee"/>
+                <rect x="14" y="82" width="14" height="3" rx="1.5" fill="#cdd5ee"/>
+                <rect x="14" y="100" width="16" height="3" rx="1.5" fill="#cdd5ee"/>
+                <rect x="14" y="106" width="10" height="3" rx="1.5" fill="#cdd5ee"/>
+                <text x="56" y="30" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="700" fill="#181024">Overview</text>
+                <text x="56" y="40" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Last 30 days · all channels</text>
+                <rect x="244" y="20" width="60" height="14" rx="4" fill="#06b6d4"/>
+                <text x="274" y="30" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="6.5" font-weight="700" fill="#ffffff">+ New</text>
+                <rect x="56" y="48" width="78" height="44" rx="6" fill="#ffffff" stroke="#e6e8ee"/>
+                <text x="64" y="58" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Revenue</text>
+                <text x="64" y="76" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#181024">$24.8K</text>
+                <text x="64" y="86" font-family="Inter, system-ui, sans-serif" font-size="5.5" font-weight="700" fill="#10b981">▲ 12.4%</text>
+                <rect x="138" y="48" width="78" height="44" rx="6" fill="#ffffff" stroke="#e6e8ee"/>
+                <text x="146" y="58" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Sessions</text>
+                <text x="146" y="76" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#181024">3,201</text>
+                <text x="146" y="86" font-family="Inter, system-ui, sans-serif" font-size="5.5" font-weight="700" fill="#10b981">▲ 8.1%</text>
+                <rect x="220" y="48" width="84" height="44" rx="6" fill="#ffffff" stroke="#e6e8ee"/>
+                <text x="228" y="58" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Conversion</text>
+                <text x="228" y="76" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#181024">4.7%</text>
+                <text x="228" y="86" font-family="Inter, system-ui, sans-serif" font-size="5.5" font-weight="700" fill="#fb7185">▼ 0.3%</text>
+                <rect x="56" y="100" width="170" height="124" rx="6" fill="#ffffff" stroke="#e6e8ee"/>
+                <text x="68" y="112" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">Daily revenue</text>
+                <text x="68" y="120" font-family="Inter, system-ui, sans-serif" font-size="5.5" fill="#6b7280">Sep 1 — Sep 30</text>
+                <rect x="180" y="106" width="40" height="12" rx="4" fill="#ecfeff" stroke="#a5f3fc"/>
+                <text x="200" y="114" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="6" font-weight="600" fill="#06b6d4">30d</text>
+                <path d="M68 198 L86 184 L106 188 L124 168 L142 174 L160 156 L180 162 L196 142 L216 152 L216 212 L68 212 Z" fill="url(#stackArea)"/>
+                <polyline points="68,198 86,184 106,188 124,168 142,174 160,156 180,162 196,142 216,152" fill="none" stroke="url(#stackLine)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="196" cy="142" r="3.5" fill="#ffffff" stroke="#06b6d4" stroke-width="1.6"/>
+                <line x1="68" y1="212" x2="216" y2="212" stroke="#eef2ff" stroke-width="0.8"/>
+                <rect x="174" y="124" width="44" height="14" rx="3" fill="#181024"/>
+                <text x="196" y="133" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="6" font-weight="700" fill="#ffffff">$1,240</text>
+                <rect x="232" y="100" width="74" height="124" rx="6" fill="#ffffff" stroke="#e6e8ee"/>
+                <text x="240" y="112" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">By plan</text>
+                <text x="240" y="120" font-family="Inter, system-ui, sans-serif" font-size="5.5" fill="#6b7280">Active users</text>
+                <rect x="240" y="170" width="10" height="44" rx="2" fill="url(#stackBars)"/>
+                <rect x="254" y="156" width="10" height="58" rx="2" fill="url(#stackBars)"/>
+                <rect x="268" y="138" width="10" height="76" rx="2" fill="url(#stackBars)"/>
+                <rect x="282" y="148" width="10" height="66" rx="2" fill="url(#stackBars)"/>
+                <text x="245" y="220" font-family="Inter, system-ui, sans-serif" font-size="4.5" fill="#9aa0ad">Free</text>
+                <text x="258" y="220" font-family="Inter, system-ui, sans-serif" font-size="4.5" fill="#9aa0ad">Pro</text>
+                <text x="270" y="220" font-family="Inter, system-ui, sans-serif" font-size="4.5" fill="#9aa0ad">Team</text>
+                <text x="284" y="220" font-family="Inter, system-ui, sans-serif" font-size="4.5" fill="#9aa0ad">Ent</text>
               </svg>
+              <span class="template-tag">Live demo</span>
             </div>
             <div class="template-meta"><div><div class="cat">SaaS</div><h3>Stack</h3></div><span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
           </a>
 
-          <a class="card template-card card-hover" href="templates.html">
+          <!-- ============ 4. Market / E-commerce ============ -->
+          <a class="card template-card card-hover" href="demo-market.html">
             <div class="template-thumb">
-              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Market — e-commerce demo">
                 <defs>
-                  <linearGradient id="tplg4a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fecaca"/><stop offset="1" stop-color="#fb7185"/></linearGradient>
-                  <linearGradient id="tplg4b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#34d399"/></linearGradient>
-                  <linearGradient id="tplg4c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
-                  <linearGradient id="tplg4d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
+                  <linearGradient id="mktBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff8f4"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+                  <linearGradient id="mktA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fed7aa"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+                  <linearGradient id="mktB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bbf7d0"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+                  <linearGradient id="mktC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bfdbfe"/><stop offset="1" stop-color="#6366f1"/></linearGradient>
+                  <linearGradient id="mktD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+                  <linearGradient id="mktHero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#181024"/><stop offset="1" stop-color="#5b3fd6"/></linearGradient>
                 </defs>
-                <rect width="320" height="240" fill="#fff"/>
-                <!-- top nav with cart -->
-                <rect x="0" y="0" width="320" height="24" fill="#0a0a0a"/>
-                <rect x="14" y="11" width="44" height="3" fill="#fff"/>
-                <rect x="240" y="10" width="14" height="4" fill="#fff"/>
-                <rect x="262" y="10" width="14" height="4" fill="#fff"/>
-                <circle cx="294" cy="12" r="5" fill="#1e3a8a"/>
-                <text x="294" y="14" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-size="6" font-weight="700">3</text>
-                <!-- category strip -->
-                <rect x="14" y="34" width="40" height="6" fill="#1e3a8a"/>
-                <rect x="60" y="34" width="32" height="6" fill="#e5e7eb"/>
-                <rect x="98" y="34" width="36" height="6" fill="#e5e7eb"/>
-                <rect x="140" y="34" width="32" height="6" fill="#e5e7eb"/>
-                <!-- product grid 4 cols -->
-                <rect x="14" y="48" width="68" height="80" fill="url(#tplg4a)"/>
-                <rect x="14" y="132" width="44" height="4" fill="#0a0a0a"/>
-                <rect x="14" y="140" width="32" height="4" fill="#1e3a8a"/>
-                <rect x="86" y="48" width="68" height="80" fill="url(#tplg4b)"/>
-                <rect x="86" y="132" width="44" height="4" fill="#0a0a0a"/>
-                <rect x="86" y="140" width="32" height="4" fill="#1e3a8a"/>
-                <rect x="158" y="48" width="68" height="80" fill="url(#tplg4c)"/>
-                <rect x="158" y="132" width="44" height="4" fill="#0a0a0a"/>
-                <rect x="158" y="140" width="32" height="4" fill="#1e3a8a"/>
-                <rect x="230" y="48" width="76" height="80" fill="url(#tplg4d)"/>
-                <rect x="230" y="132" width="44" height="4" fill="#0a0a0a"/>
-                <rect x="230" y="140" width="32" height="4" fill="#1e3a8a"/>
-                <!-- promo strip -->
-                <rect x="14" y="160" width="292" height="64" fill="#eff5ff" stroke="#b6cdff"/>
-                <rect x="28" y="174" width="120" height="8" fill="#0a0a0a"/>
-                <rect x="28" y="188" width="180" height="3" fill="#6b7280"/>
-                <rect x="28" y="195" width="140" height="3" fill="#6b7280"/>
-                <rect x="28" y="206" width="60" height="12" fill="#1e3a8a"/>
+                <rect width="320" height="240" fill="url(#mktBg)"/>
+                <rect x="0" y="0" width="320" height="14" fill="#fbf4ec"/>
+                <circle cx="9"  cy="7" r="2.6" fill="#fb7185"/>
+                <circle cx="18" cy="7" r="2.6" fill="#fbbf24"/>
+                <circle cx="27" cy="7" r="2.6" fill="#34d399"/>
+                <rect x="120" y="3" width="92" height="8" rx="3" fill="#ffffff" stroke="#fbe9d6"/>
+                <text x="166" y="9.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="5" fill="#6b7280">market.altask.dev</text>
+                <rect x="0" y="14" width="320" height="20" fill="#181024"/>
+                <text x="14" y="27" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="700" fill="#ffffff">MARKET</text>
+                <text x="200" y="27" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#ffffff" opacity=".75">Shop</text>
+                <text x="222" y="27" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#ffffff" opacity=".75">Sale</text>
+                <text x="244" y="27" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#ffffff" opacity=".75">Story</text>
+                <circle cx="294" cy="24" r="6" fill="#fb923c"/>
+                <text x="294" y="27" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="6" font-weight="700" fill="#181024">3</text>
+                <rect x="14" y="42" width="292" height="58" rx="6" fill="url(#mktHero)"/>
+                <text x="26" y="65" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Autumn drop</text>
+                <text x="26" y="80" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="500" fill="#fb923c">save up to 30%</text>
+                <text x="26" y="92" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#ffffff" opacity=".7">New arrivals · ships free over $80</text>
+                <rect x="226" y="62" width="68" height="22" rx="4" fill="#ffffff"/>
+                <text x="260" y="76" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">Shop now</text>
+                <rect x="14" y="110" width="68" height="68" rx="6" fill="url(#mktA)"/>
+                <circle cx="36" cy="146" r="14" fill="#ffffff" opacity=".55"/>
+                <text x="14" y="190" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">Linen tote</text>
+                <text x="14" y="200" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Earth · 4 colors</text>
+                <text x="76" y="190" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">$48</text>
+                <rect x="86" y="110" width="68" height="68" rx="6" fill="url(#mktB)"/>
+                <rect x="100" y="124" width="40" height="40" rx="20" fill="#ffffff" opacity=".4"/>
+                <text x="86" y="190" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">Ceramic mug</text>
+                <text x="86" y="200" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Sage · 2 sizes</text>
+                <text x="148" y="190" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">$32</text>
+                <rect x="158" y="110" width="68" height="68" rx="6" fill="url(#mktC)"/>
+                <rect x="170" y="128" width="44" height="32" rx="4" fill="#ffffff" opacity=".5"/>
+                <text x="158" y="190" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">Field journal</text>
+                <text x="158" y="200" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Indigo · A5</text>
+                <text x="220" y="190" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">$72</text>
+                <rect x="230" y="110" width="76" height="68" rx="6" fill="url(#mktD)"/>
+                <ellipse cx="268" cy="148" rx="20" ry="14" fill="#ffffff" opacity=".55"/>
+                <text x="230" y="190" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">Brass clip</text>
+                <text x="230" y="200" font-family="Inter, system-ui, sans-serif" font-size="6" fill="#6b7280">Gold · pack of 4</text>
+                <text x="300" y="190" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="7" font-weight="700" fill="#181024">$24</text>
+                <rect x="130" y="212" width="14" height="14" rx="3" fill="#181024"/>
+                <text x="137" y="223" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="700" fill="#ffffff">1</text>
+                <rect x="148" y="212" width="14" height="14" rx="3" fill="#ffffff" stroke="#e6e8ee"/>
+                <text x="155" y="223" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="600" fill="#181024">2</text>
+                <rect x="166" y="212" width="14" height="14" rx="3" fill="#ffffff" stroke="#e6e8ee"/>
+                <text x="173" y="223" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="600" fill="#181024">3</text>
+                <rect x="184" y="212" width="14" height="14" rx="3" fill="#ffffff" stroke="#e6e8ee"/>
+                <text x="191" y="223" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" font-weight="600" fill="#9aa0ad">→</text>
               </svg>
+              <span class="template-tag">Live demo</span>
             </div>
             <div class="template-meta"><div><div class="cat">E-commerce</div><h3>Market</h3></div><span class="arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
           </a>
         </div>
+
       </div>
+    </section>
+
+    <!-- ========= TESTIMONIALS ========= -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="kicker">Testimonials</span>
+          <h2 class="reveal-words mt-3">What people are saying</h2>
+          <p>Designers, engineers, marketers, and builders are shipping faster with Altask.</p>
+        </div>
+      </div>
+      <!-- Infinite, left-to-right marquee. Cards are duplicated below for the seamless loop. -->
+      <div class="reviews" data-reveal>
+        <div class="reviews__rail" role="list">
+          <article class="review-card" role="listitem">
+            <span class="review-card__quote" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 32 32" fill="currentColor"><path d="M11 8c-3.5 0-6.5 3-6.5 7v9h8v-9H8c0-2 1.5-3.5 3-3.5V8zm14 0c-3.5 0-6.5 3-6.5 7v9h8v-9h-4.5c0-2 1.5-3.5 3-3.5V8z"/></svg></span>
+            <div class="review-card__stars" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg>
+            </div>
+            <blockquote class="review-card__quote-text">"Finally, a tool that lets a non-designer ship pages that look like our brand. Altask replaced three plugins for us."</blockquote>
+            <figcaption class="review-card__person">
+              <img class="review-card__avatar" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa Park" width="44" height="44" loading="lazy" />
+              <div>
+                <strong>Lisa Park</strong>
+                <span>Senior Designer, AutoAPI</span>
+                <span class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 5-5"/></svg> Verified user</span>
+              </div>
+            </figcaption>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <span class="review-card__quote" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 32 32" fill="currentColor"><path d="M11 8c-3.5 0-6.5 3-6.5 7v9h8v-9H8c0-2 1.5-3.5 3-3.5V8zm14 0c-3.5 0-6.5 3-6.5 7v9h8v-9h-4.5c0-2 1.5-3.5 3-3.5V8z"/></svg></span>
+            <div class="review-card__stars" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg>
+            </div>
+            <blockquote class="review-card__quote-text">"Altask helped us validate our launch in weeks, not months. The visual editor cut our designer-developer ping-pong to zero."</blockquote>
+            <figcaption class="review-card__person">
+              <img class="review-card__avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Chen" width="44" height="44" loading="lazy" />
+              <div>
+                <strong>Sarah Chen</strong>
+                <span>Marketing Lead, DataFlow</span>
+                <span class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 5-5"/></svg> Verified user</span>
+              </div>
+            </figcaption>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <span class="review-card__quote" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 32 32" fill="currentColor"><path d="M11 8c-3.5 0-6.5 3-6.5 7v9h8v-9H8c0-2 1.5-3.5 3-3.5V8zm14 0c-3.5 0-6.5 3-6.5 7v9h8v-9h-4.5c0-2 1.5-3.5 3-3.5V8z"/></svg></span>
+            <div class="review-card__stars" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg>
+            </div>
+            <blockquote class="review-card__quote-text">"The component library is incredible. We rebuilt our marketing site in an afternoon and our conversion rate climbed 18%."</blockquote>
+            <figcaption class="review-card__person">
+              <img class="review-card__avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Marcus Rodriguez" width="44" height="44" loading="lazy" />
+              <div>
+                <strong>Marcus Rodriguez</strong>
+                <span>Front-end Engineer, CloudSync</span>
+                <span class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 5-5"/></svg> Verified user</span>
+              </div>
+            </figcaption>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <span class="review-card__quote" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 32 32" fill="currentColor"><path d="M11 8c-3.5 0-6.5 3-6.5 7v9h8v-9H8c0-2 1.5-3.5 3-3.5V8zm14 0c-3.5 0-6.5 3-6.5 7v9h8v-9h-4.5c0-2 1.5-3.5 3-3.5V8z"/></svg></span>
+            <div class="review-card__stars" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg>
+            </div>
+            <blockquote class="review-card__quote-text">"We replaced our entire design ops workflow with Altask. Pages that used to take a week now take a day."</blockquote>
+            <figcaption class="review-card__person">
+              <img class="review-card__avatar" src="https://randomuser.me/api/portraits/women/22.jpg" alt="Maya Kapoor" width="44" height="44" loading="lazy" />
+              <div>
+                <strong>Maya Kapoor</strong>
+                <span>Design Lead, Northwind</span>
+                <span class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 5-5"/></svg> Verified user</span>
+              </div>
+            </figcaption>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <span class="review-card__quote" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 32 32" fill="currentColor"><path d="M11 8c-3.5 0-6.5 3-6.5 7v9h8v-9H8c0-2 1.5-3.5 3-3.5V8zm14 0c-3.5 0-6.5 3-6.5 7v9h8v-9h-4.5c0-2 1.5-3.5 3-3.5V8z"/></svg></span>
+            <div class="review-card__stars" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg>
+            </div>
+            <blockquote class="review-card__quote-text">"Onboarding was 4 minutes. Our marketing pages now ship the same day they're scoped — Altask is the tool I show every founder."</blockquote>
+            <figcaption class="review-card__person">
+              <img class="review-card__avatar" src="https://randomuser.me/api/portraits/men/52.jpg" alt="Daniel Okafor" width="44" height="44" loading="lazy" />
+              <div>
+                <strong>Daniel Okafor</strong>
+                <span>Indie maker</span>
+                <span class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 5-5"/></svg> Verified user</span>
+              </div>
+            </figcaption>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <span class="review-card__quote" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 32 32" fill="currentColor"><path d="M11 8c-3.5 0-6.5 3-6.5 7v9h8v-9H8c0-2 1.5-3.5 3-3.5V8zm14 0c-3.5 0-6.5 3-6.5 7v9h8v-9h-4.5c0-2 1.5-3.5 3-3.5V8z"/></svg></span>
+            <div class="review-card__stars" aria-label="5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.3l-6.2 3.7 1.7-7.1L2 9.2l7.2-.6L12 2l2.8 6.6 7.2.6-5.5 4.7 1.7 7.1z"/></svg>
+            </div>
+            <blockquote class="review-card__quote-text">"It feels like Figma met a real CMS. The export gives us clean HTML we host on our own edge — no lock-in, just speed."</blockquote>
+            <figcaption class="review-card__person">
+              <img class="review-card__avatar" src="https://randomuser.me/api/portraits/women/85.jpg" alt="Priya Sharma" width="44" height="44" loading="lazy" />
+              <div>
+                <strong>Priya Sharma</strong>
+                <span>Product Designer, Hexcel</span>
+                <span class="review-card__verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 5-5"/></svg> Verified user</span>
+              </div>
+            </figcaption>
+          </article>
+        </div>
+      </div>
+
+
     </section>
 
     <!-- ========= PRICING ========= -->
@@ -842,24 +1055,33 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="kicker">FAQ</span>
-          <h2 class="reveal-words mt-3">Common questions</h2>
+          <h2 class="reveal-words mt-3">Frequently Asked Questions</h2>
+          <p>Everything you need to know about Altask.</p>
         </div>
-        <div class="faq" data-reveal-stagger style="max-width:780px;margin:0 auto;">
-          <details open>
+        <div class="faq" data-reveal-stagger style="max-width:780px;margin:48px auto 0;">
+          <details>
             <summary>Is coding required? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
-            <div class="faq__body">No. Altask is designed for visual building. You can ship an entire site without writing a single line of code, while keeping the door open for custom code when you want it.</div>
+            <div class="faq__body">No. Altask is built for visual building — drag, drop, and edit on the canvas. Custom code is always available when you want it, never required.</div>
           </details>
           <details>
             <summary>Can I export my website? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
-            <div class="faq__body">Yes. The free editor on this site even exports your work as a clean, dependency-free <code>.html</code> file you can host anywhere.</div>
+            <div class="faq__body">Yes. The visual editor exports a clean, dependency-free <code>.html</code> file you can host anywhere — Vercel, Netlify, your own server, or as a static asset in another app.</div>
           </details>
           <details>
             <summary>Is hosting included? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
-            <div class="faq__body">Every plan includes managed hosting on a global edge network with automatic HTTPS. Pro and Team plans add custom domains.</div>
+            <div class="faq__body">Every plan includes managed hosting on a global edge network with automatic HTTPS. Pro and Team add custom domains, redirects, and access controls.</div>
+          </details>
+          <details>
+            <summary>How does it differ from other site builders? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+            <div class="faq__body">Altask treats marketing pages the way design tools treat artboards — every block is editable, every property is a token, and you ship the same component system that powers your product.</div>
+          </details>
+          <details>
+            <summary>Do I really own what I build? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+            <div class="faq__body">Yes. The HTML, CSS, and assets you build are yours — exportable at any time, no lock-in. Your data ports out as JSON so you can rehydrate it elsewhere.</div>
           </details>
           <details>
             <summary>Is it free? <span class="chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
-            <div class="faq__body">Altask has a generous free tier with the full visual builder. Upgrade only when you need a custom domain or advanced features.</div>
+            <div class="faq__body">Yes — the free tier includes the full visual builder, hosting, and HTTPS. Upgrade only when you need a custom domain, more projects, or your team.</div>
           </details>
         </div>
       </div>
@@ -889,12 +1111,13 @@
     <div class="container">
       <div class="site-footer__grid">
         <div>
-          <a class="site-nav__brand" href="index.html"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Altask</a>
+          <a class="site-nav__brand" href="index.html"><img src="assets/images/logo.svg" alt="Altask" class="logo-img" style="height: 48px; width: auto;"></a>
           <p class="mt-4" style="max-width:280px;font-size:14px;">The visual website builder for teams who care about craft. Drag, drop, and ship.</p>
         </div>
         <div><h4>Product</h4><ul><li><a href="product.html">Overview</a></li><li><a href="features-builder.html">Features</a></li><li><a href="templates.html">Templates</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="editor.html">Editor</a></li></ul></div>
         <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Customers</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div><h4>Resources</h4><ul><li><a href="docs.html">Docs</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="docs.html">Docs</a></li>
+  <li><a href="about.html">About</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
         <div><h4>Social</h4><ul><li><a href="#">Twitter</a></li><li><a href="#">GitHub</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Dribbble</a></li></ul></div>
       </div>
       <div class="site-footer__bottom">
@@ -904,6 +1127,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/site.js?v=2" defer></script>
 </body>
 </html>

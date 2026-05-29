@@ -9,7 +9,6 @@ legacy/node_modules
 
 # next.js
 /.next/
-legacy/.next/
 /out/
 
 # production

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stack — SaaS Template Demo · Altask</title>
+  <meta name="description" content="Stack is a SaaS analytics landing template built with Altask — KPIs, charts, and a focused conversion path." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/demos.css?v=1" />
+</head>
+<body class="demo demo--stack">
+
+  <div class="demo-bar">
+    <div class="demo-bar__left">
+      <span class="demo-bar__pill">Live demo</span>
+      <span>Stack — SaaS Analytics</span>
+    </div>
+    <div>
+      <a href="index.html">← Back to Altask</a>
+      <a class="demo-bar__cta" href="editor.html">Use this template</a>
+    </div>
+  </div>
+
+  <div class="demo-container">
+    <header class="stack-nav">
+      <div class="stack-brand"><span class="pill">v3</span> Stack</div>
+      <nav class="stack-nav__links">
+        <a class="is-active" href="#">Product</a>
+        <a href="#">Customers</a>
+        <a href="#">Pricing</a>
+        <a href="#">Docs</a>
+        <a href="#">Changelog</a>
+      </nav>
+      <a class="stack-cta" href="#">+ Try free</a>
+    </header>
+
+    <section class="stack-hero">
+      <div>
+        <span class="stack-badge">Live · September report</span>
+        <h1>The analytics layer for product-led teams.</h1>
+        <p>Stack unifies events, sessions, and revenue into one workspace. Set up in 4 minutes — no SDK rewrites required.</p>
+        <div class="stack-actions">
+          <a class="stack-btn-primary" href="editor.html">Start free trial →</a>
+          <a class="stack-btn-ghost" href="#">Book a demo</a>
+        </div>
+      </div>
+
+      <div class="stack-mock" aria-hidden="true">
+        <div class="stack-mock__head">
+          <strong>Overview · Last 30 days</strong>
+          <span class="pill">All channels</span>
+        </div>
+        <div class="stack-kpi">
+          <div><small>Revenue</small><b>$24.8K</b><span class="up">▲ 12.4%</span></div>
+          <div><small>Sessions</small><b>3,201</b><span class="up">▲ 8.1%</span></div>
+          <div><small>Conv.</small><b>4.7%</b><span class="down">▼ 0.3%</span></div>
+        </div>
+        <div class="stack-mock__chart">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="stkArea" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#06b6d4" stop-opacity=".35"/>
+                <stop offset="1" stop-color="#06b6d4" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="stkLine" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#06b6d4"/>
+                <stop offset="1" stop-color="#5b3fd6"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 150 L60 130 L120 138 L180 100 L240 112 L300 80 L360 92 L420 56 L480 72 L540 60 L600 78 L600 180 L0 180 Z" fill="url(#stkArea)"/>
+            <polyline points="0,150 60,130 120,138 180,100 240,112 300,80 360,92 420,56 480,72 540,60 600,78"
+              fill="none" stroke="url(#stkLine)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack-grid">
+      <article class="stack-card">
+        <div class="ic">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10M9 21V4M15 21v-9M21 21V8"/></svg>
+        </div>
+        <h3>Real-time events</h3>
+        <p>Sub-second ingestion with idempotency, retry, and per-key quotas — built for production scale.</p>
+      </article>
+      <article class="stack-card">
+        <div class="ic">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4 -4l4 4l4 -8l4 8"/></svg>
+        </div>
+        <h3>Funnels & cohorts</h3>
+        <p>Step-by-step funnels, retention curves, and cohort breakdowns without writing a single SQL query.</p>
+      </article>
+      <article class="stack-card">
+        <div class="ic">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        </div>
+        <h3>Edge SDKs</h3>
+        <p>Drop-in clients for Node, Next, Remix, Cloudflare Workers, and React Native. No proxy required.</p>
+      </article>
+    </section>
+  </div>
+
+  <section class="stack-end">
+    <h2>Make every release measurable.</h2>
+    <p>14-day trial. SOC 2 from day one. Free for hobby projects, forever.</p>
+    <a href="editor.html">Start with Stack</a>
+  </section>
+
+</body>
+</html>

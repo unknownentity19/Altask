@@ -6,25 +6,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Drag &amp; Drop Builder · Altask</title>
 <meta name="description" content="Compose pages by dragging premium components onto a flexible canvas. Smart snapping, alignment guides, full undo history." />
-<meta name="theme-color" content="#1e3a8a" />
+<meta name="theme-color" content="#d0c5fd" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233b62c4'/%3E%3Cstop offset='1' stop-color='%231e3a8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M4 18l6-12 4 8 2-4 4 8H4z'/%3E%3C/svg%3E" />
-<link rel="canonical" href="https://altask.app/features-builder.html" />
+<link rel="canonical" href="https://altask.dev/features-builder.html" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://altask.app/features-builder.html" />
+<meta property="og:url" content="https://altask.dev/features-builder.html" />
 <meta property="og:title" content="Drag &amp; Drop Builder · Altask" />
 <meta property="og:description" content="Compose pages by dragging premium components onto a flexible canvas. Smart snapping, alignment guides, full undo history." />
-<meta property="og:image" content="https://altask.app/assets/og-image.svg" />
+<meta property="og:image" content="https://altask.dev/assets/og-image.svg" />
 <meta property="og:site_name" content="Altask" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Drag &amp; Drop Builder · Altask" />
 <meta name="twitter:description" content="Compose pages by dragging premium components onto a flexible canvas. Smart snapping, alignment guides, full undo history." />
-<meta name="twitter:image" content="https://altask.app/assets/og-image.svg" />
+<meta name="twitter:image" content="https://altask.dev/assets/og-image.svg" />
 <link rel="manifest" href="/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/base.css" />
-<link rel="stylesheet" href="assets/css/pages.css" />
+<link rel="stylesheet" href="assets/css/base.css?v=8" />
+<link rel="stylesheet" href="assets/css/pages.css?v=17" />
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -42,8 +42,7 @@
   <header class="site-nav">
     <div class="container site-nav__inner">
       <a class="site-nav__brand" href="index.html" aria-label="Altask home">
-        <span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Altask
+        <img src="assets/images/logo.svg" alt="Altask" class="logo-img" style="height: 48px; width: auto;">
       </a>
       <nav aria-label="Primary"><ul class="site-nav__links">
   <li class="has-submenu has-mega has-mega--2col">
@@ -127,6 +126,7 @@
   </li>
   <li><a href="pricing.html">Pricing</a></li>
   <li><a href="docs.html">Docs</a></li>
+  <li><a href="about.html">About</a></li>
   </ul></nav>
       <div class="site-nav__cta">
         <a class="btn btn-secondary btn-sm" href="contact.html">Sign in</a>
@@ -142,6 +142,7 @@
       <a href="templates.html">Templates</a>
       <a href="pricing.html">Pricing</a>
       <a href="docs.html">Docs</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a class="btn btn-primary" href="editor.html">Get Started</a>
     </div>
@@ -166,23 +167,23 @@
     <div class="card" data-reveal style="overflow:hidden;padding:0;">
       <svg viewBox="0 0 1200 540" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="width:100%;display:block;">
         <defs>
-          <linearGradient id="bg-builder" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8f9fb"/><stop offset="1" stop-color="#eff5ff"/></linearGradient>
+          <linearGradient id="bg-builder" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8f9fb"/><stop offset="1" stop-color="#d0c5fd"/></linearGradient>
         </defs>
         <rect width="1200" height="540" fill="url(#bg-builder)"/>
         <!-- top bar -->
         <rect x="0" y="0" width="1200" height="48" fill="#fff"/>
         <line x1="0" y1="48" x2="1200" y2="48" stroke="#e1e5ed"/>
-        <rect x="24" y="18" width="14" height="14" fill="#1e3a8a"/>
-        <rect x="46" y="22" width="60" height="8" fill="#0b1220"/>
-        <rect x="1080" y="14" width="80" height="20" fill="#1e3a8a"/>
+        <rect x="24" y="18" width="14" height="14" fill="#d0c5fd"/>
+        <rect x="46" y="22" width="60" height="8" fill="#181024"/>
+        <rect x="1080" y="14" width="80" height="20" fill="#d0c5fd"/>
         <!-- Left palette -->
         <rect x="0" y="48" width="220" height="492" fill="#fff"/>
         <line x1="220" y1="48" x2="220" y2="540" stroke="#e1e5ed"/>
         <text x="22" y="78" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#9aa3b2" letter-spacing="2">COMPONENTS</text>
         <!-- 6 component rows in palette -->
-        <g font-family="Inter,sans-serif" font-size="13" fill="#1f2937">
-          <rect x="14" y="92" width="192" height="38" rx="4" fill="#eff5ff" stroke="#b6cdff"/>
-          <rect x="22" y="103" width="22" height="16" fill="#1e3a8a"/>
+        <g font-family="Inter,sans-serif" font-size="13" fill="#2a1f3d">
+          <rect x="14" y="92" width="192" height="38" rx="4" fill="#d0c5fd" stroke="#d0c5fd"/>
+          <rect x="22" y="103" width="22" height="16" fill="#d0c5fd"/>
           <text x="56" y="115">Hero section</text>
           <rect x="14" y="138" width="192" height="38" rx="4" fill="#fff" stroke="#e1e5ed"/>
           <rect x="22" y="149" width="22" height="16" fill="#cdd2de"/>
@@ -203,35 +204,35 @@
         <!-- Center canvas page -->
         <rect x="260" y="80" width="660" height="440" fill="#fff" stroke="#e1e5ed"/>
         <!-- Hero block currently selected (purple dashed outline) -->
-        <rect x="276" y="96" width="628" height="180" fill="#eff5ff" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="4 4" rx="2"/>
-        <text x="408" y="170" font-family="Inter,sans-serif" font-size="36" font-weight="800" fill="#0b1220">Build websites visually</text>
+        <rect x="276" y="96" width="628" height="180" fill="#d0c5fd" stroke="#d0c5fd" stroke-width="2" stroke-dasharray="4 4" rx="2"/>
+        <text x="408" y="170" font-family="Inter,sans-serif" font-size="36" font-weight="800" fill="#181024">Build websites visually</text>
         <text x="408" y="200" font-family="Inter,sans-serif" font-size="16" fill="#4b5563">Drag premium components onto a flexible canvas.</text>
-        <rect x="408" y="218" width="100" height="32" fill="#1e3a8a"/>
+        <rect x="408" y="218" width="100" height="32" fill="#d0c5fd"/>
         <rect x="516" y="218" width="100" height="32" fill="#fff" stroke="#cdd2de"/>
         <!-- Selection handles -->
-        <rect x="272" y="92" width="6" height="6" fill="#1e3a8a"/>
-        <rect x="900" y="92" width="6" height="6" fill="#1e3a8a"/>
-        <rect x="272" y="272" width="6" height="6" fill="#1e3a8a"/>
-        <rect x="900" y="272" width="6" height="6" fill="#1e3a8a"/>
+        <rect x="272" y="92" width="6" height="6" fill="#d0c5fd"/>
+        <rect x="900" y="92" width="6" height="6" fill="#d0c5fd"/>
+        <rect x="272" y="272" width="6" height="6" fill="#d0c5fd"/>
+        <rect x="900" y="272" width="6" height="6" fill="#d0c5fd"/>
         <!-- Insertion line below hero -->
-        <line x1="276" y1="288" x2="904" y2="288" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="276" cy="288" r="4" fill="#1e3a8a"/>
-        <circle cx="904" cy="288" r="4" fill="#1e3a8a"/>
+        <line x1="276" y1="288" x2="904" y2="288" stroke="#d0c5fd" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="276" cy="288" r="4" fill="#d0c5fd"/>
+        <circle cx="904" cy="288" r="4" fill="#d0c5fd"/>
         <!-- Features grid placeholder below -->
         <rect x="276" y="304" width="200" height="100" fill="#f8f9fb" stroke="#e1e5ed" rx="2"/>
         <rect x="490" y="304" width="200" height="100" fill="#f8f9fb" stroke="#e1e5ed" rx="2"/>
         <rect x="704" y="304" width="200" height="100" fill="#f8f9fb" stroke="#e1e5ed" rx="2"/>
         <!-- Cursor showing dragging a Pricing block -->
         <g transform="translate(560, 396)">
-          <rect width="220" height="80" rx="4" fill="#fff" stroke="#1e3a8a" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.95"/>
-          <rect x="14" y="14" width="120" height="10" fill="#0b1220"/>
+          <rect width="220" height="80" rx="4" fill="#fff" stroke="#d0c5fd" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.95"/>
+          <rect x="14" y="14" width="120" height="10" fill="#181024"/>
           <rect x="14" y="32" width="80" height="6" fill="#9aa3b2"/>
-          <rect x="14" y="48" width="60" height="20" fill="#1e3a8a"/>
+          <rect x="14" y="48" width="60" height="20" fill="#d0c5fd"/>
         </g>
         <g transform="translate(720, 446)">
-          <path d="M0 0 L14 6 L8 8 L6 14 Z" fill="#1e3a8a"/>
-          <text x="20" y="10" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#fff" stroke="#1e3a8a" stroke-width="0">Maya</text>
-          <rect x="18" y="-2" width="40" height="14" fill="#1e3a8a" rx="2"/>
+          <path d="M0 0 L14 6 L8 8 L6 14 Z" fill="#d0c5fd"/>
+          <text x="20" y="10" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#fff" stroke="#d0c5fd" stroke-width="0">Maya</text>
+          <rect x="18" y="-2" width="40" height="14" fill="#d0c5fd" rx="2"/>
           <text x="22" y="9" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#fff">Maya</text>
         </g>
         <!-- Right inspector -->
@@ -240,25 +241,25 @@
         <text x="978" y="78" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#9aa3b2" letter-spacing="2">PROPERTIES</text>
         <text x="978" y="106" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">PADDING</text>
         <rect x="978" y="118" width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
-        <text x="990" y="138" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">64 px</text>
+        <text x="990" y="138" font-family="Inter,sans-serif" font-size="13" fill="#2a1f3d">64 px</text>
         <text x="978" y="172" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">FONT SIZE</text>
         <rect x="978" y="184" width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
-        <text x="990" y="204" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">36 px</text>
+        <text x="990" y="204" font-family="Inter,sans-serif" font-size="13" fill="#2a1f3d">36 px</text>
         <text x="978" y="238" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">ALIGNMENT</text>
         <g transform="translate(978, 250)">
           <rect width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
-          <rect x="2" y="2" width="64" height="30" fill="#1e3a8a"/>
+          <rect x="2" y="2" width="64" height="30" fill="#d0c5fd"/>
           <text x="22" y="22" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#fff">Center</text>
           <text x="86" y="22" font-family="Inter,sans-serif" font-size="11" fill="#4b5563">Left</text>
           <text x="146" y="22" font-family="Inter,sans-serif" font-size="11" fill="#4b5563">Right</text>
         </g>
         <text x="978" y="304" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">COLOR</text>
         <rect x="978" y="316" width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
-        <rect x="990" y="324" width="18" height="18" fill="#1e3a8a"/>
-        <text x="1018" y="338" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">#1E3A8A</text>
+        <rect x="990" y="324" width="18" height="18" fill="#d0c5fd"/>
+        <text x="1018" y="338" font-family="Inter,sans-serif" font-size="13" fill="#2a1f3d">#1E3A8A</text>
         <text x="978" y="372" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#9aa3b2" letter-spacing="1">SHADOW</text>
         <rect x="978" y="384" width="200" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
-        <text x="990" y="404" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">md</text>
+        <text x="990" y="404" font-family="Inter,sans-serif" font-size="13" fill="#2a1f3d">md</text>
       </svg>
     </div>
   </div>
@@ -309,31 +310,31 @@
       <div class="card" data-reveal-right style="overflow:hidden;padding:0;">
         <svg viewBox="0 0 540 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
           <rect width="540" height="380" fill="#fff"/>
-          <rect x="20" y="20" width="500" height="120" fill="#eff5ff" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="4 4"/>
-          <text x="40" y="70" font-family="Inter,sans-serif" font-size="32" font-weight="800" fill="#0b1220">Edit me directly</text>
+          <rect x="20" y="20" width="500" height="120" fill="#d0c5fd" stroke="#d0c5fd" stroke-width="2" stroke-dasharray="4 4"/>
+          <text x="40" y="70" font-family="Inter,sans-serif" font-size="32" font-weight="800" fill="#181024">Edit me directly</text>
           <text x="40" y="100" font-family="Inter,sans-serif" font-size="14" fill="#4b5563">Click any text to start typing</text>
           <!-- Cursor in the heading -->
-          <line x1="296" y1="50" x2="296" y2="80" stroke="#1e3a8a" stroke-width="2"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></line>
+          <line x1="296" y1="50" x2="296" y2="80" stroke="#d0c5fd" stroke-width="2"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></line>
           <!-- Toolbar floater -->
           <g transform="translate(40, 160)">
-            <rect width="220" height="38" rx="4" fill="#0b1220"/>
+            <rect width="220" height="38" rx="4" fill="#181024"/>
             <text x="14" y="24" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fff">B</text>
             <text x="36" y="24" font-family="Inter,sans-serif" font-size="13" font-style="italic" fill="#fff">I</text>
             <text x="56" y="24" font-family="Inter,sans-serif" font-size="13" text-decoration="underline" fill="#fff">U</text>
-            <line x1="76" y1="10" x2="76" y2="28" stroke="#3b62c4"/>
+            <line x1="76" y1="10" x2="76" y2="28" stroke="#d0c5fd"/>
             <text x="86" y="24" font-family="Inter,sans-serif" font-size="11" fill="#fff">H1</text>
             <text x="110" y="24" font-family="Inter,sans-serif" font-size="11" fill="#fff">H2</text>
             <text x="134" y="24" font-family="Inter,sans-serif" font-size="11" fill="#fff">H3</text>
-            <line x1="158" y1="10" x2="158" y2="28" stroke="#3b62c4"/>
+            <line x1="158" y1="10" x2="158" y2="28" stroke="#d0c5fd"/>
             <text x="170" y="24" font-family="Inter,sans-serif" font-size="11" fill="#fff">Link</text>
           </g>
           <text x="40" y="240" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#9aa3b2" letter-spacing="2">PROPERTIES → Heading</text>
           <rect x="40" y="252" width="460" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
-          <text x="54" y="272" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">Edit me directly</text>
+          <text x="54" y="272" font-family="Inter,sans-serif" font-size="13" fill="#2a1f3d">Edit me directly</text>
           <rect x="40" y="298" width="220" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
-          <text x="54" y="318" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">800 weight</text>
+          <text x="54" y="318" font-family="Inter,sans-serif" font-size="13" fill="#2a1f3d">800 weight</text>
           <rect x="276" y="298" width="224" height="34" fill="#f8f9fb" stroke="#e1e5ed"/>
-          <text x="290" y="318" font-family="Inter,sans-serif" font-size="13" fill="#1f2937">32 px</text>
+          <text x="290" y="318" font-family="Inter,sans-serif" font-size="13" fill="#2a1f3d">32 px</text>
         </svg>
       </div>
     </div>
@@ -396,12 +397,13 @@
     <div class="container">
       <div class="site-footer__grid">
         <div>
-          <a class="site-nav__brand" href="index.html"><span class="brand-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Altask</a>
+          <a class="site-nav__brand" href="index.html"><img src="assets/images/logo.svg" alt="Altask" class="logo-img" style="height: 48px; width: auto;"></a>
           <p class="mt-4" style="max-width:280px;font-size:14px;">The visual website builder for teams who care about craft. Drag, drop, and ship.</p>
         </div>
         <div><h4>Product</h4><ul><li><a href="product.html">Overview</a></li><li><a href="features-builder.html">Features</a></li><li><a href="templates.html">Templates</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="editor.html">Editor</a></li></ul></div>
         <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Customers</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div><h4>Resources</h4><ul><li><a href="docs.html">Docs</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
+        <div><h4>Resources</h4><ul><li><a href="docs.html">Docs</a></li>
+  <li><a href="about.html">About</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
         <div><h4>Social</h4><ul><li><a href="#">Twitter</a></li><li><a href="#">GitHub</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Dribbble</a></li></ul></div>
       </div>
       <div class="site-footer__bottom">
@@ -410,5 +412,5 @@
       </div>
     </div>
   </footer></footer>
-<script src="assets/js/site.js" defer></script>
+<script src="assets/js/site.js?v=2" defer></script>
 </body></html>

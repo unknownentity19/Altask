@@ -66,7 +66,7 @@ This feature redesigns the editor chrome and inspector to match a polished, ligh
 #### Acceptance Criteria
 
 1. THE Top_Bar SHALL display an editable project title input on its left side, prefilled with the current project name.
-2. THE Top_Bar SHALL display a non-editable subtitle line below the project title showing the publish URL placeholder (defaulting to `https://{project-slug}.altask.app` derived from the project title).
+2. THE Top_Bar SHALL display a non-editable subtitle line below the project title showing the publish URL placeholder (defaulting to `https://{project-slug}.altask.dev` derived from the project title).
 3. THE Top_Bar SHALL display a device toggle group with three buttons in this order: Desktop, Tablet, Mobile.
 4. THE Top_Bar SHALL display a viewport readout in the format `{WIDTH} PX / {ZOOM}%`, where WIDTH is the current Device_Mode width and ZOOM is the current Zoom_Level.
 5. THE Top_Bar SHALL display undo and redo icon buttons that invoke the existing History undo and redo operations.

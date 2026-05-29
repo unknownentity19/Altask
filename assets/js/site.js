@@ -301,4 +301,19 @@
       });
     });
   }
+
+  /* ================================================================
+     Reviews infinite marquee — duplicate children once for seamless
+     loop. The CSS animates translateX from 0 to -50%.
+     ================================================================ */
+  document.querySelectorAll(".reviews__rail").forEach((rail) => {
+    if (rail.dataset.cloned) return;
+    const children = Array.from(rail.children);
+    children.forEach((node) => {
+      const clone = node.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      rail.appendChild(clone);
+    });
+    rail.dataset.cloned = "true";
+  });
 })();

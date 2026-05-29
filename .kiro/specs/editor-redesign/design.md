@@ -207,7 +207,7 @@ Three groups: **left** (project meta + brand mark), **centre** (device toggle + 
   <div class="ed-top__left">
     <div class="ed-top__title">
       <input id="nameInput" class="ed-top__name"   value="…">
-      <span  id="nameSlug"  class="ed-top__slug">https://untitled.altask.app</span>
+      <span  id="nameSlug"  class="ed-top__slug">https://untitled.altask.dev</span>
     </div>
   </div>
 

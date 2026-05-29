@@ -11,22 +11,22 @@
   --border: #e1e5ed;
   --border-2: #cdd2de;
 
-  --fg: #0b1220;
-  --fg-2: #1f2937;
-  --fg-muted: #4b5563;
+  --fg: #181024;
+  --fg-2: #2a1f3d;
+  --fg-muted: #5b5470;
   --fg-dim: #6b7280;
   --fg-faint: #9aa3b2;
 
-  --p-50:  #eff5ff;
-  --p-75:  #e1ecff;
-  --p-100: #d3e2ff;
-  --p-200: #b6cdff;
-  --p-300: #8aabf7;
-  --p-400: #5d83df;
-  --p-500: #3b62c4;
-  --p-600: #2a4ca4;
-  --p-700: #1e3a8a;
-  --p-800: #172a64;
+  --p-50:  #f4f1ff;
+  --p-75:  #ece6ff;
+  --p-100: #e1d8ff;
+  --p-200: #d0c5fd;
+  --p-300: #b3a4f9;
+  --p-400: #9683f0;
+  --p-500: #7a5fe5;
+  --p-600: #6442d6;
+  --p-700: #4f30c2;
+  --p-800: #3b1f9b;
 
   --font-sans: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
@@ -41,8 +41,8 @@
   --shadow-xs: 0 1px 2px rgba(15, 15, 20, 0.04);
   --shadow-sm: 0 1px 2px rgba(15, 15, 20, 0.04), 0 2px 4px rgba(15, 15, 20, 0.04);
   --shadow-md: 0 1px 2px rgba(15, 15, 20, 0.05), 0 8px 24px -6px rgba(15, 15, 20, 0.10);
-  --shadow-lg: 0 24px 60px -20px rgba(30, 58, 138, 0.18), 0 12px 32px -16px rgba(15, 15, 20, 0.14);
-  --shadow-purple: 0 12px 30px -10px rgba(30, 58, 138, 0.45);
+  --shadow-lg: 0 24px 60px -20px rgba(122, 95, 229, 0.18), 0 12px 32px -16px rgba(15, 15, 20, 0.14);
+  --shadow-purple: 0 12px 30px -10px rgba(122, 95, 229, 0.45);
 
   --container: 1320px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -101,12 +101,12 @@ p  { margin: 0; color: var(--fg-muted); }
   width: 6px; height: 6px;
   border-radius: 4px;
   background: var(--p-600);
-  box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.4);
+  box-shadow: 0 0 0 0 rgba(122, 95, 229, 0.4);
   animation: pulse-dot 2.4s var(--ease-in-out) infinite;
 }
 @keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.4); }
-  50%      { box-shadow: 0 0 0 6px rgba(30, 58, 138, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(122, 95, 229, 0.4); }
+  50%      { box-shadow: 0 0 0 6px rgba(122, 95, 229, 0); }
 }
 
 .kicker {
@@ -171,7 +171,7 @@ p  { margin: 0; color: var(--fg-muted); }
   background: var(--p-700);
   box-shadow: var(--shadow-purple);
 }
-.btn-primary:hover { background: var(--p-800); transform: translateY(-1px); box-shadow: 0 16px 36px -10px rgba(30, 58, 138, 0.55); }
+.btn-primary:hover { background: var(--p-800); transform: translateY(-1px); box-shadow: 0 16px 36px -10px rgba(122, 95, 229, 0.55); }
 
 .btn-secondary {
   color: var(--fg);
@@ -225,7 +225,7 @@ p  { margin: 0; color: var(--fg-muted); }
 }
 .card-hover:hover .icon-tile {
   transform: scale(1.05) rotate(-3deg);
-  box-shadow: 0 6px 18px -6px rgba(30, 58, 138, 0.35);
+  box-shadow: 0 6px 18px -6px rgba(122, 95, 229, 0.35);
 }
 .icon-tile.alt-amber { background: #fff7ed; border-color: #fed7aa; color: #c2410c; }
 .icon-tile.alt-rose  { background: #fff1f2; border-color: #fecdd3; color: #be123c; }
@@ -295,7 +295,7 @@ p  { margin: 0; color: var(--fg-muted); }
   border-radius: 4px;
   color: #fff;
   background: linear-gradient(135deg, var(--p-500), var(--p-700));
-  box-shadow: 0 4px 14px -4px rgba(30, 58, 138, 0.5);
+  box-shadow: 0 4px 14px -4px rgba(122, 95, 229, 0.5);
 }
 .site-nav__links {
   display: flex;
@@ -674,9 +674,9 @@ details > summary:focus-visible {
 
 /* Pulse glow on focus indicators */
 @keyframes pulse-ring {
-  0%   { box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.35); }
-  70%  { box-shadow: 0 0 0 14px rgba(30, 58, 138, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(30, 58, 138, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(122, 95, 229, 0.35); }
+  70%  { box-shadow: 0 0 0 14px rgba(122, 95, 229, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(122, 95, 229, 0); }
 }
 
 /* Card lift with cursor light */
@@ -686,7 +686,7 @@ details > summary:focus-visible {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(400px circle at var(--mx, -100%) var(--my, -100%), rgba(30, 58, 138, 0.06), transparent 40%);
+  background: radial-gradient(400px circle at var(--mx, -100%) var(--my, -100%), rgba(122, 95, 229, 0.06), transparent 40%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -852,7 +852,7 @@ details > summary:focus-visible {
 .mega__link:hover .meta span { color: var(--fg-muted); }
 
 .mega__feature {
-  background: linear-gradient(165deg, var(--p-700) 0%, #172a64 60%, #0e1a3d 100%);
+  background: linear-gradient(165deg, var(--p-700) 0%, #d0c5fd 60%, #d0c5fd 100%);
   color: #fff;
   border-radius: 6px;
   padding: 22px;
@@ -979,4 +979,34 @@ details > summary:focus-visible {
 @media (max-width: 720px) {
   .has-mega--2col .mega { min-width: 320px; max-width: 400px; }
   .mega__inner--2col { grid-template-columns: 1fr; }
+}
+
+
+/* =========================================================
+   Brand text override — refined violet text on light surfaces.
+   - #5b3fd6 (violet-600) for headings/links/labels needing contrast
+   - #d0c5fd remains the soft accent for chips, kickers on dark, etc.
+   ========================================================= */
+.kicker,
+.text-purple,
+.site-nav__links a:hover,
+.site-nav__links a.is-active,
+.site-nav__mobile a:hover,
+.site-footer a:hover,
+.submenu a:hover,
+.site-nav__links .has-submenu:hover .submenu-trigger,
+.site-nav__links .has-submenu.is-open .submenu-trigger,
+.mega__link:hover,
+.mega__feature__cta {
+  color: #5b3fd6;
+}
+
+/* Soft-surface icon tiles + submenu icons keep the lavender tone
+   on a tinted background, but the icon stroke uses the darker violet
+   so the symbol stays readable. */
+.icon-tile,
+.submenu a .ico {
+  color: #5b3fd6;
+  background: #f4f1ff;
+  border-color: #d0c5fd;
 }
