@@ -417,17 +417,8 @@ p  { margin: 0; color: var(--fg-muted); }
 [data-reveal-stagger].is-visible > *:nth-child(7) { transition-delay: 0.47s; }
 [data-reveal-stagger].is-visible > *:nth-child(8) { transition-delay: 0.54s; }
 
-/* Scroll progress bar */
-.scroll-progress {
-  position: fixed;
-  top: 0; left: 0;
-  height: 2px;
-  width: 0;
-  background: linear-gradient(90deg, var(--p-500), var(--p-700));
-  z-index: 100;
-  pointer-events: none;
-  transition: width 0.05s linear;
-}
+/* Scroll progress bar — removed */
+.scroll-progress { display: none !important; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -716,17 +707,6 @@ details > summary:focus-visible {
   transition: transform 0.4s var(--ease);
 }
 .link-underline:hover::after { transform: scaleX(1); }
-
-/* Scroll progress bar (already exists) — animate the gradient */
-.scroll-progress {
-  background: linear-gradient(90deg, var(--p-500), var(--p-700), var(--p-500));
-  background-size: 200% 100%;
-  animation: scroll-progress-shine 6s linear infinite;
-}
-@keyframes scroll-progress-shine {
-  0%   { background-position: 0% 0; }
-  100% { background-position: 200% 0; }
-}
 
 /* Submenu drop animation */
 .submenu {
