@@ -15,15 +15,10 @@
     });
   }
 
-  // Sticky-nav state + top scroll progress bar
+  // Sticky-nav state
   const nav = document.querySelector(".site-nav");
-  const progress = document.createElement("div");
-  progress.className = "scroll-progress";
-  document.body.appendChild(progress);
   function onScroll() {
     const h = document.documentElement;
-    const pct = (h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight)) * 100;
-    progress.style.width = pct + "%";
     if (nav) nav.classList.toggle("is-stuck", h.scrollTop > 8);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
