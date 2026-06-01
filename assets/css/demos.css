@@ -296,7 +296,7 @@ button { font-family: inherit; cursor: pointer; }
 .stack-card h3 { margin: 0 0 6px; font-size: 17px; font-weight: 700; }
 .stack-card p { margin: 0; color: #5b5470; font-size: 14px; }
 
-.stack-end { background: linear-gradient(135deg, #181024, #06b6d4); color: #fff; padding: 80px 0; text-align: center; }
+.stack-end { background: linear-gradient(135deg, #06b6d4, #7c3aed); color: #fff; padding: 80px 0; text-align: center; }
 .stack-end h2 { font-size: 36px; margin: 0; font-weight: 800; letter-spacing: -.01em; }
 .stack-end p  { color: rgba(255,255,255,.78); max-width: 520px; margin: 14px auto 22px; }
 .stack-end a  { background: #fff; color: #181024; padding: 12px 22px; border-radius: 10px; font-weight: 700; font-size: 14px; }

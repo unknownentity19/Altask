@@ -8,10 +8,167 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/demos.css?v=1" />
+  <link rel="stylesheet" href="assets/css/demos.css?v=2" />
+  <style>
+    /* ---- Integrations strip ---- */
+    .stack-integrations {
+      padding: 48px 0;
+      text-align: center;
+      border-top: 1px solid #e6e8ee;
+      border-bottom: 1px solid #e6e8ee;
+      background: #fff;
+    }
+    .stack-integrations p {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #8b8a9a;
+      margin: 0 0 20px;
+    }
+    .stack-integrations__logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+    .stack-integrations__logos span {
+      font-size: 15px;
+      color: #5b5470;
+      letter-spacing: -.01em;
+    }
+    .stack-integrations__logos span.fw6 { font-weight: 600; }
+    .stack-integrations__logos span.fw7 { font-weight: 700; color: #3a3548; }
+
+    /* ---- How it works ---- */
+    .stack-how {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .stack-how__title {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: #06b6d4;
+      margin: 0 0 40px;
+    }
+    .stack-how__steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+    }
+    @media (max-width: 880px) { .stack-how__steps { grid-template-columns: 1fr; max-width: 400px; } }
+    .stack-step {
+      text-align: center;
+      position: relative;
+    }
+    .stack-step__num {
+      display: inline-grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #ecfeff;
+      border: 2px solid #a5f3fc;
+      color: #06b6d4;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .stack-step h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      font-weight: 700;
+      color: #181024;
+    }
+    .stack-step p {
+      margin: 0;
+      font-size: 14px;
+      color: #5b5470;
+      line-height: 1.6;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+    /* Arrow connectors between steps */
+    .stack-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -22px;
+      top: 12px;
+      font-size: 20px;
+      color: #a5f3fc;
+      font-weight: 700;
+    }
+    @media (max-width: 880px) {
+      .stack-step:not(:last-child)::after {
+        content: "↓";
+        position: static;
+        display: block;
+        margin: 20px auto;
+      }
+    }
+
+    /* ---- Testimonial ---- */
+    .stack-testimonial {
+      padding: 64px 24px;
+      background: #f7fbfc;
+    }
+    .stack-testimonial__card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #e6e8ee;
+      border-radius: 18px;
+      padding: 40px 44px;
+      text-align: center;
+      box-shadow: 0 16px 48px -20px rgba(15,16,28,.10);
+    }
+    .stack-testimonial__quote {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.55;
+      color: #181024;
+      margin: 0 0 24px;
+      letter-spacing: -.01em;
+    }
+    .stack-testimonial__quote::before {
+      content: "\201C";
+      color: #06b6d4;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 0;
+      vertical-align: -6px;
+      margin-right: 4px;
+    }
+    .stack-testimonial__quote::after {
+      content: "\201D";
+      color: #06b6d4;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 0;
+      vertical-align: -6px;
+      margin-left: 4px;
+    }
+    .stack-testimonial__author {
+      font-size: 14px;
+      color: #5b5470;
+      font-weight: 500;
+    }
+    .stack-testimonial__author strong {
+      color: #181024;
+      font-weight: 700;
+    }
+  </style>
 </head>
 <body class="demo demo--stack">
 
+  <!-- Demo bar -->
   <div class="demo-bar">
     <div class="demo-bar__left">
       <span class="demo-bar__pill">Live demo</span>
@@ -24,6 +181,8 @@
   </div>
 
   <div class="demo-container">
+
+    <!-- 1. Nav -->
     <header class="stack-nav">
       <div class="stack-brand"><span class="pill">v3</span> Stack</div>
       <nav class="stack-nav__links">
@@ -36,6 +195,7 @@
       <a class="stack-cta" href="#">+ Try free</a>
     </header>
 
+    <!-- 2. Hero -->
     <section class="stack-hero">
       <div>
         <span class="stack-badge">Live · September report</span>
@@ -77,6 +237,24 @@
       </div>
     </section>
 
+  </div>
+
+  <!-- 3. Integrations strip -->
+  <section class="stack-integrations">
+    <p>Works with your stack</p>
+    <div class="stack-integrations__logos">
+      <span class="fw7">Segment</span>
+      <span class="fw6">Mixpanel</span>
+      <span class="fw7">Amplitude</span>
+      <span class="fw6">dbt</span>
+      <span class="fw7">Snowflake</span>
+      <span class="fw6">Vercel</span>
+    </div>
+  </section>
+
+  <div class="demo-container">
+
+    <!-- 4. Features -->
     <section class="stack-grid">
       <article class="stack-card">
         <div class="ic">
@@ -89,7 +267,7 @@
         <div class="ic">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4 -4l4 4l4 -8l4 8"/></svg>
         </div>
-        <h3>Funnels & cohorts</h3>
+        <h3>Funnels &amp; cohorts</h3>
         <p>Step-by-step funnels, retention curves, and cohort breakdowns without writing a single SQL query.</p>
       </article>
       <article class="stack-card">
@@ -100,8 +278,40 @@
         <p>Drop-in clients for Node, Next, Remix, Cloudflare Workers, and React Native. No proxy required.</p>
       </article>
     </section>
+
   </div>
 
+  <!-- 5. How it works -->
+  <section class="stack-how">
+    <p class="stack-how__title">How it works</p>
+    <div class="stack-how__steps">
+      <div class="stack-step">
+        <div class="stack-step__num">1</div>
+        <h3>Install SDK</h3>
+        <p>Add our lightweight client with a single npm install. Under 4 KB gzipped, zero dependencies.</p>
+      </div>
+      <div class="stack-step">
+        <div class="stack-step__num">2</div>
+        <h3>Track events</h3>
+        <p>Call <code>stack.track()</code> anywhere in your code. Events stream in real-time to your dashboard.</p>
+      </div>
+      <div class="stack-step">
+        <div class="stack-step__num">3</div>
+        <h3>Ship insights</h3>
+        <p>Build funnels, set alerts, and share live dashboards with your team — no SQL required.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Testimonial -->
+  <section class="stack-testimonial">
+    <div class="stack-testimonial__card">
+      <p class="stack-testimonial__quote">Stack replaced three tools in our data stack. The real-time funnels alone justified the switch.</p>
+      <p class="stack-testimonial__author"><strong>James Park</strong>, VP Engineering at Nova</p>
+    </div>
+  </section>
+
+  <!-- 7. CTA footer -->
   <section class="stack-end">
     <h2>Make every release measurable.</h2>
     <p>14-day trial. SOC 2 from day one. Free for hobby projects, forever.</p>

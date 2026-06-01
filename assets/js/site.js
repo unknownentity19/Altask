@@ -15,15 +15,10 @@
     });
   }
 
-  // Sticky-nav state + top scroll progress bar
+  // Sticky-nav state
   const nav = document.querySelector(".site-nav");
-  const progress = document.createElement("div");
-  progress.className = "scroll-progress";
-  document.body.appendChild(progress);
   function onScroll() {
     const h = document.documentElement;
-    const pct = (h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight)) * 100;
-    progress.style.width = pct + "%";
     if (nav) nav.classList.toggle("is-stuck", h.scrollTop > 8);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -303,17 +298,178 @@
   }
 
   /* ================================================================
-     Reviews infinite marquee — duplicate children once for seamless
-     loop. The CSS animates translateX from 0 to -50%.
+     Infinite marquee — pixel-perfect seamless loop.
+     Clone items enough times so there's never blank space,
+     then scroll by exactly one set-width for a seamless reset.
      ================================================================ */
-  document.querySelectorAll(".reviews__rail").forEach((rail) => {
-    if (rail.dataset.cloned) return;
-    const children = Array.from(rail.children);
-    children.forEach((node) => {
-      const clone = node.cloneNode(true);
-      clone.setAttribute("aria-hidden", "true");
-      rail.appendChild(clone);
+
+  let marqueeId = 0;
+
+  function initMarquee(track, gapPx, speed) {
+    if (!track || track.dataset.cloned) return;
+
+    const items = Array.from(track.children);
+    if (items.length === 0) return;
+
+    // Measure one full set width (all original items + their gaps)
+    let setWidth = 0;
+    items.forEach((item) => {
+      setWidth += item.offsetWidth + gapPx;
     });
-    rail.dataset.cloned = "true";
+
+    // Clone sets until total width > viewport + one setWidth
+    // This guarantees no blank space is ever visible
+    const viewportW = window.innerWidth;
+    const minWidth = viewportW + setWidth;
+    let currentWidth = setWidth;
+
+    while (currentWidth < minWidth) {
+      items.forEach((item) => {
+        const clone = item.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        track.appendChild(clone);
+      });
+      currentWidth += setWidth;
+    }
+
+    track.dataset.cloned = "true";
+
+    // Inject a unique @keyframes that scrolls exactly one set width
+    const id = "marquee-" + (marqueeId++);
+    const style = document.createElement("style");
+    style.textContent =
+      "@keyframes " + id +
+      " { from { transform: translate3d(0,0,0); }" +
+      " to { transform: translate3d(-" + setWidth + "px,0,0); } }";
+    document.head.appendChild(style);
+
+    // Duration based on speed (px/s) so both marquees feel consistent
+    const dur = setWidth / speed;
+    track.style.animation = id + " " + dur + "s linear infinite";
+  }
+
+  // Reviews: 30px/s
+  document.querySelectorAll(".reviews__rail").forEach((rail) => {
+    initMarquee(rail, 20, 30);
   });
+
+  // Logos: 35px/s
+  document.querySelectorAll(".logos-marquee__track").forEach((track) => {
+    initMarquee(track, 56, 35);
+  });
+})();
+
+
+/* ============ Live user avatar cycling ============ */
+(function () {
+  const pile = document.getElementById("hero-avpile");
+  const countEl = document.getElementById("hero-user-count");
+  if (!pile || !countEl) return;
+
+  const portraits = [
+    "https://randomuser.me/api/portraits/women/44.jpg",
+    "https://randomuser.me/api/portraits/men/32.jpg",
+    "https://randomuser.me/api/portraits/women/68.jpg",
+    "https://randomuser.me/api/portraits/men/75.jpg",
+    "https://randomuser.me/api/portraits/women/22.jpg",
+    "https://randomuser.me/api/portraits/men/52.jpg",
+    "https://randomuser.me/api/portraits/women/85.jpg",
+    "https://randomuser.me/api/portraits/men/14.jpg",
+    "https://randomuser.me/api/portraits/women/30.jpg",
+    "https://randomuser.me/api/portraits/men/72.jpg",
+    "https://randomuser.me/api/portraits/women/12.jpg",
+    "https://randomuser.me/api/portraits/men/25.jpg",
+    "https://randomuser.me/api/portraits/women/49.jpg",
+    "https://randomuser.me/api/portraits/men/45.jpg",
+    "https://randomuser.me/api/portraits/women/63.jpg",
+    "https://randomuser.me/api/portraits/men/61.jpg",
+    "https://randomuser.me/api/portraits/women/17.jpg",
+    "https://randomuser.me/api/portraits/men/83.jpg",
+  ];
+
+  // Track which portraits are currently visible
+  let activeSet = new Set(
+    Array.from(pile.querySelectorAll(".av")).map((img) => img.src)
+  );
+  let userCount = 2847;
+  let cycling = false;
+
+  // Kick-start: reveal the initially-hidden 4th avatar after a beat
+  setTimeout(() => {
+    const entering = pile.querySelector(".av--entering");
+    if (entering) {
+      entering.classList.add("av--show");
+      setTimeout(() => {
+        entering.classList.remove("av--entering", "av--show");
+      }, 800);
+    }
+  }, 1200);
+
+  function getRandomNew() {
+    const available = portraits.filter((p) => !activeSet.has(p));
+    if (available.length === 0) return portraits[Math.floor(Math.random() * portraits.length)];
+    return available[Math.floor(Math.random() * available.length)];
+  }
+
+  function preloadImage(src) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(src);
+      img.onerror = () => resolve(src);
+      img.src = src;
+    });
+  }
+
+  async function cycle() {
+    if (cycling) return;
+    cycling = true;
+
+    const avatars = Array.from(pile.querySelectorAll(".av"));
+    if (avatars.length === 0) { cycling = false; return; }
+
+    // Pick a random avatar to swap
+    const idx = Math.floor(Math.random() * avatars.length);
+    const target = avatars[idx];
+    const oldSrc = target.src;
+
+    // Preload the new image first
+    const newSrc = getRandomNew();
+    await preloadImage(newSrc);
+
+    // Step 1: Animate out (700ms)
+    target.classList.add("av--leaving");
+
+    await new Promise((r) => setTimeout(r, 750));
+
+    // Step 2: Swap image while hidden
+    activeSet.delete(oldSrc);
+    activeSet.add(newSrc);
+    target.src = newSrc;
+    target.classList.remove("av--leaving");
+    target.classList.add("av--entering");
+
+    // Step 3: Force reflow, then animate in
+    void target.offsetWidth;
+    await new Promise((r) => setTimeout(r, 50));
+
+    // For first avatar, override margin to 0
+    if (idx === 0) target.style.marginLeft = "0";
+    target.classList.add("av--show");
+
+    // Step 4: Wait for enter animation to finish (700ms)
+    await new Promise((r) => setTimeout(r, 800));
+
+    target.classList.remove("av--entering", "av--show");
+    if (idx === 0) target.style.marginLeft = "";
+
+    // Gently fluctuate the user count
+    const delta = Math.floor(Math.random() * 7) - 2;
+    userCount = Math.max(2800, Math.min(2900, userCount + delta));
+    countEl.textContent = userCount.toLocaleString();
+
+    cycling = false;
+  }
+
+  // Cycle every 5 seconds for a relaxed, natural feel
+  setInterval(cycle, 5000);
 })();

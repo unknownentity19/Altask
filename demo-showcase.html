@@ -8,7 +8,122 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/demos.css?v=1" />
+  <link rel="stylesheet" href="assets/css/demos.css?v=2" />
+  <style>
+    /* === Showcase — additional sections ========================= */
+
+    /* About ---------------------------------------------------- */
+    .show-about {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 64px;
+      align-items: start;
+      padding: 80px 0 96px;
+      border-top: 1px solid rgba(24, 16, 36, .07);
+    }
+    @media (max-width: 880px) {
+      .show-about { grid-template-columns: 1fr; gap: 32px; padding: 48px 0 56px; }
+    }
+    .show-about blockquote {
+      margin: 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 1.2rem + 2vw, 2.8rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.25;
+      color: #181024;
+      letter-spacing: -.01em;
+    }
+    .show-about blockquote::before {
+      content: "\201C";
+      display: block;
+      font-size: 3.4rem;
+      line-height: 1;
+      color: rgba(24, 16, 36, .18);
+      margin-bottom: 8px;
+    }
+    .show-about__body p {
+      font-size: 16px;
+      color: #5b5470;
+      line-height: 1.7;
+      margin: 0 0 22px;
+      max-width: 440px;
+    }
+    .show-about__body a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #181024;
+      border-bottom: 1.5px solid #181024;
+      padding-bottom: 2px;
+    }
+
+    /* Services ------------------------------------------------- */
+    .show-services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-bottom: 96px;
+    }
+    @media (max-width: 880px) {
+      .show-services { grid-template-columns: 1fr; }
+    }
+    .show-service {
+      background: #fff;
+      border: 1px solid rgba(24, 16, 36, .06);
+      border-radius: 18px;
+      padding: 32px 28px;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .show-service:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px -16px rgba(24, 16, 36, .13);
+    }
+    .show-service__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #f0ede6;
+      color: #181024;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .show-service h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: #181024;
+    }
+    .show-service p {
+      font-size: 14px;
+      color: #5b5470;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Tile image layer ----------------------------------------- */
+    .show-tile__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .show-tile__overlay {
+      position: relative;
+      z-index: 2;
+    }
+    .show-tile__caption {
+      z-index: 2;
+    }
+  </style>
 </head>
 <body class="demo demo--showcase">
 
@@ -24,6 +139,8 @@
   </div>
 
   <div class="demo-container">
+
+    <!-- ─── Nav ──────────────────────────────────────────────── -->
     <header class="show-nav">
       <a class="show-brand" href="#">Studio</a>
       <nav class="show-nav__links">
@@ -32,12 +149,13 @@
         <a href="#">Journal</a>
         <a href="#">Contact</a>
       </nav>
-      <a class="show-cta" href="#">
+      <a class="show-cta" href="#" style="display:inline-flex;align-items:center;gap:8px;background:#181024;color:#fff;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:600;">
         Hire us
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
     </header>
 
+    <!-- ─── Hero ─────────────────────────────────────────────── -->
     <section class="show-hero">
       <h1>Selected<br/><em>work, 2024.</em></h1>
       <div>
@@ -46,38 +164,87 @@
       </div>
     </section>
 
+    <!-- ─── Portfolio Grid ───────────────────────────────────── -->
     <section class="show-grid">
       <div class="show-grid__col">
+
         <article class="show-tile show-tile--aurora">
-          <h3>Aurora</h3>
-          <p>Brand identity · Typography · Print</p>
+          <img class="show-tile__img" src="assets/images/demos/aurora.png" alt="Aurora project — branding and identity design" loading="lazy" />
+          <div class="show-tile__overlay">
+            <h3>Aurora</h3>
+            <p>Brand identity · Typography · Print</p>
+          </div>
           <span class="show-tile__caption">Aurora · Branding · 2024</span>
         </article>
+
         <article class="show-tile show-tile--quill">
-          <h3>Quill &amp; Code</h3>
-          <p>Editorial site · Custom CMS</p>
+          <img class="show-tile__img" src="assets/images/demos/quill.png" alt="Quill &amp; Code project — editorial design" loading="lazy" />
+          <div class="show-tile__overlay">
+            <h3>Quill &amp; Code</h3>
+            <p>Editorial site · Custom CMS</p>
+          </div>
           <span class="show-tile__caption">Quill &amp; Code · Editorial · 2024</span>
         </article>
+
       </div>
       <div class="show-grid__col">
+
         <article class="show-tile show-tile--lumen">
-          <h3>Lumen Lab</h3>
-          <p>Product launch site · 3D system</p>
+          <img class="show-tile__img" src="assets/images/demos/lumen.png" alt="Lumen Lab project — product design" loading="lazy" />
+          <div class="show-tile__overlay">
+            <h3>Lumen Lab</h3>
+            <p>Product launch site · 3D system</p>
+          </div>
           <span class="show-tile__caption">Lumen Lab · Product · 2023</span>
         </article>
+
         <article class="show-tile show-tile--orbit">
-          <h3>Orbit Suite</h3>
-          <p>Dashboard UI · Design tokens</p>
+          <img class="show-tile__img" src="assets/images/demos/orbit.png" alt="Orbit Suite project — SaaS dashboard design" loading="lazy" />
+          <div class="show-tile__overlay">
+            <h3>Orbit Suite</h3>
+            <p>Dashboard UI · Design tokens</p>
+          </div>
           <span class="show-tile__caption">Orbit · SaaS · 2023</span>
         </article>
+
       </div>
     </section>
 
+    <!-- ─── About ────────────────────────────────────────────── -->
+    <section class="show-about">
+      <blockquote>Design is the silent ambassador of your brand.</blockquote>
+      <div class="show-about__body">
+        <p>We're a small, intentional team of designers and strategists based in London. Since 2018 we've helped over 60 companies — from seed-stage startups to public brands — find the visual language that earns trust before anyone reads a word.</p>
+        <a href="#">Learn more →</a>
+      </div>
+    </section>
+
+    <!-- ─── Services ─────────────────────────────────────────── -->
+    <section class="show-services">
+      <article class="show-service">
+        <span class="show-service__number">01</span>
+        <h3>Brand Identity</h3>
+        <p>Strategy, naming, logo systems, brand guidelines, and collateral — everything you need to launch or relaunch with confidence.</p>
+      </article>
+      <article class="show-service">
+        <span class="show-service__number">02</span>
+        <h3>Digital Design</h3>
+        <p>Responsive marketing sites, product interfaces, and design systems built for scale — delivered production-ready.</p>
+      </article>
+      <article class="show-service">
+        <span class="show-service__number">03</span>
+        <h3>Art Direction</h3>
+        <p>Photo shoots, motion graphics, and campaign visuals that give your brand a distinctive creative edge in every channel.</p>
+      </article>
+    </section>
+
+    <!-- ─── CTA Card ─────────────────────────────────────────── -->
     <section class="show-cta-card">
       <h2>Bring us your next launch.</h2>
       <p>We partner with founders to ship work that earns attention. Tell us what you're building — we usually reply the same day.</p>
       <a href="#">Start a project</a>
     </section>
+
   </div>
 
 </body>

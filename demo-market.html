@@ -8,10 +8,96 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/demos.css?v=1" />
+  <link rel="stylesheet" href="assets/css/demos.css?v=2" />
+  <style>
+    /* Story section */
+    .mkt-story {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding: 80px 0 72px;
+      border-top: 1px solid rgba(15,16,28,.06);
+    }
+    @media (max-width: 880px) { .mkt-story { grid-template-columns: 1fr; padding: 48px 0; } }
+    .mkt-story__text h2 {
+      font-size: clamp(1.8rem, 1.4rem + 1.5vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      margin: 0 0 18px;
+      color: #181024;
+    }
+    .mkt-story__text p {
+      color: #5b5470;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 480px;
+      margin: 0 0 24px;
+    }
+    .mkt-story__text a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fb923c;
+    }
+    .mkt-story__text a:hover { text-decoration: underline; }
+    .mkt-story__visual {
+      position: relative;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #fde68a 0%, #fb923c 50%, #ea580c 100%);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .mkt-story__visual::before {
+      content: "";
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.18);
+    }
+    .mkt-story__visual::after {
+      content: "";
+      position: absolute;
+      left: 40px;
+      bottom: 40px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.3);
+    }
+
+    /* Minimal footer */
+    .mkt-footer {
+      text-align: center;
+      padding: 40px 24px 48px;
+      font-size: 13px;
+      color: #5b5470;
+      border-top: 1px solid rgba(15,16,28,.06);
+    }
+    .mkt-footer__links {
+      display: inline-flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .mkt-footer__links a {
+      color: #5b5470;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .mkt-footer__links a:hover {
+      color: #181024;
+    }
+  </style>
 </head>
 <body class="demo demo--market">
 
+  <!-- Demo bar -->
   <div class="demo-bar">
     <div class="demo-bar__left">
       <span class="demo-bar__pill">Live demo</span>
@@ -23,11 +109,14 @@
     </div>
   </div>
 
+  <!-- 1. Announcement banner -->
   <div class="mkt-banner">
-    Free shipping over $80 · <b>Autumn drop is live →</b>
+    Free shipping over $80 · <strong>Autumn drop is live →</strong>
   </div>
 
   <div class="demo-container">
+
+    <!-- 2. Navigation -->
     <header class="mkt-nav">
       <a class="mkt-brand" href="#">MARKET</a>
       <nav class="mkt-nav__links">
@@ -43,6 +132,7 @@
       </a>
     </header>
 
+    <!-- 3. Hero -->
     <section class="mkt-hero">
       <div>
         <h1>Autumn drop —<br/><em>save up to 30%</em></h1>
@@ -52,6 +142,7 @@
       <div class="mkt-hero__visual" aria-hidden="true"></div>
     </section>
 
+    <!-- 4. Category strip -->
     <div class="mkt-strip">
       <span class="is-active">All</span>
       <span>New arrivals</span>
@@ -62,6 +153,7 @@
       <span>Gift</span>
     </div>
 
+    <!-- 5. Product grid -->
     <section class="mkt-grid">
       <article class="mkt-card mkt-card--a">
         <div class="mkt-card__img"></div>
@@ -121,6 +213,18 @@
       </article>
     </section>
 
+    <!-- 6. Story section (NEW) -->
+    <section class="mkt-story">
+      <div class="mkt-story__text">
+        <h2>Crafted with intention</h2>
+        <p>Every piece in the Market collection is born from a conversation — not a brief. We work directly with 28 small studios across 11 countries, choosing makers who share our obsession with honest materials, considered design, and things that last longer than a season.</p>
+        <p>From hand-thrown ceramics in Portugal to plant-dyed linens in Kyoto, each product carries the quiet confidence of someone who truly loves what they make. We believe sustainable isn't a label — it's how you build a supply chain.</p>
+        <a href="#">Read our story →</a>
+      </div>
+      <div class="mkt-story__visual" aria-hidden="true"></div>
+    </section>
+
+    <!-- 7. Trust section -->
     <section class="mkt-trust">
       <div>
         <div class="ic">
@@ -146,6 +250,7 @@
     </section>
   </div>
 
+  <!-- 8. Newsletter CTA -->
   <div class="demo-container">
     <section class="mkt-end">
       <h2>Be first to the next drop.</h2>
@@ -153,6 +258,16 @@
       <a href="#">Join the list</a>
     </section>
   </div>
+
+  <!-- 9. Minimal footer -->
+  <footer class="mkt-footer">
+    <p>© 2024 Market · Crafted in Copenhagen</p>
+    <div class="mkt-footer__links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
 
 </body>
 </html>
