@@ -3,36 +3,26 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About · Altask</title>
-<meta name="description" content="Altask is the visual website builder for teams who care about craft. Read our story, principles, and the people behind the product." />
+<title>Altask</title>
+<meta name="description" content="Altask Labs is an independent software studio building AI-powered tools that make website creation faster, simpler, and more accessible." />
 <meta name="theme-color" content="#5b3fd6" />
 <link rel="icon" href="assets/images/tab.jpg" type="image/jpeg" />
 <link rel="canonical" href="https://altask.dev/about.html" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://altask.dev/about.html" />
-<meta property="og:title" content="About · Altask" />
-<meta property="og:description" content="Altask is the visual website builder for teams who care about craft. Read our story, principles, and the people behind the product." />
+<meta property="og:title" content="About · Altask Labs" />
+<meta property="og:description" content="Altask Labs is an independent software studio building AI-powered tools that make website creation faster, simpler, and more accessible." />
 <meta property="og:image" content="https://altask.dev/assets/og-image.svg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="manifest" href="/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/base.css?v=8" />
-<link rel="stylesheet" href="assets/css/pages.css?v=17" />
+<link rel="stylesheet" href="assets/css/base.css?v=13" />
+<link rel="stylesheet" href="assets/css/pages.css?v=20" />
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
-
-<!-- ========= TOP UTILITY BAR ========= -->
-<div class="topbar">
-  <div class="container topbar__inner">
-    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="9"/></svg> Community</a>
-    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="10 17 15 12 10 7"/></svg> YouTube</a>
-    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l8 10-8 8h2l7-7 6 7h4l-9-11 8-7h-2l-7 6-5-6z"/></svg> Twitter</a>
-    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v8M8 7v.01M12 18v-5a3 3 0 0 1 6 0v5"/></svg> LinkedIn</a>
-  </div>
-</div>
 
 <!-- ========= NAV ========= -->
 <header class="site-nav">
@@ -41,14 +31,86 @@
       <img src="assets/images/logo.svg" alt="Altask" class="logo-img" style="height: 48px; width: auto;">
     </a>
     <nav aria-label="Primary"><ul class="site-nav__links">
-      <li><a href="product.html">Product</a></li>
-      <li><a href="features-builder.html">Features</a></li>
-      <li><a href="templates.html">Templates</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a class="is-active" href="about.html">About</a></li>
-    </ul></nav>
+  <li class="has-submenu has-mega has-mega--2col">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Product <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner mega__inner--2col">
+      <div class="mega__col">
+        <h5>Get started</h5>
+        <a class="mega__link" href="product.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l6-12 4 8 2-4 4 8"/></svg></span>
+          <span class="meta"><strong>Overview</strong><span>The whole platform</span></span>
+        </a>
+        <a class="mega__link" href="how.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span>
+          <span class="meta"><strong>How it works</strong><span>Three steps, one canvas</span></span>
+        </a>
+        <a class="mega__link" href="editor.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></span>
+          <span class="meta"><strong>Open Editor</strong><span>Try in your browser</span></span>
+        </a>
+      </div>
+      <div class="mega__col">
+        <h5>More</h5>
+        <a class="mega__link" href="docs.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4V4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+          <span class="meta"><strong>Documentation</strong><span>SDK, API, guides</span></span>
+        </a>
+        <a class="mega__link" href="community.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="11" r="2.5"/><path d="M3 20c0-3.3 3-6 6-6s6 2.7 6 6"/></svg></span>
+          <span class="meta"><strong>Community</strong><span>12,000+ builders</span></span>
+        </a>
+        <a class="mega__link" href="contact.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span class="meta"><strong>Contact</strong><span>Talk to the team</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li class="has-submenu has-mega">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner">
+      <div class="mega__col">
+        <h5>Features</h5>
+        <a class="mega__link" href="features-builder.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <span class="meta"><strong>Drag and Drop builder</strong><span>Smart snapping, alignment guides</span></span>
+        </a>
+        <a class="mega__link" href="features-responsive.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="11" rx="1"/><rect x="13" y="9" width="9" height="13" rx="1"/></svg></span>
+          <span class="meta"><strong>Responsive controls</strong><span>Per-breakpoint overrides</span></span>
+        </a>
+        <a class="mega__link" href="features-publish.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 9l6-6 6 6"/><rect x="3" y="15" width="18" height="6" rx="1"/></svg></span>
+          <span class="meta"><strong>One-click publish</strong><span>Global edge with HTTPS</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li class="has-submenu has-mega">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Templates <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner">
+      <div class="mega__col">
+        <h5>Templates</h5>
+        <a class="mega__link" href="templates.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></span>
+          <span class="meta"><strong>Browse all</strong><span>Production-ready starts</span></span>
+        </a>
+        <a class="mega__link" href="templates-startup.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c5-5 9-9 14-14M14 5h5v5"/></svg></span>
+          <span class="meta"><strong>Startup and SaaS</strong><span>Lift, Stack, Pulse</span></span>
+        </a>
+        <a class="mega__link" href="templates-portfolio.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="2"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M21 17l-5-5-7 7"/></svg></span>
+          <span class="meta"><strong>Portfolio</strong><span>Showcase, Folio, Frame</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li><a href="pricing.html">Pricing</a></li>
+  <li><a href="about.html">About</a></li>
+  </ul></nav>
     <div class="site-nav__cta">
-      <a class="btn btn-secondary btn-sm" href="contact.html">Sign in</a>
+      <a class="btn btn-secondary btn-sm" href="signin.html">Sign in</a>
       <a class="btn btn-primary btn-sm" href="editor.html">Get Started</a>
       <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -61,224 +123,170 @@
     <a href="templates.html">Templates</a>
     <a href="pricing.html">Pricing</a>
     <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
     <a class="btn btn-primary" href="editor.html">Get Started</a>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- ========= ABOUT HERO ========= -->
+  <!-- ========= HERO ========= -->
   <section class="about-hero">
     <div class="container">
-      <span class="kicker" data-reveal>About Altask</span>
-      <h1 class="reveal-words mt-3">A canvas for the<br/><span class="text-purple">teams that ship.</span></h1>
+      <span class="kicker" data-reveal>Altask Labs</span>
+      <h1 class="reveal-words mt-3">About <span class="text-purple">Altask Labs</span></h1>
       <p class="about-hero__lede" data-reveal style="transition-delay:.15s;">
-        We build visual tools for the people who build the web. Designers, engineers, marketers, and indie makers — anyone who'd rather spend their time on craft than on plumbing.
+        Building AI-powered tools that make website creation faster, simpler, and more accessible.
       </p>
-      <div class="about-hero__chips" data-reveal style="transition-delay:.25s;">
-        <span class="docs-chip">Independent · 2024</span>
-        <span class="docs-chip docs-chip--ok">Profitable · No external funding</span>
-        <span class="docs-chip docs-chip--ghost">Distributed across 11 countries</span>
-      </div>
     </div>
   </section>
 
-  <!-- ========= STATS ========= -->
-  <section class="section-tight">
+  <!-- ========= WHO WE ARE ========= -->
+  <section class="section">
     <div class="container">
-      <div class="about-stats" data-reveal-stagger>
-        <div class="about-stat">
-          <strong>12,400+</strong>
-          <span>Sites built with Altask</span>
+      <div class="about-grid">
+        <div class="about-grid__head" data-reveal>
+          <span class="kicker">Who we are</span>
+          <h2 class="reveal-words mt-3">A small software lab with a single focus.</h2>
         </div>
-        <div class="about-stat">
-          <strong>1.8M</strong>
-          <span>Pages published last quarter</span>
-        </div>
-        <div class="about-stat">
-          <strong>98%</strong>
-          <span>NPS from active customers</span>
-        </div>
-        <div class="about-stat">
-          <strong>11</strong>
-          <span>Countries on the team</span>
+        <div class="about-grid__body" data-reveal style="transition-delay:.1s;">
+          <p>
+            Altask Labs is an independent software studio building tools for creating websites. We pair AI with a visual editor so that going from an idea to a live, professional site doesn't require writing code or fighting with complicated software.
+          </p>
+          <p>
+            It's for founders, freelancers, small teams, and makers who need a real website but don't have a designer or developer on call, the people who know exactly what they want to say and just want the most direct path to publishing it.
+          </p>
+          <p>
+            We're not trying to be everything to everyone. We're focused on one problem: making it genuinely easy to build a website you're proud of.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========= STORY ========= -->
+  <!-- ========= BOOTSTRAPPED & INDEPENDENT ========= -->
+  <section class="section-tight" style="background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-grid__head" data-reveal>
+          <span class="kicker">Independent</span>
+          <h2 class="reveal-words mt-3">Bootstrapped and Independent</h2>
+        </div>
+        <div class="about-grid__body" data-reveal style="transition-delay:.1s;">
+          <p>
+            Altask Labs is fully self-funded, built with founder savings and revenue from freelance software development. That independence means we answer to the people using the product rather than outside investors, and we get to build carefully, at our own pace.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= OUR STORY ========= -->
   <section class="section">
     <div class="container">
       <div class="about-grid">
         <div class="about-grid__head" data-reveal>
           <span class="kicker">Our story</span>
-          <h2 class="reveal-words mt-3">Built because the tools we wanted didn't exist.</h2>
+          <h2 class="reveal-words mt-3">It started with frustration.</h2>
         </div>
         <div class="about-grid__body" data-reveal style="transition-delay:.1s;">
           <p>
-            Altask started in a coworking space in Lisbon in early 2024. A small team of designers and engineers were tired of the same loop:
-            scope a marketing page in Figma, hand it to a dev for a week, get back something <em>close</em> to the design, repeat.
+            I'd tried just about every website builder out there. Each one either boxed me into rigid templates, buried the settings I actually needed under endless menus, or spat out bloated pages I couldn't really control.
           </p>
           <p>
-            We wanted a single canvas — designerly enough to make beautiful pages, technical enough to ship them — and we wanted to own the
-            HTML at the end. So we built it. Today Altask is used by teams from indie maker shops to public companies to ship their marketing surface area.
+            I kept coming back to the same thought: <em>this should be simpler.</em> Describe what you want, shape it visually, publish it. Instead of settling for the tools that existed, I started building the one I wished I had.
           </p>
           <p>
-            We're independent, profitable, and intentionally small. We grow by listening to the people building with the tool, not by chasing valuations.
+            Altask grew straight out of that frustration, a platform that uses AI to handle the heavy lifting, then hands you a clean visual canvas to make the result truly yours.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========= PRINCIPLES ========= -->
+  <!-- ========= WHAT WE'RE BUILDING ========= -->
   <section class="section-tight" style="background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
     <div class="container">
+      <div class="about-grid">
+        <div class="about-grid__head" data-reveal>
+          <span class="kicker">What we're building</span>
+          <h2 class="reveal-words mt-3">One platform, from idea to published.</h2>
+        </div>
+        <div class="about-grid__body" data-reveal style="transition-delay:.1s;">
+          <p>
+            Altask turns a simple prompt into a real, editable website, then gives you full visual control to shape every detail. The vision is a single place where creating, designing, and shipping a site all happen without friction.
+          </p>
+          <div class="about-hero__chips mt-4">
+            <span class="docs-chip">AI website generation</span>
+            <span class="docs-chip">Visual editing</span>
+            <span class="docs-chip">Responsive by default</span>
+            <span class="docs-chip">Collaboration</span>
+            <span class="docs-chip">One-click publishing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= OUR PRINCIPLES ========= -->
+  <section class="section">
+    <div class="container">
       <div class="section-head" data-reveal>
-        <span class="kicker">Principles</span>
-        <h2 class="reveal-words mt-3">How we build</h2>
-        <p>Six rules we use to make decisions when no one's looking.</p>
+        <span class="kicker">Our principles</span>
+        <h2 class="reveal-words mt-3">What guides our decisions</h2>
+        <p>Not generic company values, the ideas we actually use when deciding what to build.</p>
       </div>
 
-      <div class="grid grid-3 mt-5" data-reveal-stagger>
+      <div class="grid grid-2 mt-5" data-reveal-stagger>
         <article class="card card-hover" style="padding:24px 26px;">
           <span class="icon-tile" style="margin-bottom:14px;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 5-5"/></svg>
           </span>
-          <h3 style="font-size:17px;margin:0 0 6px;">Craft over speed.</h3>
-          <p class="text-muted" style="font-size:14px;line-height:1.6;">Default to slower, more considered work. Speed compounds when the foundation is right.</p>
+          <h3 style="font-size:17px;margin:0 0 6px;">Simplicity over complexity.</h3>
+          <p class="text-muted" style="font-size:14px;line-height:1.6;">Every feature has to earn its place. If it makes the product harder to understand, it doesn't ship.</p>
         </article>
         <article class="card card-hover" style="padding:24px 26px;">
           <span class="icon-tile" style="margin-bottom:14px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2"/><path d="M18 4v5h-5M6 20v-5h5"/></svg>
           </span>
-          <h3 style="font-size:17px;margin:0 0 6px;">Own the primitives.</h3>
-          <p class="text-muted" style="font-size:14px;line-height:1.6;">Build the underlying parts ourselves. Layouts, type scales, colour systems — no off-the-shelf UI kits.</p>
+          <h3 style="font-size:17px;margin:0 0 6px;">Fast iteration on feedback.</h3>
+          <p class="text-muted" style="font-size:14px;line-height:1.6;">We'd rather ship something small today and improve it from real usage than polish in private for months.</p>
         </article>
         <article class="card card-hover" style="padding:24px 26px;">
           <span class="icon-tile" style="margin-bottom:14px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
           </span>
-          <h3 style="font-size:17px;margin:0 0 6px;">Ship the rough cut.</h3>
-          <p class="text-muted" style="font-size:14px;line-height:1.6;">Production isn't a milestone, it's the studio. Ideas that don't survive contact with users die quickly here.</p>
+          <h3 style="font-size:17px;margin:0 0 6px;">Your site, your control.</h3>
+          <p class="text-muted" style="font-size:14px;line-height:1.6;">AI gets you started, but you stay in charge. Nothing important is locked away or out of reach.</p>
         </article>
         <article class="card card-hover" style="padding:24px 26px;">
           <span class="icon-tile" style="margin-bottom:14px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6v6H9z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8c7 0 7 8 14 4M5 12c7 0 7 8 14 4"/></svg>
           </span>
-          <h3 style="font-size:17px;margin:0 0 6px;">No lock-in, ever.</h3>
-          <p class="text-muted" style="font-size:14px;line-height:1.6;">Whatever you build is yours, exportable any day. Loyalty isn't a contract — it's earned every release.</p>
-        </article>
-        <article class="card card-hover" style="padding:24px 26px;">
-          <span class="icon-tile" style="margin-bottom:14px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="11" r="2.5"/><path d="M3 20c0-3.3 3-6 6-6s6 2.7 6 6"/></svg>
-          </span>
-          <h3 style="font-size:17px;margin:0 0 6px;">Small team, deep work.</h3>
-          <p class="text-muted" style="font-size:14px;line-height:1.6;">We hire slowly and protect maker time. No standups. Long async write-ups. Quiet Tuesdays.</p>
-        </article>
-        <article class="card card-hover" style="padding:24px 26px;">
-          <span class="icon-tile" style="margin-bottom:14px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg>
-          </span>
-          <h3 style="font-size:17px;margin:0 0 6px;">Patience, then sprint.</h3>
-          <p class="text-muted" style="font-size:14px;line-height:1.6;">Plan in months, ship in days. We deliberate carefully, then move quickly once the call is made.</p>
+          <h3 style="font-size:17px;margin:0 0 6px;">Sustainable over trendy.</h3>
+          <p class="text-muted" style="font-size:14px;line-height:1.6;">We build for the long term, not for whatever happens to be loud this quarter.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ========= TEAM ========= -->
-  <section class="section">
+  <!-- ========= LOOKING AHEAD ========= -->
+  <section class="section-tight" style="background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
     <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="kicker">The team</span>
-        <h2 class="reveal-words mt-3">A small group of obsessives.</h2>
-        <p>Designers and engineers who care about typography, performance, and getting the corners right.</p>
+      <div class="about-grid">
+        <div class="about-grid__head" data-reveal>
+          <span class="kicker">Looking ahead</span>
+          <h2 class="reveal-words mt-3">Getting better, release by release.</h2>
+        </div>
+        <div class="about-grid__body" data-reveal style="transition-delay:.1s;">
+          <p>
+            We're continuously improving Altask, listening to the people who use it, sharpening the AI, and expanding what the editor can do. The mission stays the same: make professional website creation accessible to anyone, whatever their budget or background.
+          </p>
+          <p>
+            There's a lot still to build, and we're only just getting started.
+          </p>
+        </div>
       </div>
-
-      <div class="team-grid mt-5" data-reveal-stagger>
-        <figure class="team-card">
-          <img src="https://randomuser.me/api/portraits/men/14.jpg" alt="Felix Adesina" loading="lazy" />
-          <figcaption>
-            <strong>Felix Adesina</strong>
-            <span>Co-founder · Design</span>
-            <small>Previously at Linear and a design studio in Berlin.</small>
-          </figcaption>
-        </figure>
-        <figure class="team-card">
-          <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Naomi Pereira" loading="lazy" />
-          <figcaption>
-            <strong>Naomi Pereira</strong>
-            <span>Co-founder · Engineering</span>
-            <small>Built rendering systems at Vercel, then ran her own freelance studio.</small>
-          </figcaption>
-        </figure>
-        <figure class="team-card">
-          <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Yusuf Al-Rashid" loading="lazy" />
-          <figcaption>
-            <strong>Yusuf Al-Rashid</strong>
-            <span>Engineering</span>
-            <small>Spent five years on type rendering and layout engines.</small>
-          </figcaption>
-        </figure>
-        <figure class="team-card">
-          <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Inês Carvalho" loading="lazy" />
-          <figcaption>
-            <strong>Inês Carvalho</strong>
-            <span>Design</span>
-            <small>Identity and motion. Cares about kerning more than is reasonable.</small>
-          </figcaption>
-        </figure>
-        <figure class="team-card">
-          <img src="https://randomuser.me/api/portraits/men/25.jpg" alt="Daniel Zhao" loading="lazy" />
-          <figcaption>
-            <strong>Daniel Zhao</strong>
-            <span>Engineering</span>
-            <small>Edge runtimes, build pipelines, and a soft spot for compilers.</small>
-          </figcaption>
-        </figure>
-        <figure class="team-card">
-          <img src="https://randomuser.me/api/portraits/women/49.jpg" alt="Sara Lindgren" loading="lazy" />
-          <figcaption>
-            <strong>Sara Lindgren</strong>
-            <span>Customer experience</span>
-            <small>Onboarding, support, and the weekly team newsletter.</small>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========= PRESS ========= -->
-  <section class="section-tight" style="border-top: 1px solid var(--border);">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <span class="kicker">Press</span>
-        <h2 class="reveal-words mt-3">Selected mentions</h2>
-      </div>
-      <ul class="press-list mt-5" data-reveal-stagger>
-        <li>
-          <span class="press-list__source">The New Stack</span>
-          <a href="#">"Altask is what happens when designers build their own tools." <span aria-hidden="true">→</span></a>
-          <time>Aug 2026</time>
-        </li>
-        <li>
-          <span class="press-list__source">Indie Hackers</span>
-          <a href="#">"The most considered marketing-page builder we've reviewed this year." <span aria-hidden="true">→</span></a>
-          <time>Jun 2026</time>
-        </li>
-        <li>
-          <span class="press-list__source">Hacker News</span>
-          <a href="#">"Show HN: Altask — visual website builder that exports clean HTML." <span aria-hidden="true">→</span></a>
-          <time>Apr 2024</time>
-        </li>
-        <li>
-          <span class="press-list__source">Sidebar</span>
-          <a href="#">"A craft-focused alternative to the big page builders." <span aria-hidden="true">→</span></a>
-          <time>Mar 2024</time>
-        </li>
-      </ul>
     </div>
   </section>
 
@@ -286,11 +294,11 @@
   <section class="section">
     <div class="container">
       <div class="cta-banner" data-reveal>
-        <h2>Build the next thing with us.</h2>
-        <p>We're hiring carefully — designers, engineers, and a writer. We also love hearing from teams using Altask in production.</p>
+        <h2>Start building with Altask.</h2>
+        <p>Turn an idea into a live website in minutes. Try the editor free, no credit card, no lock-in.</p>
         <div class="cta-banner__ctas">
-          <a class="btn btn-primary" href="contact.html">Get in touch</a>
-          <a class="btn btn-secondary" href="editor.html">Try the editor</a>
+          <a class="btn btn-primary" href="editor.html">Try the editor</a>
+          <a class="btn btn-secondary" href="contact.html">Talk to us</a>
         </div>
       </div>
     </div>
@@ -318,6 +326,6 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=2" defer></script>
+<script src="assets/js/site.js?v=7" defer></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Documentation · Altask</title>
+<title>Altask</title>
 <meta name="description" content="Altask developer documentation: Quickstart, SDK, REST API, components, webhooks, and embed snippets." />
 <meta name="theme-color" content="#5b3fd6" />
 <link rel="icon" href="assets/images/tab.jpg" type="image/jpeg" />
@@ -18,21 +18,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/base.css?v=8" />
-<link rel="stylesheet" href="assets/css/pages.css?v=17" />
+<link rel="stylesheet" href="assets/css/base.css?v=13" />
+<link rel="stylesheet" href="assets/css/pages.css?v=20" />
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
-
-<!-- ========= TOP UTILITY BAR ========= -->
-<div class="topbar">
-  <div class="container topbar__inner">
-    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="9"/></svg> Community</a>
-    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="10 17 15 12 10 7"/></svg> YouTube</a>
-    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l8 10-8 8h2l7-7 6 7h4l-9-11 8-7h-2l-7 6-5-6z"/></svg> Twitter</a>
-    <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v8M8 7v.01M12 18v-5a3 3 0 0 1 6 0v5"/></svg> LinkedIn</a>
-  </div>
-</div>
 
 <!-- ========= NAV ========= -->
 <header class="site-nav">
@@ -41,13 +31,86 @@
       <img src="assets/images/logo.svg" alt="Altask" class="logo-img" style="height: 48px; width: auto;">
     </a>
     <nav aria-label="Primary"><ul class="site-nav__links">
-      <li><a href="product.html">Product</a></li>
-      <li><a href="features-builder.html">Features</a></li>
-      <li><a href="templates.html">Templates</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-    </ul></nav>
+  <li class="has-submenu has-mega has-mega--2col">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Product <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner mega__inner--2col">
+      <div class="mega__col">
+        <h5>Get started</h5>
+        <a class="mega__link" href="product.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18l6-12 4 8 2-4 4 8"/></svg></span>
+          <span class="meta"><strong>Overview</strong><span>The whole platform</span></span>
+        </a>
+        <a class="mega__link" href="how.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span>
+          <span class="meta"><strong>How it works</strong><span>Three steps, one canvas</span></span>
+        </a>
+        <a class="mega__link" href="editor.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></span>
+          <span class="meta"><strong>Open Editor</strong><span>Try in your browser</span></span>
+        </a>
+      </div>
+      <div class="mega__col">
+        <h5>More</h5>
+        <a class="mega__link" href="docs.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4V4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+          <span class="meta"><strong>Documentation</strong><span>SDK, API, guides</span></span>
+        </a>
+        <a class="mega__link" href="community.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="11" r="2.5"/><path d="M3 20c0-3.3 3-6 6-6s6 2.7 6 6"/></svg></span>
+          <span class="meta"><strong>Community</strong><span>12,000+ builders</span></span>
+        </a>
+        <a class="mega__link" href="contact.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span class="meta"><strong>Contact</strong><span>Talk to the team</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li class="has-submenu has-mega">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Features <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner">
+      <div class="mega__col">
+        <h5>Features</h5>
+        <a class="mega__link" href="features-builder.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <span class="meta"><strong>Drag and Drop builder</strong><span>Smart snapping, alignment guides</span></span>
+        </a>
+        <a class="mega__link" href="features-responsive.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="11" rx="1"/><rect x="13" y="9" width="9" height="13" rx="1"/></svg></span>
+          <span class="meta"><strong>Responsive controls</strong><span>Per-breakpoint overrides</span></span>
+        </a>
+        <a class="mega__link" href="features-publish.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6 9l6-6 6 6"/><rect x="3" y="15" width="18" height="6" rx="1"/></svg></span>
+          <span class="meta"><strong>One-click publish</strong><span>Global edge with HTTPS</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li class="has-submenu has-mega">
+    <button type="button" class="submenu-trigger" aria-expanded="false">Templates <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+    <div class="mega" role="menu"><div class="mega__inner">
+      <div class="mega__col">
+        <h5>Templates</h5>
+        <a class="mega__link" href="templates.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg></span>
+          <span class="meta"><strong>Browse all</strong><span>Production-ready starts</span></span>
+        </a>
+        <a class="mega__link" href="templates-startup.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c5-5 9-9 14-14M14 5h5v5"/></svg></span>
+          <span class="meta"><strong>Startup and SaaS</strong><span>Lift, Stack, Pulse</span></span>
+        </a>
+        <a class="mega__link" href="templates-portfolio.html">
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="2"/><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M21 17l-5-5-7 7"/></svg></span>
+          <span class="meta"><strong>Portfolio</strong><span>Showcase, Folio, Frame</span></span>
+        </a>
+      </div>
+    </div></div>
+  </li>
+  <li><a href="pricing.html">Pricing</a></li>
+  <li><a href="about.html">About</a></li>
+  </ul></nav>
     <div class="site-nav__cta">
-      <a class="btn btn-secondary btn-sm" href="contact.html">Sign in</a>
+      <a class="btn btn-secondary btn-sm" href="signin.html">Sign in</a>
       <a class="btn btn-primary btn-sm" href="editor.html">Get Started</a>
       <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu" aria-expanded="false">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -59,7 +122,8 @@
     <a href="features-builder.html">Features</a>
     <a href="templates.html">Templates</a>
     <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
     <a class="btn btn-primary" href="editor.html">Get Started</a>
   </div>
 </header>
@@ -103,7 +167,7 @@
           <h5>Guides</h5>
           <a href="#guide-cms">Wire up a CMS</a>
           <a href="#guide-domains">Custom domains</a>
-          <a href="#guide-cli">CLI &amp; CI</a>
+          <a href="#guide-cli">CLI and CI</a>
         </nav>
 
         <a class="docs-side__cta" href="contact.html">
@@ -140,7 +204,7 @@
       <!-- Quickstart -->
       <section class="docs-section" id="quickstart">
         <h2>Quickstart</h2>
-        <p class="docs-lead">Three minutes from a clean install to a deployed page. Pick your runtime — the snippet stays the same.</p>
+        <p class="docs-lead">Three minutes from a clean install to a deployed page. Pick your runtime, the snippet stays the same.</p>
 
         <div class="docs-tabs" data-docs-tabs>
           <div class="docs-tabs__bar" role="tablist">
@@ -218,7 +282,7 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
           <tbody>
             <tr><td><code>@altask/sdk</code></td><td>REST client + Webhook helpers</td><td>4.8 KB</td></tr>
             <tr><td><code>@altask/components</code></td><td>React components used by the editor</td><td>21 KB</td></tr>
-            <tr><td><code>@altask/cli</code></td><td>CLI for local dev, preview, deploy</td><td>—</td></tr>
+            <tr><td><code>@altask/cli</code></td><td>CLI for local dev, preview, deploy</td><td></td></tr>
           </tbody>
         </table>
       </section>
@@ -276,13 +340,13 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
             <tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr>
           </thead>
           <tbody>
-            <tr><td><code>title</code></td><td>string</td><td>—</td><td>Headline text. Required.</td></tr>
-            <tr><td><code>subtitle</code></td><td>string</td><td>—</td><td>Supporting copy beneath the headline.</td></tr>
-            <tr><td><code>cta</code></td><td>{ label, href }</td><td>—</td><td>Primary call-to-action.</td></tr>
-            <tr><td><code>secondaryCta</code></td><td>{ label, href }</td><td>—</td><td>Optional secondary button.</td></tr>
+            <tr><td><code>title</code></td><td>string</td><td></td><td>Headline text. Required.</td></tr>
+            <tr><td><code>subtitle</code></td><td>string</td><td></td><td>Supporting copy beneath the headline.</td></tr>
+            <tr><td><code>cta</code></td><td>{ label, href }</td><td></td><td>Primary call-to-action.</td></tr>
+            <tr><td><code>secondaryCta</code></td><td>{ label, href }</td><td></td><td>Optional secondary button.</td></tr>
             <tr><td><code>variant</code></td><td>"centered" | "split"</td><td>"centered"</td><td>Layout style.</td></tr>
             <tr><td><code>theme</code></td><td>"light" | "dark"</td><td>"light"</td><td>Color theme override.</td></tr>
-            <tr><td><code>media</code></td><td>{ src, alt }</td><td>—</td><td>Image rendered for the split variant.</td></tr>
+            <tr><td><code>media</code></td><td>{ src, alt }</td><td></td><td>Image rendered for the split variant.</td></tr>
           </tbody>
         </table>
 
@@ -316,10 +380,10 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
         <table class="props">
           <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td><code>plans</code></td><td>Plan[]</td><td>—</td><td>Plans to render. Required.</td></tr>
+            <tr><td><code>plans</code></td><td>Plan[]</td><td></td><td>Plans to render. Required.</td></tr>
             <tr><td><code>billing</code></td><td>"monthly" | "yearly"</td><td>"monthly"</td><td>Initial billing period.</td></tr>
             <tr><td><code>currency</code></td><td>string</td><td>"USD"</td><td>ISO currency code.</td></tr>
-            <tr><td><code>highlight</code></td><td>string</td><td>—</td><td>Plan ID to render as featured.</td></tr>
+            <tr><td><code>highlight</code></td><td>string</td><td></td><td>Plan ID to render as featured.</td></tr>
           </tbody>
         </table>
 
@@ -328,7 +392,7 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
   <span class="tp">plans</span>={[
     { id: <span class="ts">"free"</span>, name: <span class="ts">"Free"</span>,  price: <span class="tn">0</span>,  features: [<span class="ts">"1 site"</span>] },
     { id: <span class="ts">"pro"</span>,  name: <span class="ts">"Pro"</span>,   price: <span class="tn">19</span>, features: [<span class="ts">"Unlimited sites"</span>] },
-    { id: <span class="ts">"team"</span>, name: <span class="ts">"Team"</span>,  price: <span class="tn">59</span>, features: [<span class="ts">"Roles &amp; SSO"</span>] }
+    { id: <span class="ts">"team"</span>, name: <span class="ts">"Team"</span>,  price: <span class="tn">59</span>, features: [<span class="ts">"Roles and SSO"</span>] }
   ]}
   <span class="tp">highlight</span>=<span class="ts">"pro"</span>
 <span class="tag">/&gt;</span></pre>
@@ -346,8 +410,8 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
         <table class="props">
           <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td><code>fields</code></td><td>Field[]</td><td>—</td><td>Declarative field list. Optional.</td></tr>
-            <tr><td><code>action</code></td><td>(values) =&gt; Promise</td><td>—</td><td>Submit handler. Receives sanitised values.</td></tr>
+            <tr><td><code>fields</code></td><td>Field[]</td><td></td><td>Declarative field list. Optional.</td></tr>
+            <tr><td><code>action</code></td><td>(values) =&gt; Promise</td><td></td><td>Submit handler. Receives sanitised values.</td></tr>
             <tr><td><code>submitLabel</code></td><td>string</td><td>"Submit"</td><td>Submit button label.</td></tr>
             <tr><td><code>validateOn</code></td><td>"blur" | "change"</td><td>"blur"</td><td>When to run field validation.</td></tr>
           </tbody>
@@ -376,10 +440,10 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
         <table class="props">
           <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
           <tbody>
-            <tr><td><code>brand</code></td><td>{ name, logo }</td><td>—</td><td>Wordmark and logo. Required.</td></tr>
+            <tr><td><code>brand</code></td><td>{ name, logo }</td><td></td><td>Wordmark and logo. Required.</td></tr>
             <tr><td><code>columns</code></td><td>Column[]</td><td>[]</td><td>Link columns rendered as a grid.</td></tr>
             <tr><td><code>social</code></td><td>SocialLink[]</td><td>[]</td><td>Social platform handles.</td></tr>
-            <tr><td><code>legal</code></td><td>string</td><td>—</td><td>Copyright / legal copy.</td></tr>
+            <tr><td><code>legal</code></td><td>string</td><td></td><td>Copyright / legal copy.</td></tr>
           </tbody>
         </table>
       </section>
@@ -448,7 +512,7 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
           <h2>Pages</h2>
           <span class="docs-tag docs-tag--api">REST API</span>
         </div>
-        <p>Pages live inside a site. Each page has a slug, a JSON content tree, and an SEO block. Updates are atomic — partial PATCH bodies are merged server-side.</p>
+        <p>Pages live inside a site. Each page has a slug, a JSON content tree, and an SEO block. Updates are atomic, partial PATCH bodies are merged server-side.</p>
         <ul class="docs-endpoints">
           <li><span class="docs-endpoints__verb docs-endpoints__verb--get">GET</span><code>/v1/sites/{id}/pages</code><span class="docs-endpoints__desc">List pages</span></li>
           <li><span class="docs-endpoints__verb docs-endpoints__verb--post">POST</span><code>/v1/sites/{id}/pages</code><span class="docs-endpoints__desc">Create a page</span></li>
@@ -461,7 +525,7 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
 <pre><span class="tk">curl</span> -X PATCH https://api.altask.dev/v1/pages/page_4Bz1 \
   -H <span class="ts">"Authorization: Bearer $ALTASK_KEY"</span> \
   -H <span class="ts">"Content-Type: application/json"</span> \
-  -d <span class="ts">'{"seo": {"title": "Pricing — Altask", "description": "Plans for every team."}}'</span></pre>
+  -d <span class="ts">'{"seo": {"title": "Pricing, Altask", "description": "Plans for every team."}}'</span></pre>
         </div>
       </section>
 
@@ -494,7 +558,7 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
       <!-- Webhooks -->
       <section class="docs-section" id="webhooks">
         <h2>Webhooks</h2>
-        <p>Subscribe to lifecycle events to keep your CMS, CI, or analytics in sync. Payloads are signed with HMAC-SHA256 — verify with the <code>X-Altask-Signature</code> header.</p>
+        <p>Subscribe to lifecycle events to keep your CMS, CI, or analytics in sync. Payloads are signed with HMAC-SHA256, verify with the <code>X-Altask-Signature</code> header.</p>
         <table class="props">
           <thead><tr><th>Event</th><th>When it fires</th></tr></thead>
           <tbody>
@@ -502,7 +566,7 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
             <tr><td><code>page.published</code></td><td>A page is published or republished.</td></tr>
             <tr><td><code>deploy.succeeded</code></td><td>A deploy lands on the global edge with a 2xx health check.</td></tr>
             <tr><td><code>deploy.failed</code></td><td>A deploy fails build, validation, or health check.</td></tr>
-            <tr><td><code>domain.verified</code></td><td>A custom domain passes DNS &amp; SSL verification.</td></tr>
+            <tr><td><code>domain.verified</code></td><td>A custom domain passes DNS and SSL verification.</td></tr>
           </tbody>
         </table>
       </section>
@@ -529,7 +593,7 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
       <!-- Error reference -->
       <section class="docs-section" id="errors">
         <h2>Error reference</h2>
-        <p>Errors return a JSON body with <code>code</code>, <code>message</code>, and an optional <code>request_id</code>. Always log <code>request_id</code> when contacting support — it pins the request to a single trace.</p>
+        <p>Errors return a JSON body with <code>code</code>, <code>message</code>, and an optional <code>request_id</code>. Always log <code>request_id</code> when contacting support, it pins the request to a single trace.</p>
         <table class="props">
           <thead><tr><th>Status</th><th>Code</th><th>When you'll see it</th></tr></thead>
           <tbody>
@@ -604,10 +668,10 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
       <!-- Guide: CLI -->
       <section class="docs-section" id="guide-cli">
         <div class="docs-section__head">
-          <h2>CLI &amp; CI</h2>
+          <h2>CLI and CI</h2>
           <span class="docs-tag">Guide</span>
         </div>
-        <p>The Altask CLI runs the same build pipeline as the cloud — preview locally, lint your blocks, and ship from CI without leaving your terminal.</p>
+        <p>The Altask CLI runs the same build pipeline as the cloud, preview locally, lint your blocks, and ship from CI without leaving your terminal.</p>
 
         <div class="docs-tabs" data-docs-tabs>
           <div class="docs-tabs__bar" role="tablist">
@@ -695,7 +759,7 @@ client.sites.deploy(id=<span class="ts">"site_8aL2k9X"</span>)</pre>
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=2" defer></script>
+<script src="assets/js/site.js?v=7" defer></script>
 <script>
   // Tabs + copy buttons + scrollspy for the docs page.
   (function(){

@@ -62,6 +62,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Keep real inputs and code usable/selectable */
+input, textarea, select, [contenteditable="true"], pre, code {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 img, svg, video, iframe { display: block; max-width: 100%; }
@@ -788,9 +800,9 @@ details > summary:focus-visible {
   place-items: center;
   width: 30px; height: 30px;
   border-radius: 4px;
-  background: var(--bg-mute);
-  color: var(--fg-muted);
-  border: 1px solid var(--border);
+  background: var(--p-50);
+  color: var(--p-700);
+  border: 1px solid var(--p-100);
   flex: 0 0 auto;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
