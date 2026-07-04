@@ -80,6 +80,11 @@ img, svg, video, iframe { display: block; max-width: 100%; }
 button { font-family: inherit; }
 a { color: inherit; text-decoration: none; }
 
+/* Anchored sections shouldn't hide under the sticky nav */
+[id] { scroll-margin-top: 96px; }
+
+.logo-img { height: 48px; width: auto; }
+
 ::selection { background: var(--p-200); color: var(--p-800); }
 
 /* ----- Type ----- */
@@ -412,6 +417,7 @@ div[class*="progress"] {
 [data-reveal-stagger].is-visible > *:nth-child(6) { transition-delay: 0.40s; }
 [data-reveal-stagger].is-visible > *:nth-child(7) { transition-delay: 0.47s; }
 [data-reveal-stagger].is-visible > *:nth-child(8) { transition-delay: 0.54s; }
+[data-reveal-stagger].is-visible > *:nth-child(n+9) { transition-delay: 0.6s; }
 
 
 @media (prefers-reduced-motion: reduce) {
@@ -620,7 +626,6 @@ details > summary:focus-visible {
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  margin-right: 0.18em;
 }
 .reveal-words .word > span {
   display: inline-block;
@@ -661,6 +666,13 @@ details > summary:focus-visible {
   50%      { transform: translateY(-10px); }
 }
 .float-y { animation: float-y 6s ease-in-out infinite; }
+
+/* Magnetic buttons: use the independent `translate` property so the
+   cursor attraction never fights hover/active `transform` states */
+[data-magnetic] {
+  transition: translate 0.3s var(--ease);
+  will-change: translate;
+}
 
 /* Pulse glow on focus indicators */
 @keyframes pulse-ring {

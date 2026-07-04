@@ -125,6 +125,9 @@
   display: grid;
   place-items: center;
   animation: hero-float 6s ease-in-out infinite;
+  /* Subtle cursor parallax (vars set by site.js on .hero) */
+  translate: var(--parallax-x, 0px) var(--parallax-y, 0px);
+  transition: translate 0.6s var(--ease);
 }
 @keyframes hero-float {
   0%, 100% { transform: translateY(0); }
@@ -3328,10 +3331,16 @@
   line-height: 1.05;
 }
 .how-hero h1 .ord {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+  display: inline-block;
   font-size: 0.9em;
+  background: linear-gradient(120deg, var(--p-700), var(--p-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* background-clip: text doesn't reach into the inline-block word spans
+   created by the reveal-words splitter, so re-apply it per word */
+.how-hero h1 .ord .word > span {
   background: linear-gradient(120deg, var(--p-700), var(--p-500));
   -webkit-background-clip: text;
   background-clip: text;

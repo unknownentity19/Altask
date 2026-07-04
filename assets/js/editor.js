@@ -178,7 +178,7 @@
       thumb: thumbCards(),
       defaults: {
         title: "Why teams pick Altask",
-        f1Title: "Drag & drop", f1Body: "Compose pages by dragging blocks onto a flexible canvas.",
+        f1Title: "Drag and drop", f1Body: "Compose pages by dragging blocks onto a flexible canvas.",
         f2Title: "Real-time preview", f2Body: "See pixel-perfect changes the moment you make them.",
         f3Title: "One-click publish", f3Body: "Push to a global edge with HTTPS in a single click.",
       },
@@ -527,7 +527,7 @@
       }),
       makeBlock("features", {
         title: "Why teams pick Altask",
-        f1Title: "Drag & drop",
+        f1Title: "Drag and drop",
         f1Body: "Compose pages by dragging blocks onto a flexible canvas with pixel-precise controls.",
         f2Title: "Real-time preview",
         f2Body: "See pixel-perfect changes the moment you make them. Resize for desktop, tablet, mobile.",

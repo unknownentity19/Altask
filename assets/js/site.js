@@ -25,6 +25,7 @@
   onScroll();
 
   // Reveal observer
+  const revealSelector = "[data-reveal], [data-reveal-stagger], [data-reveal-scale], [data-reveal-left], [data-reveal-right], .reveal-words";
   if ("IntersectionObserver" in window && !reduced) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -38,8 +39,28 @@
       { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
     );
     document.querySelectorAll("[data-reveal], [data-reveal-stagger]").forEach((el) => io.observe(el));
+
+    // Safety sweep: fast/jump scrolling (anchor links, End key, scrollbar drags)
+    // can move elements past the viewport before the observer fires, leaving
+    // content permanently invisible. Reveal anything that ends up above the fold.
+    let sweepRaf = 0;
+    function sweep() {
+      sweepRaf = 0;
+      document.querySelectorAll(revealSelector).forEach((el) => {
+        if (el.classList.contains("is-visible")) return;
+        const r = el.getBoundingClientRect();
+        if (r.bottom < 140 && r.height > 0) el.classList.add("is-visible");
+      });
+    }
+    function queueSweep() {
+      if (!sweepRaf) sweepRaf = requestAnimationFrame(sweep);
+    }
+    window.addEventListener("scroll", queueSweep, { passive: true });
+    window.addEventListener("resize", queueSweep, { passive: true });
+    window.addEventListener("load", queueSweep);
+    queueSweep();
   } else {
-    document.querySelectorAll("[data-reveal], [data-reveal-stagger]").forEach((el) => el.classList.add("is-visible"));
+    document.querySelectorAll(revealSelector).forEach((el) => el.classList.add("is-visible"));
   }
 
   // Tabs (Validate / Track / Optimize / Scale)
@@ -269,16 +290,18 @@
     });
   });
 
-  // Magnetic buttons (subtle attraction to cursor)
+  // Magnetic buttons (subtle attraction to cursor).
+  // Uses the independent `translate` property so it never clobbers the
+  // hover/active `transform` styles applied by CSS.
   document.querySelectorAll("[data-magnetic]").forEach((el) => {
     const strength = parseFloat(el.dataset.magnetic) || 0.3;
     el.addEventListener("mousemove", (e) => {
       const r = el.getBoundingClientRect();
       const x = (e.clientX - (r.left + r.width / 2)) * strength;
       const y = (e.clientY - (r.top + r.height / 2)) * strength;
-      el.style.transform = `translate(${x}px, ${y}px)`;
+      el.style.translate = x.toFixed(1) + "px " + y.toFixed(1) + "px";
     });
-    el.addEventListener("mouseleave", () => { el.style.transform = ""; });
+    el.addEventListener("mouseleave", () => { el.style.translate = ""; });
   });
 
   // Parallax on hero glow
@@ -318,8 +341,9 @@
     });
 
     // Clone sets until total width > viewport + one setWidth
-    // This guarantees no blank space is ever visible
-    const viewportW = window.innerWidth;
+    // This guarantees no blank space is ever visible, even if the
+    // window is later resized wider than at load time.
+    const viewportW = Math.max(window.innerWidth, 1920);
     const minWidth = viewportW + setWidth;
     let currentWidth = setWidth;
 
@@ -415,7 +439,7 @@
     return new Promise((resolve) => {
       const img = new Image();
       img.onload = () => resolve(src);
-      img.onerror = () => resolve(src);
+      img.onerror = () => resolve(null);
       img.src = src;
     });
   }
@@ -432,9 +456,10 @@
     const target = avatars[idx];
     const oldSrc = target.src;
 
-    // Preload the new image first
-    const newSrc = getRandomNew();
-    await preloadImage(newSrc);
+    // Preload the new image first; skip the swap entirely if it fails
+    // so we never animate in a broken image.
+    const newSrc = await preloadImage(getRandomNew());
+    if (!newSrc) { cycling = false; return; }
 
     // Step 1: Animate out (700ms)
     target.classList.add("av--leaving");
