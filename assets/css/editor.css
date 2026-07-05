@@ -78,11 +78,9 @@ button { font-family: inherit; }
   height: 36px;
   margin-bottom: 6px;
   border-radius: var(--ed-radius);
-  color: #fff;
-  background: linear-gradient(135deg, #4f7bff 0%, #2d49d8 100%);
   text-decoration: none;
-  box-shadow: 0 4px 12px -4px rgba(58,100,255,.45);
 }
+.ed-rail__brand img { width: 30px; height: 30px; object-fit: contain; display: block; }
 .ed-rail__group { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; }
 .ed-rail__bottom { margin-top: auto; display: flex; flex-direction: column; gap: 2px; }
 .ed-rail__btn {
@@ -506,7 +504,16 @@ button { font-family: inherit; }
   display: none;
   border-radius: 2px;
 }
-.ed-dropline.is-active { display: block; }
+.ed-dropline.is-active { display: block; border-top-style: solid; }
+/* While dragging, hint every insertion point and mute editing chrome */
+.ed-canvas-wrap.is-dnd .ed-dropline { display: block; opacity: .25; }
+.ed-canvas-wrap.is-dnd .ed-dropline.is-active {
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba(58, 100, 255, .18);
+}
+.ed-canvas-wrap.is-dnd .ed-slot__add { opacity: 0 !important; }
+.ed-canvas-wrap.is-dnd .ed-block [contenteditable] { pointer-events: none; }
+.ed-block.is-drag-src { opacity: .35; outline-style: dashed; }
 
 /* Insert menu */
 .ed-insert-menu {
@@ -606,6 +613,8 @@ button { font-family: inherit; }
 }
 .ed-block__bar button:hover { background: rgba(255,255,255,.32); }
 .ed-block__bar button.danger:hover { background: rgba(244,63,94,.7); }
+.ed-block__bar button.drag { cursor: grab; }
+.ed-block__bar button.drag:active { cursor: grabbing; }
 
 /* ============== INSPECTOR ============== */
 .ed-insp-wrap {

@@ -11,9 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..900&family=Inter:wght@400;500;600;700&family=Urbanist:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/base.css?v=17" />
+  <link rel="stylesheet" href="assets/css/base.css?v=18" />
   <link rel="stylesheet" href="assets/css/pages.css?v=25" />
-  <link rel="stylesheet" href="assets/css/editor.css?v=10" />
+  <link rel="stylesheet" href="assets/css/editor.css?v=11" />
 <link rel="canonical" href="https://altask.dev/editor.html" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://altask.dev/editor.html" />
@@ -35,9 +35,7 @@
     <!-- ============== Left icon rail ============== -->
     <nav class="ed-rail" aria-label="Editor navigation">
       <a href="index.html" class="ed-rail__brand" title="Back to site">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
-          <path d="M4 18l6-12 4 8 2-4 4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="assets/images/logo.svg" alt="Altask" />
       </a>
       <div class="ed-rail__group">
         <button class="ed-rail__btn is-active" data-rail="add" title="Add components">
@@ -145,7 +143,7 @@
     <aside class="ed-insp-wrap" aria-label="Properties">
       <div class="ed-insp-tabs" role="tablist">
         <button class="ed-insp-tab is-active" data-insptab="design" title="Design">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16M5 17l4-12 4 8 2-4 4 8"/></svg>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
         </button>
         <button class="ed-insp-tab" data-insptab="layout" title="Layout">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
@@ -177,6 +175,6 @@
   <!-- Toast -->
   <div id="toast" class="ed-toast" role="status" aria-live="polite"></div>
 
-  <script src="assets/js/editor.js?v=11"></script>
+  <script src="assets/js/editor.js?v=12"></script>
 </body>
 </html>

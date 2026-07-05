@@ -670,14 +670,32 @@
     // Keyboard
     document.addEventListener("keydown", (e) => {
       const meta = e.metaKey || e.ctrlKey;
-      if (meta && e.key.toLowerCase() === "z" && !e.shiftKey) { e.preventDefault(); undo(); }
-      else if ((meta && e.key.toLowerCase() === "y") || (meta && e.shiftKey && e.key.toLowerCase() === "z")) { e.preventDefault(); redo(); }
+      const ae = document.activeElement;
+      const typing = ae && (ae.tagName === "INPUT" || ae.tagName === "TEXTAREA" || ae.isContentEditable);
+      if (meta && e.key.toLowerCase() === "z" && !e.shiftKey) {
+        if (typing) return; // let native text undo work while editing
+        e.preventDefault(); undo();
+      }
+      else if ((meta && e.key.toLowerCase() === "y") || (meta && e.shiftKey && e.key.toLowerCase() === "z")) {
+        if (typing) return;
+        e.preventDefault(); redo();
+      }
       else if (meta && (e.key === "=" || e.key === "+")) { e.preventDefault(); setZoom(state.zoom + 0.1); }
       else if (meta && e.key === "-") { e.preventDefault(); setZoom(state.zoom - 0.1); }
       else if (meta && e.key === "0") { e.preventDefault(); setZoom(1); }
+      else if (e.key === "Escape") {
+        const menu = $(".ed-insert-menu");
+        if (menu) { menu.remove(); return; }
+        if ($("#preview").classList.contains("is-open")) { closePreview(); return; }
+        if (typing) { ae.blur(); return; }
+        if (state.selectedId) {
+          state.selectedId = null;
+          renderCanvas();
+          renderInspector();
+        }
+      }
       else if (e.key === "Delete" || e.key === "Backspace") {
-        const ae = document.activeElement;
-        if (ae && (ae.tagName === "INPUT" || ae.tagName === "TEXTAREA" || ae.isContentEditable)) return;
+        if (typing) return;
         if (!state.selectedId) return;
         e.preventDefault();
         pushHistory();
@@ -874,14 +892,6 @@
       canvas.appendChild(wrap);
       canvas.appendChild(makeSlot(i + 1));
     });
-
-    canvas.addEventListener("click", () => {
-      if (state.selectedId !== null) {
-        state.selectedId = null;
-        renderCanvas();
-        renderInspector();
-      }
-    }, { once: true });
   }
 
   function makeSlot(idx) {
@@ -953,6 +963,9 @@
 
   function makeBlockBar(label) {
     const bar = el(`<div class="ed-block__bar" contenteditable="false">
+      <button type="button" data-act="drag" class="drag" title="Drag to reorder" draggable="false">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="8" cy="5" r="1.6"/><circle cx="16" cy="5" r="1.6"/><circle cx="8" cy="12" r="1.6"/><circle cx="16" cy="12" r="1.6"/><circle cx="8" cy="19" r="1.6"/><circle cx="16" cy="19" r="1.6"/></svg>
+      </button>
       <span class="label">${escHtml(label)}</span>
       <button type="button" data-act="up" title="Move up">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
@@ -970,7 +983,7 @@
     bar.addEventListener("click", (e) => {
       e.stopPropagation();
       const btn = e.target.closest("[data-act]");
-      if (!btn) return;
+      if (!btn || btn.dataset.act === "drag") return;
       const blockEl = bar.parentElement;
       const id = blockEl.dataset.id;
       const idx = state.blocks.findIndex((x) => x.id === id);
@@ -992,6 +1005,12 @@
       }
       afterStateChange();
     });
+    // Drag handle: arms the parent block for HTML5 drag
+    const dragBtn = bar.querySelector('[data-act="drag"]');
+    dragBtn.addEventListener("mousedown", (e) => {
+      e.stopPropagation();
+      bar.parentElement.setAttribute("draggable", "true");
+    });
     return bar;
   }
 
@@ -1000,8 +1019,11 @@
       node.setAttribute("contenteditable", "true");
       node.spellcheck = false;
       let prev = "";
+      let snapshot = null;
       node.addEventListener("focus", () => {
         prev = node.textContent;
+        // Snapshot BEFORE edits so undo restores the pre-edit state
+        snapshot = JSON.stringify(state);
         state.selectedId = block.id;
         $$(".ed-block").forEach((b) => b.classList.toggle("is-selected", b.dataset.id === block.id));
         renderInspector();
@@ -1019,7 +1041,13 @@
         }
       });
       node.addEventListener("blur", () => {
-        if (node.textContent !== prev) pushHistory();
+        if (node.textContent !== prev && snapshot) {
+          history.past.push(snapshot);
+          if (history.past.length > 80) history.past.shift();
+          history.future.length = 0;
+          updateUndoRedoButtons();
+        }
+        snapshot = null;
       });
     });
   }
@@ -1092,9 +1120,23 @@
   // ----- Drag & drop --------------------------------------------------------
   function wireCanvasDnD() {
     const wrap = $("#canvasWrap");
+    let dragSrcEl = null;      // .ed-block being reordered
+    let autoScrollDir = 0;
+    let autoScrollRaf = 0;
 
     function clearActiveLines() {
       $$(".ed-dropline").forEach((l) => l.classList.remove("is-active"));
+    }
+    function endDrag() {
+      wrap.classList.remove("is-dnd");
+      clearActiveLines();
+      stopAutoScroll();
+      if (dragSrcEl) {
+        dragSrcEl.classList.remove("is-drag-src");
+        dragSrcEl.removeAttribute("draggable");
+        dragSrcEl = null;
+      }
+      $$(".ed-block[draggable]").forEach((b) => b.removeAttribute("draggable"));
     }
     function nearestDropline(clientY) {
       const lines = $$(".ed-dropline");
@@ -1106,21 +1148,44 @@
       }
       return best;
     }
+    // Auto-scroll the canvas viewport while dragging near its edges
+    function updateAutoScroll(clientY) {
+      const r = wrap.getBoundingClientRect();
+      const zone = 56;
+      if (clientY < r.top + zone) autoScrollDir = -1;
+      else if (clientY > r.bottom - zone) autoScrollDir = 1;
+      else autoScrollDir = 0;
+      if (autoScrollDir && !autoScrollRaf) stepAutoScroll();
+    }
+    function stepAutoScroll() {
+      if (!autoScrollDir) { autoScrollRaf = 0; return; }
+      wrap.scrollTop += autoScrollDir * 14;
+      autoScrollRaf = requestAnimationFrame(stepAutoScroll);
+    }
+    function stopAutoScroll() {
+      autoScrollDir = 0;
+      if (autoScrollRaf) { cancelAnimationFrame(autoScrollRaf); autoScrollRaf = 0; }
+    }
 
     wrap.addEventListener("dragover", (e) => {
-      if (
-        e.dataTransfer.types.includes("text/altask-component") ||
-        e.dataTransfer.types.includes("text/altask-block")
-      ) {
-        e.preventDefault();
-        e.dataTransfer.dropEffect = e.dataTransfer.types.includes("text/altask-component") ? "copy" : "move";
-      } else { return; }
+      const isComp  = e.dataTransfer.types.includes("text/altask-component");
+      const isBlock = e.dataTransfer.types.includes("text/altask-block");
+      if (!isComp && !isBlock) return;
+      e.preventDefault();
+      e.dataTransfer.dropEffect = isComp ? "copy" : "move";
+      wrap.classList.add("is-dnd");
       clearActiveLines();
       const line = nearestDropline(e.clientY);
       if (line) line.classList.add("is-active");
+      updateAutoScroll(e.clientY);
     });
 
-    wrap.addEventListener("dragleave", (e) => { if (e.target === wrap) clearActiveLines(); });
+    wrap.addEventListener("dragleave", (e) => {
+      // Only reset when truly leaving the viewport, not moving between children
+      if (e.relatedTarget && wrap.contains(e.relatedTarget)) return;
+      clearActiveLines();
+      stopAutoScroll();
+    });
 
     wrap.addEventListener("drop", (e) => {
       const compId = e.dataTransfer.getData("text/altask-component");
@@ -1130,35 +1195,52 @@
       const line = nearestDropline(e.clientY);
       const idx = line ? Number(line.dataset.index) : state.blocks.length;
 
-      pushHistory();
       if (compId) {
+        pushHistory();
         const block = makeBlock(compId);
         state.blocks.splice(idx, 0, block);
         state.selectedId = block.id;
+        endDrag();
+        afterStateChange(componentById(compId).label + " added");
       } else if (blockId) {
         const fromIdx = state.blocks.findIndex((b) => b.id === blockId);
-        if (fromIdx === -1) return;
-        const [moved] = state.blocks.splice(fromIdx, 1);
+        if (fromIdx === -1) { endDrag(); return; }
         const adjust = fromIdx < idx ? idx - 1 : idx;
+        if (adjust === fromIdx) { endDrag(); return; } // dropped in place — no-op, no history
+        pushHistory();
+        const [moved] = state.blocks.splice(fromIdx, 1);
         state.blocks.splice(adjust, 0, moved);
         state.selectedId = moved.id;
+        endDrag();
+        afterStateChange("Block moved");
       }
-      clearActiveLines();
-      afterStateChange();
     });
 
-    wrap.addEventListener("mousedown", (e) => {
-      const blockEl = e.target.closest && e.target.closest(".ed-block");
-      if (!blockEl) return;
-      if (e.target.closest("[contenteditable='true']")) return;
-      if (e.target.closest("button")) return;
-      blockEl.setAttribute("draggable", "true");
-    });
     wrap.addEventListener("dragstart", (e) => {
       const blockEl = e.target.closest && e.target.closest(".ed-block");
-      if (!blockEl) return;
+      if (!blockEl || blockEl.getAttribute("draggable") !== "true") return;
+      dragSrcEl = blockEl;
       e.dataTransfer.setData("text/altask-block", blockEl.dataset.id);
       e.dataTransfer.effectAllowed = "move";
+      // Ghost: the block itself, anchored at the grab point
+      if (e.dataTransfer.setDragImage) {
+        const r = blockEl.getBoundingClientRect();
+        e.dataTransfer.setDragImage(blockEl, clamp(e.clientX - r.left, 0, r.width), 18);
+      }
+      requestAnimationFrame(() => blockEl.classList.add("is-drag-src"));
+    });
+
+    wrap.addEventListener("dragend", endDrag);
+    document.addEventListener("drop", () => endDrag());
+
+    // Deselect when clicking empty canvas space (persistent — wired once)
+    $("#canvas").addEventListener("click", (e) => {
+      if (e.target.closest(".ed-block, .ed-insert-menu, .ed-slot__add")) return;
+      if (state.selectedId !== null) {
+        state.selectedId = null;
+        renderCanvas();
+        renderInspector();
+      }
     });
   }
 
@@ -1549,13 +1631,9 @@
     if (block.id === state.selectedId) node.classList.add("is-selected");
     wireInlineEditing(node, block);
     applyStyleOverrides(block);
-    node.addEventListener("click", (e) => {
-      if (e.target instanceof HTMLElement && e.target.isContentEditable) return;
-      e.stopPropagation();
-      state.selectedId = block.id;
-      renderCanvas();
-      renderInspector();
-    });
+    // NOTE: no addEventListener here — the wrapper keeps its click handler
+    // from renderCanvas; re-adding one on every content edit stacked
+    // duplicate handlers.
   }
 
   // ============================================================
@@ -1687,7 +1765,7 @@ ${state.blocks.map((b) => renderForExport(b)).join("\n")}
       .blk--cta h2{color:#fff;font-size:32px;margin:0;font-weight:700}
       .blk--cta p{color:rgba(255,255,255,.7);max-width:520px;margin:14px auto 0}
       .blk--cta a{display:inline-block;margin-top:22px;padding:12px 24px;background:#fff;color:#181024;border-radius:10px;font-weight:600;text-decoration:none;font-size:14px}
-      .blk--image .img{width:100%;aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,#eef2ff,#dbe4ff);background-size:cover;background-position:center}
+      .blk--image .img{width:100%;aspect-ratio:16/9;border-radius:12px;background-image:var(--img-src,none),linear-gradient(135deg,#eef2ff,#dbe4ff);background-size:cover;background-position:center}
       .blk--columns .grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
       @media (max-width:720px){.blk--columns .grid{grid-template-columns:1fr}}
       .blk--columns h3{font-size:22px;margin:0 0 10px;font-weight:700}
