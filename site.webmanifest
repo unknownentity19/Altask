@@ -4,10 +4,9 @@
   "description": "Visual website builder with drag-and-drop editor, no code, full control.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f7f6f3",
-  "theme_color": "#1e3a8a",
+  "background_color": "#f8f9fb",
+  "theme_color": "#4f30c2",
   "icons": [
-    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/assets/images/favicon.svg?v=2", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
 }
