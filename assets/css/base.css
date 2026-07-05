@@ -301,6 +301,10 @@ div[class*="progress"] {
   width: 34px; height: 34px;
   border-radius: 4px;
   color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1;
   background: linear-gradient(135deg, var(--p-500), var(--p-700));
   box-shadow: 0 4px 14px -4px rgba(122, 95, 229, 0.5);
 }

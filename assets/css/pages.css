@@ -126,8 +126,9 @@
   place-items: center;
   /* Subtle cursor parallax (vars set by site.js on .hero) */
   translate: var(--parallax-x, 0px) var(--parallax-y, 0px);
-  /* Keep reveal (opacity/transform) transitions: this shorthand overrides base.css */
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease), translate 0.6s var(--ease);
+  /* Reveal (opacity/transform) gets a 0.15s stagger delay; translate must
+     stay at 0s delay or every parallax update lags and the scene stutters. */
+  transition: opacity 0.7s var(--ease) 0.15s, transform 0.7s var(--ease) 0.15s, translate 0.6s var(--ease);
 }
 @keyframes hero-float {
   0%, 100% { transform: translateY(0); }
