@@ -124,10 +124,10 @@
   z-index: 1;
   display: grid;
   place-items: center;
-  animation: hero-float 6s ease-in-out infinite;
   /* Subtle cursor parallax (vars set by site.js on .hero) */
   translate: var(--parallax-x, 0px) var(--parallax-y, 0px);
-  transition: translate 0.6s var(--ease);
+  /* Keep reveal (opacity/transform) transitions: this shorthand overrides base.css */
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease), translate 0.6s var(--ease);
 }
 @keyframes hero-float {
   0%, 100% { transform: translateY(0); }
@@ -146,6 +146,9 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  /* Float lives here (not on .hero__illustration) so it can't fight the
+     data-reveal transform transition on the parent. */
+  animation: hero-float 6s ease-in-out infinite;
   /* Not a real <img>: nothing to "save image as", nothing to drag out. */
   user-select: none;
   -webkit-user-select: none;
@@ -559,19 +562,28 @@
   flex-wrap: wrap;
   gap: 20px 36px;
 }
-.logos__row .logo {
+.logos__row .logo,
+.logos-marquee .logo {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-weight: 700;
   font-size: 16px;
   color: var(--fg-dim);
-  opacity: 0.7;
+  opacity: 0.9;
   transition: opacity 0.3s ease, color 0.3s ease;
-  filter: grayscale(1);
 }
-.logos__row .logo:hover { opacity: 1; color: var(--p-700); filter: grayscale(0); }
-.logos__row .logo svg { color: currentColor; flex: 0 0 auto; }
+.logos__row .logo:hover,
+.logos-marquee .logo:hover { opacity: 1; color: var(--p-700); }
+.logos__row .logo svg,
+.logos-marquee .logo svg { color: currentColor; flex: 0 0 auto; }
+.logos__row .logo img,
+.logos-marquee .logo img {
+  height: 22px;
+  width: auto;
+  flex: 0 0 auto;
+  display: block;
+}
 
 /* =================== SECTION HEAD =================== */
 .section-head {
